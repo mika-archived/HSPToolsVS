@@ -4,9 +4,15 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
+using System;
+using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
+using HSPToolsVS.Language;
+
+using Microsoft.VisualStudio.OLE.Interop;
+using Microsoft.VisualStudio.Package;
 using Microsoft.VisualStudio.Shell;
 
 namespace HSPToolsVS
@@ -34,13 +40,20 @@ namespace HSPToolsVS
     [Guid(PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
+    // Register a Language Service
+    [ProvideService(typeof(HSPLanguageService), ServiceName = "HSP Language Service")]
+    [ProvideLanguageService(typeof(HSPLanguageService), "HSP", 0)]
+    [ProvideLanguageExtension(typeof(HSPLanguageService), ".hsp")]
+    [ProvideLanguageExtension(typeof(HSPLanguageService), ".as")]
     // ReSharper disable once InconsistentNaming
-    public sealed class HSPVSPackage : Package
+    public sealed class HSPVSPackage : Package, IOleComponent
     {
         /// <summary>
         ///     HSPVSPackage GUID string.
         /// </summary>
         public const string PackageGuidString = "d831da21-d940-4ad0-aa2a-4a7a04e3d6c4";
+
+        private uint _componentId;
 
         #region Package Members
 
@@ -51,6 +64,104 @@ namespace HSPToolsVS
         protected override void Initialize()
         {
             base.Initialize();
+
+            var serviceContainer = this as IServiceContainer;
+            var hspLangService = new HSPLanguageService();
+            hspLangService.SetSite(this);
+            serviceContainer.AddService(typeof(HSPLanguageService), hspLangService, true);
+
+            var manager = GetService(typeof(SOleComponentManager)) as IOleComponentManager;
+            if (_componentId != 0 || manager == null)
+                return;
+            var crinfo = new OLECRINFO[1];
+            crinfo[0].cbSize = (uint)Marshal.SizeOf(typeof(OLECRINFO));
+            crinfo[0].grfcrf = (uint)_OLECRF.olecrfNeedIdleTime |
+                               (uint)_OLECRF.olecrfNeedPeriodicIdleTime;
+            crinfo[0].grfcadvf = (uint)_OLECADVF.olecadvfModal |
+                                 (uint)_OLECADVF.olecadvfRedrawOff |
+                                 (uint)_OLECADVF.olecadvfWarningsOff;
+            crinfo[0].uIdleTimeInterval = 1000;
+            var hr = manager.FRegisterComponent(this, crinfo, out _componentId);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (_componentId != 0)
+            {
+                var mgr = GetService(typeof(SOleComponentManager))
+                    as IOleComponentManager;
+                if (mgr != null)
+                {
+                    var hr = mgr.FRevokeComponent(_componentId);
+                }
+                _componentId = 0;
+            }
+
+            base.Dispose(disposing);
+        }
+
+        #endregion
+
+        #region Implementation of IOleComponent
+
+        public int FReserved1(uint dwReserved, uint message, IntPtr wParam, IntPtr lParam)
+        {
+            return 1;
+        }
+
+        public int FPreTranslateMessage(MSG[] pMsg)
+        {
+            return 0;
+        }
+
+        public void OnEnterState(uint uStateId, int fEnter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnAppActivate(int fActive, uint dwOtherThreadId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnLoseActivation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnActivationChange(IOleComponent pic, int fSameComponent, OLECRINFO[] pcrinfo, int fHostIsActivating,
+                                       OLECHOSTINFO[] pchostinfo, uint dwReserved)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int FDoIdle(uint grfidlef)
+        {
+            var bPeriodic = (grfidlef & (uint)_OLEIDLEF.oleidlefPeriodic) != 0;
+            var service = GetService(typeof(HSPLanguageService)) as LanguageService;
+            service?.OnIdle(bPeriodic);
+
+            return 0;
+        }
+
+        public int FQueryTerminate(int fPromptUser)
+        {
+            return 1;
+        }
+
+        public void Terminate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IntPtr HwndGetWindow(uint dwWhich, uint dwReserved)
+        {
+            return IntPtr.Zero;
+        }
+
+        public int FContinueMessageLoop(uint uReason, IntPtr pvLoopData, MSG[] pMsgPeeked)
+        {
+            return 1;
         }
 
         #endregion
