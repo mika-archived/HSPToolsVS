@@ -9,8 +9,6 @@ using System.Runtime.InteropServices;
 
 using Microsoft.VisualStudio.Shell;
 
-// ReSharper disable InconsistentNaming
-
 namespace HSPToolsVS
 {
     /// <summary>
@@ -36,6 +34,7 @@ namespace HSPToolsVS
     [Guid(PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
+    // ReSharper disable once InconsistentNaming
     public sealed class HSPVSPackage : Package
     {
         /// <summary>
