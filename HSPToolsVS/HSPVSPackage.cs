@@ -74,14 +74,14 @@ namespace HSPToolsVS
             if (_componentId != 0 || manager == null)
                 return;
             var crinfo = new OLECRINFO[1];
-            crinfo[0].cbSize = (uint)Marshal.SizeOf(typeof(OLECRINFO));
-            crinfo[0].grfcrf = (uint)_OLECRF.olecrfNeedIdleTime |
-                               (uint)_OLECRF.olecrfNeedPeriodicIdleTime;
-            crinfo[0].grfcadvf = (uint)_OLECADVF.olecadvfModal |
-                                 (uint)_OLECADVF.olecadvfRedrawOff |
-                                 (uint)_OLECADVF.olecadvfWarningsOff;
+            crinfo[0].cbSize = (uint) Marshal.SizeOf(typeof(OLECRINFO));
+            crinfo[0].grfcrf = (uint) _OLECRF.olecrfNeedIdleTime |
+                               (uint) _OLECRF.olecrfNeedPeriodicIdleTime;
+            crinfo[0].grfcadvf = (uint) _OLECADVF.olecadvfModal |
+                                 (uint) _OLECADVF.olecadvfRedrawOff |
+                                 (uint) _OLECADVF.olecadvfWarningsOff;
             crinfo[0].uIdleTimeInterval = 1000;
-            var hr = manager.FRegisterComponent(this, crinfo, out _componentId);
+            manager.FRegisterComponent(this, crinfo, out _componentId);
         }
 
         protected override void Dispose(bool disposing)
@@ -90,10 +90,7 @@ namespace HSPToolsVS
             {
                 var mgr = GetService(typeof(SOleComponentManager))
                     as IOleComponentManager;
-                if (mgr != null)
-                {
-                    var hr = mgr.FRevokeComponent(_componentId);
-                }
+                mgr?.FRevokeComponent(_componentId);
                 _componentId = 0;
             }
 
@@ -137,7 +134,7 @@ namespace HSPToolsVS
 
         public int FDoIdle(uint grfidlef)
         {
-            var bPeriodic = (grfidlef & (uint)_OLEIDLEF.oleidlefPeriodic) != 0;
+            var bPeriodic = (grfidlef & (uint) _OLEIDLEF.oleidlefPeriodic) != 0;
             var service = GetService(typeof(HSPLanguageService)) as LanguageService;
             service?.OnIdle(bPeriodic);
 
