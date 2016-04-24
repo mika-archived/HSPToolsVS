@@ -8,6 +8,7 @@ namespace HSPToolsVS.Language
     // ReSharper disable once InconsistentNaming
     internal class HSPScanner : IScanner
     {
+        private string _source;
         private IVsTextBuffer _textBuffer;
 
         public HSPScanner(IVsTextBuffer textBuffer)
@@ -17,7 +18,7 @@ namespace HSPToolsVS.Language
 
         public void SetSource(string source, int offset)
         {
-            throw new NotImplementedException();
+            _source = source.Substring(offset);
         }
 
         public bool ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)

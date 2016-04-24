@@ -56,6 +56,7 @@
     <Compile Include="Language\HSPLanguagePreferences.cs" />
     <Compile Include="Language\HSPLanguageService.cs" />
     <Compile Include="Language\HSPScanner.cs" />
+    <Compile Include="Language\HSPTokens.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
