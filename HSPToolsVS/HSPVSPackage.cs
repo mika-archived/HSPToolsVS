@@ -120,7 +120,7 @@ namespace HSPToolsVS
 
         public void OnAppActivate(int fActive, uint dwOtherThreadId)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void OnLoseActivation()

@@ -27,7 +27,23 @@ namespace HSPToolsVS.Language
         {
             var foundToken = false;
             var token = _lexer.GetNextToken();
-            //
+            if (token != null)
+            {
+                switch (token.Type)
+                {
+                    case HSPTokenType.Preprocessor:
+                        tokenInfo.Color = TokenColor.Comment;
+                        tokenInfo.Type = TokenType.Unknown;
+                        foundToken = true;
+                        break;
+
+                    case HSPTokenType.Keyword:
+                        tokenInfo.Color = TokenColor.Keyword;
+                        tokenInfo.Type = TokenType.Keyword;
+                        foundToken = true;
+                        break;
+                }
+            }
             return foundToken;
         }
     }

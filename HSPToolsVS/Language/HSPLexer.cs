@@ -24,14 +24,15 @@ namespace HSPToolsVS.Language
         public void Tokenize()
         {
             var reader = new StringReader(_source);
-            var inComment = false;
+            var inBlockComment = false;
+            var inLineComment = false;
             const int charLimit = 10; // HSP keywords max char length ("sarrayconv").
             var charHistory = new List<char>(charLimit);
             var offset = 0;
             while (reader.Peek() != -1)
             {
                 var c = (char) reader.Read();
-                if (!inComment && (c == ' ' || c == '　' || c == '\t' || c == '\n'))
+                if (!inBlockComment && !inLineComment && (c == ' ' || c == '　' || c == '\t'))
                 {
                     ProduceToken(charHistory, offset);
                     offset++;
@@ -44,9 +45,9 @@ namespace HSPToolsVS.Language
                 charHistory.Add(c);
 
                 // Comment?
-                ProduceCommentToken(reader, charHistory, ref inComment);
+                ProduceCommentToken(charHistory, ref inLineComment, ref inBlockComment);
 
-                if (inComment)
+                if (inBlockComment || inLineComment)
                     continue;
 
                 // Identifier split by operators?
@@ -55,7 +56,7 @@ namespace HSPToolsVS.Language
             }
         }
 
-        private void ProduceCommentToken(TextReader reader, ICollection<char> charHistory, ref bool inComment)
+        private void ProduceCommentToken(ICollection<char> charHistory, ref bool inLComment, ref bool inBComment)
         {
             var str = string.Join("", charHistory);
 
@@ -64,19 +65,18 @@ namespace HSPToolsVS.Language
             {
                 case ";":
                 case "//":
-                    while ((char) reader.Read() != '\n') {}
-                    charHistory.Clear();
+                    inLComment = true;
                     return;
 
                 case "/*":
-                    inComment = true;
+                    inBComment = true;
                     charHistory.Clear();
                     return;
             }
             // Block comment
-            if (!inComment || !str.EndsWith("*/"))
+            if (!inBComment || !str.EndsWith("*/"))
                 return;
-            inComment = false;
+            inBComment = false;
             charHistory.Clear();
         }
 
@@ -88,31 +88,31 @@ namespace HSPToolsVS.Language
                 HSPTokens.Operators3Chars.Contains(str))
             {
                 charHistory.Clear();
-                _tokens.Add(new Token(str, offset, TokenType.Operator));
+                _tokens.Add(new Token(str, offset, HSPTokenType.Operator));
                 return;
             }
             if (HSPTokens.Keywords.Contains(str))
             {
                 charHistory.Clear();
-                _tokens.Add(new Token(str, offset, TokenType.Keyword));
+                _tokens.Add(new Token(str, offset, HSPTokenType.Keyword));
                 return;
             }
             if (HSPTokens.Macros.Contains(str))
             {
                 charHistory.Clear();
-                _tokens.Add(new Token(str, offset, TokenType.Macro));
+                _tokens.Add(new Token(str, offset, HSPTokenType.Macro));
                 return;
             }
             if (HSPTokens.Preprocessors.Contains(str))
             {
                 charHistory.Clear();
-                _tokens.Add(new Token(str, offset, TokenType.Preprocessor));
+                _tokens.Add(new Token(str, offset, HSPTokenType.Preprocessor));
             }
         }
 
         public Token GetNextToken()
         {
-            return _tokens[_curTokenIndex++];
+            return _tokens.Count <= _curTokenIndex ? null : _tokens[_curTokenIndex++];
         }
     }
 }

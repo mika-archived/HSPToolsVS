@@ -1,6 +1,7 @@
 ﻿namespace HSPToolsVS.Language
 {
-    internal enum TokenType
+    // ReSharper disable once InconsistentNaming
+    internal enum HSPTokenType
     {
         Keyword,
 
