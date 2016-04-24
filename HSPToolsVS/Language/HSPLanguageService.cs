@@ -15,7 +15,7 @@ namespace HSPToolsVS.Language
         {
             if (_languagePreferences != null)
                 return _languagePreferences;
-            _languagePreferences = new LanguagePreferences(Site, typeof(HSPLanguageService).GUID, Name);
+            _languagePreferences = new HSPLanguagePreferences(Site, typeof(HSPLanguageService).GUID, Name);
             _languagePreferences.Init();
             return _languagePreferences;
         }

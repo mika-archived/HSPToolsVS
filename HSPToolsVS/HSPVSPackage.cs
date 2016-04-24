@@ -88,9 +88,8 @@ namespace HSPToolsVS
         {
             if (_componentId != 0)
             {
-                var mgr = GetService(typeof(SOleComponentManager))
-                    as IOleComponentManager;
-                mgr?.FRevokeComponent(_componentId);
+                var manager = GetService(typeof(SOleComponentManager)) as IOleComponentManager;
+                manager?.FRevokeComponent(_componentId);
                 _componentId = 0;
             }
 
