@@ -53,10 +53,12 @@
   <ItemGroup>
     <Compile Include="HSPVSPackage.cs" />
     <Compile Include="Language\HSPAuthoringScope.cs" />
+    <Compile Include="Language\HSPColorize.cs" />
     <Compile Include="Language\HSPLanguagePreferences.cs" />
     <Compile Include="Language\HSPLanguageService.cs" />
     <Compile Include="Language\HSPLexer.cs" />
     <Compile Include="Language\HSPScanner.cs" />
+    <Compile Include="Language\HSPSource.cs" />
     <Compile Include="Language\HSPTokens.cs" />
     <Compile Include="Language\Token.cs" />
     <Compile Include="Language\HSPTokenType.cs" />

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Package;
+﻿using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Package;
 using Microsoft.VisualStudio.TextManager.Interop;
 
 namespace HSPToolsVS.Language
@@ -30,6 +31,23 @@ namespace HSPToolsVS.Language
             return new HSPAuthoringScope();
         }
 
+        public override Source CreateSource(IVsTextLines buffer)
+        {
+            return new HSPSource(this, buffer, new Colorizer(this, buffer, GetScanner(buffer)));
+        }
+
         public override string GetFormatFilterList() => "HSP Script Files(*.hsp,*.as)|*.hsp;*.as";
+
+        public override int GetItemCount(out int count)
+        {
+            count = HSPColorize.ColorableItems.Length;
+            return VSConstants.S_OK;
+        }
+
+        public override int GetColorableItem(int index, out IVsColorableItem item)
+        {
+            item = HSPColorize.ColorableItems[index];
+            return VSConstants.S_OK;
+        }
     }
 }

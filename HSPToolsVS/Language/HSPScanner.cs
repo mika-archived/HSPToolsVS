@@ -32,12 +32,16 @@ namespace HSPToolsVS.Language
                 switch (token.Type)
                 {
                     case HSPTokenType.Preprocessor:
+                        tokenInfo.StartIndex = token.StartIndex;
+                        tokenInfo.EndIndex = token.EndIndex;
                         tokenInfo.Color = TokenColor.Comment;
                         tokenInfo.Type = TokenType.Unknown;
                         foundToken = true;
                         break;
 
                     case HSPTokenType.Keyword:
+                        tokenInfo.StartIndex = token.StartIndex;
+                        tokenInfo.EndIndex = token.EndIndex;
                         tokenInfo.Color = TokenColor.Keyword;
                         tokenInfo.Type = TokenType.Keyword;
                         foundToken = true;
