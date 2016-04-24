@@ -93,6 +93,9 @@ namespace HSPToolsVS
                 _componentId = 0;
             }
 
+            var serviceContainer = this as IServiceContainer;
+            serviceContainer.RemoveService(typeof(HSPLanguageService));
+
             base.Dispose(disposing);
         }
 

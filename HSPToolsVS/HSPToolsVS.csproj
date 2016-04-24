@@ -55,8 +55,11 @@
     <Compile Include="Language\HSPAuthoringScope.cs" />
     <Compile Include="Language\HSPLanguagePreferences.cs" />
     <Compile Include="Language\HSPLanguageService.cs" />
+    <Compile Include="Language\HSPLexer.cs" />
     <Compile Include="Language\HSPScanner.cs" />
     <Compile Include="Language\HSPTokens.cs" />
+    <Compile Include="Language\Token.cs" />
+    <Compile Include="Language\TokenType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
