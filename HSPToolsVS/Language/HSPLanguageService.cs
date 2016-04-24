@@ -40,13 +40,13 @@ namespace HSPToolsVS.Language
 
         public override int GetItemCount(out int count)
         {
-            count = HSPColorize.ColorableItems.Length;
+            count = HSPColorable.ColorableItems.Length;
             return VSConstants.S_OK;
         }
 
         public override int GetColorableItem(int index, out IVsColorableItem item)
         {
-            item = HSPColorize.ColorableItems[index];
+            item = HSPColorable.ColorableItems[index];
             return VSConstants.S_OK;
         }
     }

@@ -53,7 +53,8 @@
   <ItemGroup>
     <Compile Include="HSPVSPackage.cs" />
     <Compile Include="Language\HSPAuthoringScope.cs" />
-    <Compile Include="Language\HSPColorize.cs" />
+    <Compile Include="Language\HSPColorableItem.cs" />
+    <Compile Include="Language\HSPColorable.cs" />
     <Compile Include="Language\HSPLanguagePreferences.cs" />
     <Compile Include="Language\HSPLanguageService.cs" />
     <Compile Include="Language\HSPLexer.cs" />
