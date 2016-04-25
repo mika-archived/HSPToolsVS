@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.Package;
+﻿using System.Diagnostics;
+
+using Microsoft.VisualStudio.Package;
 using Microsoft.VisualStudio.TextManager.Interop;
 
 namespace HSPToolsVS.Language
@@ -19,6 +21,7 @@ namespace HSPToolsVS.Language
         public void SetSource(string source, int offset)
         {
             _lexer.SetCurLine(source, offset);
+            Debug.WriteLine("--- NEWLINE ---");
         }
 
         public bool ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)
@@ -26,6 +29,7 @@ namespace HSPToolsVS.Language
             var token = _lexer.GetNextToken(ref state);
             if (token == null)
                 return false;
+            Debug.WriteLine(token.ToString());
             tokenInfo.StartIndex = token.StartIndex;
             tokenInfo.EndIndex = token.EndIndex;
             tokenInfo.Type = token.Type.ToTokenType();

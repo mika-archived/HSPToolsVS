@@ -8,6 +8,7 @@ namespace HSPToolsVS.Language
     // ReSharper disable once InconsistentNaming
     internal class HSPLexer
     {
+        private bool _isStringCharsIn;
         private int _offset;
         private string _source;
 
@@ -15,11 +16,14 @@ namespace HSPToolsVS.Language
         {
             _source = source.Substring(offset);
             _offset = offset;
+            _isStringCharsIn = false;
         }
 
         public Token GetNextToken(ref int state)
         {
             // InComment?
+            if (_source.Length <= _offset)
+                return null;
             var source = _source.Substring(_offset);
             if (state == (int) ParseState.InBlockComment)
             {
@@ -39,88 +43,117 @@ namespace HSPToolsVS.Language
                 if (char.IsWhiteSpace(c))
                 {
                     if (charHistory.Count != 0)
-                        return ProduceToken(charHistory, ref _offset, true);
-                    _offset++;
-                    return new Token("", _offset - 1, HSPTokenType.Sepatator);
+                        if (_isStringCharsIn)
+                        {
+                            charHistory.Add(c);
+                            continue;
+                        }
+                        else
+                            return ProduceToken(charHistory, true);
+                    var index = _offset;
+                    _offset += 1;
+                    return new Token("", index, HSPTokenType.Sepatator);
                 }
+                if (c == ';')
+                {
+                    var index = _offset;
+                    _offset += source.Length;
+                    return new Token(source, index, HSPTokenType.Comment);
+                }
+                if (c == '\'' || c == '"')
+                    _isStringCharsIn = true;
                 charHistory.Add(c);
                 if (string.Join(string.Empty, charHistory) == "/*")
                 {
                     state = (int) ParseState.InBlockComment;
                     return new Token(source.Substring(_offset), _offset, HSPTokenType.Comment);
                 }
-                var token = ProduceToken(charHistory, ref _offset);
+                if (string.Join(string.Empty, charHistory) == "//")
+                {
+                    var index = _offset;
+                    _offset += source.Length;
+                    return new Token(source, index, HSPTokenType.Comment);
+                }
+                var token = ProduceToken(charHistory);
                 if (token != null)
                     return token;
             }
-            return ProduceToken(charHistory, ref _offset, true); // Last
+            return ProduceToken(charHistory, true); // Last
         }
 
-        private Token ProduceToken(List<char> charHistory, ref int startIndex, bool isForce = false)
+        private Token ProduceToken(List<char> charHistory, bool isForce = false)
         {
             var str = string.Join(string.Empty, charHistory);
-            var index = startIndex;
+            var index = _offset;
             // TODO: *flag の判定(* -> Operator, flag -> Identifier を *flag -> Flag にする)
-            if (IsContainsInList(str, HSPTokens.Operators1Char, HSPTokens.Operators2Chars,
-                                 HSPTokens.Operators3Chars))
+            if (!_isStringCharsIn && str.Length > 1 && IsEndsWithInList(str, HSPTokens.Operators))
+            {
+                charHistory.RemoveRange(charHistory.Count - 1, 1);
+                return ProduceToken(charHistory, true);
+            }
+            if (IsContainsInList(str, HSPTokens.Operators))
             {
                 charHistory.Clear();
-                startIndex += str.Length;
+                _offset += str.Length;
                 return new Token(str, index, HSPTokenType.Operator);
             }
-            if (IsEndsWithInList(str, HSPTokens.Separators))
+            if (!_isStringCharsIn && str.Length > 1 && IsEndsWithInList(str, HSPTokens.Separators))
             {
-                charHistory.RemoveRange(0, charHistory.Count - 1);
-                return ProduceToken(charHistory, ref startIndex, true);
+                charHistory.RemoveRange(charHistory.Count - 1, 1);
+                return ProduceToken(charHistory, true);
             }
             if (IsContainsInList(str, HSPTokens.Separators))
             {
                 charHistory.Clear();
-                startIndex += str.Length;
+                _offset += str.Length;
                 return new Token(str, index, HSPTokenType.Sepatator);
             }
-            if (IsContainsInList(str, HSPTokens.Keywords))
+            if (IsMatch(str, "^\".*?\"$"))
             {
                 charHistory.Clear();
-                startIndex += str.Length;
+                _isStringCharsIn = false;
+                _offset += str.Length;
+                return new Token(str, index, HSPTokenType.String);
+            }
+            if (IsMatch(str, "^'.*?'$")) // HSP allows 'foo' (return 'f' char code).
+            {
+                charHistory.Clear();
+                _isStringCharsIn = false;
+                _offset += str.Length;
+                return new Token(str, index, HSPTokenType.Char);
+            }
+            if (!isForce)
+                return null;
+            charHistory.Clear();
+            return ParseKeywordAndMacroAndPreprocessors(str) ?? ParseIdentifierOrNumericOrFlag(str);
+        }
+
+        private Token ParseKeywordAndMacroAndPreprocessors(string str)
+        {
+            var index = _offset;
+            if (IsContainsInList(str, HSPTokens.Keywords))
+            {
+                _offset += str.Length;
                 return new Token(str, index, HSPTokenType.Keyword);
             }
             if (IsContainsInList(str, HSPTokens.Macros))
             {
-                charHistory.Clear();
-                startIndex += str.Length;
+                _offset += str.Length;
                 return new Token(str, index, HSPTokenType.Macro);
             }
             if (IsContainsInList(str, HSPTokens.Preprocessors))
             {
-                charHistory.Clear();
-                startIndex += str.Length;
+                _offset += str.Length;
                 return new Token(str, index, HSPTokenType.Preprocessor);
             }
-            if (IsMatch(str, "\".*?\""))
-            {
-                charHistory.Clear();
-                startIndex += str.Length;
-                return new Token(str, index, HSPTokenType.String);
-            }
-            if (IsMatch(str, "'.*?'")) // HSP allows 'foo' (return 'f' char code).
-            {
-                charHistory.Clear();
-                startIndex += str.Length;
-                return new Token(str, index, HSPTokenType.Char);
-            }
-
-            if (!isForce)
-                return null;
-            charHistory.Clear();
-            return ParseIdentifierOrNumericOrFlag(str, ref startIndex);
+            return null;
         }
 
-        private Token ParseIdentifierOrNumericOrFlag(string str, ref int startIndex)
+        private Token ParseIdentifierOrNumericOrFlag(string str)
         {
             double d;
-            var index = startIndex;
-            startIndex += str.Length;
+            var index = _offset;
+            _offset += str.Length;
             if (double.TryParse(str, out d))
                 return new Token(str, index, HSPTokenType.Numeric);
             return str.StartsWith("*")
@@ -133,9 +166,9 @@ namespace HSPToolsVS.Language
             return lists.Any(list => list.Contains(str));
         }
 
-        private bool IsEndsWithInList(string str, List<string> list)
+        private bool IsEndsWithInList(string str, params List<string>[] lists)
         {
-            return list.All(str.EndsWith);
+            return lists.Any(list => list.Any(str.EndsWith));
         }
 
         private bool IsMatch(string str, string regex)
