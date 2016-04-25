@@ -110,14 +110,14 @@ namespace HSPToolsVS.Language
                     return TokenColor.Comment;
 
                 case HSPTokenType.Numeric:
+                case HSPTokenType.Macro:
+                case HSPTokenType.Flag:
                     return TokenColor.Number; // Literal?
 
-                case HSPTokenType.Flag:
                 case HSPTokenType.Idenfitier:
                     return TokenColor.Identifier;
 
                 case HSPTokenType.Keyword:
-                case HSPTokenType.Macro:
                 case HSPTokenType.Preprocessor:
                     return TokenColor.Keyword;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -25,15 +24,6 @@ namespace HSPToolsVS.Language
             if (_source.Length <= _offset)
                 return null;
             var source = _source.Substring(_offset);
-            if (state == (int) ParseState.InBlockComment)
-            {
-                if (!source.Contains("*/"))
-                    return new Token(source, _offset, HSPTokenType.Comment);
-                state = (int) ParseState.InNormal;
-                var index = _offset + source.IndexOf("*/", StringComparison.Ordinal);
-                _offset += source.IndexOf("*/", StringComparison.Ordinal);
-                return new Token(source.Substring(index, _offset), index, HSPTokenType.Comment);
-            }
             if (source == "")
                 return null;
 
@@ -63,11 +53,6 @@ namespace HSPToolsVS.Language
                 if (c == '\'' || c == '"')
                     _isStringCharsIn = true;
                 charHistory.Add(c);
-                if (string.Join(string.Empty, charHistory) == "/*")
-                {
-                    state = (int) ParseState.InBlockComment;
-                    return new Token(source.Substring(_offset), _offset, HSPTokenType.Comment);
-                }
                 if (string.Join(string.Empty, charHistory) == "//")
                 {
                     var index = _offset;
