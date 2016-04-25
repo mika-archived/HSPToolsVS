@@ -5,23 +5,28 @@ namespace HSPToolsVS.Language
     // ReSharper disable once InconsistentNaming
     internal static class HSPTokens
     {
-        public static List<string> Operators1Char = new List<string>
+        public static List<string> LineComment => new List<string> {"//", ";"};
+
+        public static List<string> Operators1Char => new List<string>
         {
             "+", "-", "*", "/", "\\", "&", "|", "^", "=", "!", "<", ">"
         };
 
-        public static List<string> Operators2Chars = new List<string>
+        public static List<string> Operators2Chars => new List<string>
         {
             "<<", ">>", "==", "!=", ">=", "<=", "+=", "-=",
             "*=", "/=", "\\=", "|=", "&=", "^=", "++", "--"
         };
 
-        public static List<string> Operators3Chars = new List<string>
+        public static List<string> Operators3Chars => new List<string>
         {
             "<<=", ">>="
         };
 
-        public static List<string> LineComment = new List<string> {"//", ";"};
+        public static List<string> Separators => new List<string>
+        {
+            ",", ":", "(", ")", "{", "}"
+        };
 
         public static List<string> Keywords { get; }
 

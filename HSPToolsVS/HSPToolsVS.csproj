@@ -61,6 +61,7 @@
     <Compile Include="Language\HSPScanner.cs" />
     <Compile Include="Language\HSPSource.cs" />
     <Compile Include="Language\HSPTokens.cs" />
+    <Compile Include="Language\ParseState.cs" />
     <Compile Include="Language\Token.cs" />
     <Compile Include="Language\HSPTokenType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

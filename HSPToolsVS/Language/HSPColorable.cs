@@ -14,16 +14,25 @@ namespace HSPToolsVS.Language
         {
             var items = new List<ColorableItem>
             {
-                new HSPColorableItem("Unknown",
-                                     COLORINDEX.CI_SYSPLAINTEXT_FG,
-                                     COLORINDEX.CI_SYSPLAINTEXT_BK),
                 new HSPColorableItem("Text",
                                      COLORINDEX.CI_SYSPLAINTEXT_FG,
                                      COLORINDEX.CI_SYSPLAINTEXT_BK),
                 new HSPColorableItem("Keyword",
                                      COLORINDEX.CI_DARKBLUE,
                                      COLORINDEX.CI_SYSPLAINTEXT_BK,
-                                     FONTFLAGS.FF_BOLD)
+                                     FONTFLAGS.FF_BOLD),
+                new HSPColorableItem("Comment",
+                                     COLORINDEX.CI_DARKGREEN,
+                                     COLORINDEX.CI_SYSPLAINTEXT_BK),
+                new HSPColorableItem("Identifier",
+                                     COLORINDEX.CI_SYSPLAINTEXT_FG,
+                                     COLORINDEX.CI_SYSPLAINTEXT_BK),
+                new HSPColorableItem("String",
+                                     COLORINDEX.CI_BROWN,
+                                     COLORINDEX.CI_SYSPLAINTEXT_BK),
+                new HSPColorableItem("Number",
+                                     COLORINDEX.CI_SYSPLAINTEXT_FG,
+                                     COLORINDEX.CI_SYSPLAINTEXT_BK)
             };
             ColorableItems = items.ToArray();
         }

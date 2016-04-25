@@ -4,10 +4,10 @@ using Microsoft.VisualStudio.TextManager.Interop;
 namespace HSPToolsVS.Language
 {
     // ReSharper disable once InconsistentNaming
+    // Line-based syntax scanner
     internal class HSPScanner : IScanner
     {
         private readonly HSPLexer _lexer;
-        private string _source;
         private IVsTextBuffer _textBuffer;
 
         public HSPScanner(IVsTextBuffer textBuffer)
@@ -18,37 +18,19 @@ namespace HSPToolsVS.Language
 
         public void SetSource(string source, int offset)
         {
-            _source = source.Substring(offset);
             _lexer.SetCurLine(source, offset);
-            _lexer.Tokenize();
         }
 
         public bool ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)
         {
-            var foundToken = false;
-            var token = _lexer.GetNextToken();
-            if (token != null)
-            {
-                switch (token.Type)
-                {
-                    case HSPTokenType.Preprocessor:
-                        tokenInfo.StartIndex = token.StartIndex;
-                        tokenInfo.EndIndex = token.EndIndex;
-                        tokenInfo.Color = TokenColor.Comment;
-                        tokenInfo.Type = TokenType.Unknown;
-                        foundToken = true;
-                        break;
-
-                    case HSPTokenType.Keyword:
-                        tokenInfo.StartIndex = token.StartIndex;
-                        tokenInfo.EndIndex = token.EndIndex;
-                        tokenInfo.Color = TokenColor.Keyword;
-                        tokenInfo.Type = TokenType.Keyword;
-                        foundToken = true;
-                        break;
-                }
-            }
-            return foundToken;
+            var token = _lexer.GetNextToken(ref state);
+            if (token == null)
+                return false;
+            tokenInfo.StartIndex = token.StartIndex;
+            tokenInfo.EndIndex = token.EndIndex;
+            tokenInfo.Type = token.Type.ToTokenType();
+            tokenInfo.Color = token.Type.ToColor();
+            return true;
         }
     }
 }
