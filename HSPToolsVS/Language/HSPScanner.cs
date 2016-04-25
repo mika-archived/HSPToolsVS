@@ -30,6 +30,7 @@ namespace HSPToolsVS.Language
             tokenInfo.EndIndex = token.EndIndex;
             tokenInfo.Type = token.Type.ToTokenType();
             tokenInfo.Color = token.Type.ToColor();
+            tokenInfo.Token = (int) token.Type;
             return true;
         }
     }
