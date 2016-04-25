@@ -115,24 +115,21 @@ namespace HSPToolsVS
 
         public void OnEnterState(uint uStateId, int fEnter)
         {
-            throw new NotImplementedException();
+
         }
 
         public void OnAppActivate(int fActive, uint dwOtherThreadId)
         {
-            // throw new NotImplementedException();
+
         }
 
         public void OnLoseActivation()
         {
-            throw new NotImplementedException();
+
         }
 
         public void OnActivationChange(IOleComponent pic, int fSameComponent, OLECRINFO[] pcrinfo, int fHostIsActivating,
-                                       OLECHOSTINFO[] pchostinfo, uint dwReserved)
-        {
-            throw new NotImplementedException();
-        }
+                                       OLECHOSTINFO[] pchostinfo, uint dwReserved) {}
 
         public int FDoIdle(uint grfidlef)
         {
@@ -150,7 +147,7 @@ namespace HSPToolsVS
 
         public void Terminate()
         {
-            throw new NotImplementedException();
+
         }
 
         public IntPtr HwndGetWindow(uint dwWhich, uint dwReserved)
