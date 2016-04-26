@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{CA9EAC28-09CA-42BE-AADD-66A6ED79980F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSDoc", "Tools\HSDoc\HSDoc.csproj", "{2448C790-5117-4F9C-BEA4-FAAEE53374DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +27,15 @@ Global
 		{A4AAC5A7-5639-4453-BA5D-4001470F310A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AAC5A7-5639-4453-BA5D-4001470F310A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4AAC5A7-5639-4453-BA5D-4001470F310A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2448C790-5117-4F9C-BEA4-FAAEE53374DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2448C790-5117-4F9C-BEA4-FAAEE53374DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2448C790-5117-4F9C-BEA4-FAAEE53374DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2448C790-5117-4F9C-BEA4-FAAEE53374DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2448C790-5117-4F9C-BEA4-FAAEE53374DD} = {CA9EAC28-09CA-42BE-AADD-66A6ED79980F}
 	EndGlobalSection
 EndGlobal
