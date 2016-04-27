@@ -8,5 +8,21 @@ namespace HSPToolsVS.Language
     {
         public HSPSource(LanguageService service, IVsTextLines textLines, Colorizer colorizer)
             : base(service, textLines, colorizer) {}
+
+        #region Overrides of Source
+
+        public override CommentInfo GetCommentFormat()
+        {
+            var info = new CommentInfo
+            {
+                UseLineComments = true,
+                LineStart = ";",
+                BlockStart = "/*",
+                BlockEnd = "*/"
+            };
+            return info;
+        }
+
+        #endregion
     }
 }

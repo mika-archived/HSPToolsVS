@@ -10,7 +10,7 @@ namespace HSPToolsVS.Language
         public HSPLanguagePreferences(IServiceProvider site, Guid langSvc, string name) : base(site, langSvc, name)
         {
             EnableCodeSense = true; // IntelliSense support.
-            EnableCommenting = true; // Block comments.
+            EnableCommenting = true; // Toggle comments from Edit -> Advanced. (Ctrl+K, Ctrl+C / Ctrl+K, Ctrl+U)
             EnableMatchBraces = true; // Highlight matching brances.
             EnableMatchBracesAtCaret = true; // Highlight matching braces on typings.
             LineNumbers = true; // Shown line numbers.
