@@ -7,6 +7,7 @@ namespace HSPToolsVS.Language
     // ReSharper disable once InconsistentNaming
     internal class HSPLexer
     {
+        private bool _isSpecialCharProcessing;
         private bool _isStringCharsIn;
         private int _offset;
         private string _source;
@@ -16,6 +17,7 @@ namespace HSPToolsVS.Language
             _source = source.Substring(offset);
             _offset = offset;
             _isStringCharsIn = false;
+            _isSpecialCharProcessing = false;
         }
 
         public Token GetNextToken(ref int state)
@@ -53,7 +55,7 @@ namespace HSPToolsVS.Language
                 if (c == '\'' || c == '"')
                     _isStringCharsIn = true;
                 charHistory.Add(c);
-                if (string.Join(string.Empty, charHistory) == "//")
+                if (!_isStringCharsIn && string.Join(string.Empty, charHistory) == "//")
                 {
                     var index = _offset;
                     _offset += source.Length;
@@ -74,12 +76,14 @@ namespace HSPToolsVS.Language
             if (!_isStringCharsIn && str.Length > 1 && IsEndsWithInList(str, HSPTokens.Operators))
             {
                 charHistory.RemoveRange(charHistory.Count - 1, 1);
+                _isSpecialCharProcessing = true;
                 return ProduceToken(charHistory, true);
             }
-            if (IsContainsInList(str, HSPTokens.Operators))
+            if (_isSpecialCharProcessing && IsContainsInList(str, HSPTokens.Operators))
             {
                 charHistory.Clear();
                 _offset += str.Length;
+                _isSpecialCharProcessing = false;
                 return new Token(str, index, HSPTokenType.Operator);
             }
             if (!_isStringCharsIn && str.Length > 1 && IsEndsWithInList(str, HSPTokens.Separators))
@@ -91,6 +95,7 @@ namespace HSPToolsVS.Language
             {
                 charHistory.Clear();
                 _offset += str.Length;
+                _isSpecialCharProcessing = false;
                 return new Token(str, index, HSPTokenType.Sepatator);
             }
             if (IsMatch(str, "^\".*?\"$"))
@@ -141,9 +146,14 @@ namespace HSPToolsVS.Language
             _offset += str.Length;
             if (double.TryParse(str, out d))
                 return new Token(str, index, HSPTokenType.Numeric);
-            return str.StartsWith("*")
-                ? new Token(str, index, HSPTokenType.Flag)
-                : new Token(str, index, HSPTokenType.Idenfitier);
+            // Label
+            if (str.StartsWith("*"))
+            {
+                return str.Length > 1
+                    ? new Token(str, index, HSPTokenType.Flag)
+                    : new Token(str, index, HSPTokenType.Operator);
+            }
+            return new Token(str, index, HSPTokenType.Idenfitier);
         }
 
         private bool IsContainsInList(string str, params List<string>[] lists)

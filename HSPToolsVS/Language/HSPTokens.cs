@@ -11,7 +11,10 @@ namespace HSPToolsVS.Language
 
         public static List<string> Operators { get; }
 
-        public static List<string> Separators => new List<string>();
+        public static List<string> Separators => new List<string>
+        {
+            ",", ":", "(", ")", "{", "}", ".", "@"
+        };
 
         public static List<string> Keywords { get; }
 
@@ -94,8 +97,7 @@ namespace HSPToolsVS.Language
                 "+", "-", "*", "/", "\\", "&", "|", "^", "=", "!", "<", ">",
                 "<<", ">>", "==", "!=", ">=", "<=", "+=", "-=",
                 "*=", "/=", "\\=", "|=", "&=", "^=", "++", "--",
-                "<<=", ">>=",
-                ",", ":", "(", ")", "{", "}", ".", "@"
+                "<<=", ">>="
             };
             Operators.Sort((s1, s2) => s2.Length - s1.Length);
         }
