@@ -8,7 +8,7 @@ using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
-using HSPToolsVS.Language;
+using HSPToolsVS.LanguageService;
 
 using Microsoft.VisualStudio.Shell;
 

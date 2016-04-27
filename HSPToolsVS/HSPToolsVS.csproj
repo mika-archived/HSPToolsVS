@@ -52,21 +52,200 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="HSPVSPackage.cs" />
-    <Compile Include="Language\HSPAuthoringScope.cs" />
-    <Compile Include="Language\HSPLanguagePreferences.cs" />
-    <Compile Include="Language\HSPLanguageService.cs" />
-    <Compile Include="Language\HSPLexer.cs" />
-    <Compile Include="Language\HSPScanner.cs" />
-    <Compile Include="Language\HSPSource.cs" />
-    <Compile Include="Language\HSPTokens.cs" />
-    <Compile Include="Language\ParseState.cs" />
-    <Compile Include="Language\Token.cs" />
-    <Compile Include="Language\HSPTokenType.cs" />
+    <Compile Include="LanguageService\HSPAuthoringScope.cs" />
+    <Compile Include="LanguageService\HSPLanguagePreferences.cs" />
+    <Compile Include="LanguageService\HSPLanguageService.cs" />
+    <Compile Include="LanguageService\HSPLexer.cs" />
+    <Compile Include="LanguageService\HSPScanner.cs" />
+    <Compile Include="LanguageService\HSPSource.cs" />
+    <Compile Include="LanguageService\HSPTokens.cs" />
+    <Compile Include="LanguageService\ParseState.cs" />
+    <Compile Include="LanguageService\Token.cs" />
+    <Compile Include="LanguageService\HSPTokenType.cs" />
+    <Compile Include="Project\SharedProject\AllFilesProjectElement.cs" />
+    <Compile Include="Project\SharedProject\AssemblyReferenceNode.cs" />
+    <Compile Include="Project\SharedProject\Attributes.cs" />
+    <Compile Include="Project\SharedProject\Automation\AutomationScope.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAFileItem.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAFolderItem.cs" />
+    <Compile Include="Project\SharedProject\Automation\OANavigableProjectItems.cs" />
+    <Compile Include="Project\SharedProject\Automation\OANullProperty.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProject.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProjectConfigurationProperties.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProjectItem.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProjectItems.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProperties.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAProperty.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAReferenceFolderItem.cs" />
+    <Compile Include="Project\SharedProject\Automation\OAReferenceItem.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAAssemblyReference.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAProjectReference.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAReferenceBase.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAReferences.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAVSProject.cs" />
+    <Compile Include="Project\SharedProject\Automation\VSProject\OAVSProjectItem.cs" />
+    <Compile Include="Project\SharedProject\BuildDependency.cs" />
+    <Compile Include="Project\SharedProject\BuildPropertyPage.cs" />
+    <Compile Include="Project\SharedProject\ClipboardService.cs" />
+    <Compile Include="Project\SharedProject\Command.cs" />
+    <Compile Include="Project\SharedProject\CommonConfigProvider.cs" />
+    <Compile Include="Project\SharedProject\CommonConstants.cs" />
+    <Compile Include="Project\SharedProject\CommonEditorFactory.cs" />
+    <Compile Include="Project\SharedProject\CommonFileNode.cs" />
+    <Compile Include="Project\SharedProject\CommonFolderNode.cs" />
+    <Compile Include="Project\SharedProject\CommonNonCodeFileNode.cs" />
+    <Compile Include="Project\SharedProject\CommonPackage.cs" />
+    <Compile Include="Project\SharedProject\CommonProjectConfig.cs" />
+    <Compile Include="Project\SharedProject\CommonProjectNode.cs" />
+    <Compile Include="Project\SharedProject\CommonProjectNodeProperties.cs" />
+    <Compile Include="Project\SharedProject\CommonProjectPackage.cs" />
+    <Compile Include="Project\SharedProject\CommonPropertyPage.cs" />
+    <Compile Include="Project\SharedProject\CommonReferenceContainerNode.cs" />
+    <Compile Include="Project\SharedProject\CommonUtils.cs" />
+    <Compile Include="Project\SharedProject\ConfigProvider.cs" />
+    <Compile Include="Project\SharedProject\DataObject.cs" />
+    <Compile Include="Project\SharedProject\DebugTimer.cs" />
+    <Compile Include="Project\SharedProject\DependentFileNode.cs" />
+    <Compile Include="Project\SharedProject\DesignPropertyDescriptor.cs" />
+    <Compile Include="Project\SharedProject\DeveloperActivityAttribute.cs" />
+    <Compile Include="Project\SharedProject\DialogWindowVersioningWorkaround.cs" />
+    <Compile Include="Project\SharedProject\DirtyChangedEventArgs.cs" />
+    <Compile Include="Project\SharedProject\DocumentManager.cs" />
+    <Compile Include="Project\SharedProject\EnumBSTR.cs" />
+    <Compile Include="Project\SharedProject\EnumDependencies.cs" />
+    <Compile Include="Project\SharedProject\ExceptionExtensions.cs" />
+    <Compile Include="Project\SharedProject\ExtensibilityEventsDispatcher.cs" />
+    <Compile Include="Project\SharedProject\FileChangeManager.cs" />
+    <Compile Include="Project\SharedProject\FileDocumentManager.cs" />
+    <Compile Include="Project\SharedProject\FileNode.cs" />
+    <Compile Include="Project\SharedProject\FileWatcher.cs" />
+    <Compile Include="Project\SharedProject\FlavoredProjectFactoryBase.cs" />
+    <Compile Include="Project\SharedProject\FolderNode.cs" />
+    <Compile Include="Project\SharedProject\HierarchyIdMap.cs" />
+    <Compile Include="Project\SharedProject\HierarchyNode.cs" />
+    <Compile Include="Project\SharedProject\HierarchyNodeFlags.cs" />
+    <Compile Include="Project\SharedProject\IClipboardService.cs" />
+    <Compile Include="Project\SharedProject\IDEBuildLogger.cs" />
+    <Compile Include="Project\SharedProject\IDiskBasedNode.cs" />
+    <Compile Include="Project\SharedProject\IdleManager.cs" />
+    <Compile Include="Project\SharedProject\ImageHandler.cs" />
+    <Compile Include="Project\SharedProject\Interfaces.cs" />
+    <Compile Include="Project\SharedProject\IProjectLauncher.cs" />
+    <Compile Include="Project\SharedProject\IProjectLaunchProperties.cs" />
+    <Compile Include="Project\SharedProject\IProjectPublisher.cs" />
+    <Compile Include="Project\SharedProject\IPublishFile.cs" />
+    <Compile Include="Project\SharedProject\IPublishProject.cs" />
+    <Compile Include="Project\SharedProject\LocalizableProperties.cs" />
+    <Compile Include="Project\SharedProject\Misc\ConnectionPointContainer.cs" />
+    <Compile Include="Project\SharedProject\Misc\ExternDll.cs" />
+    <Compile Include="Project\SharedProject\Misc\NativeMethods.cs" />
+    <Compile Include="Project\SharedProject\Misc\UnsafeNativeMethods.cs" />
+    <Compile Include="Project\SharedProject\MsBuildProjectElement.cs" />
+    <Compile Include="Project\SharedProject\Navigation\CommonLibraryNode.cs" />
+    <Compile Include="Project\SharedProject\Navigation\HierarchyListener.cs" />
+    <Compile Include="Project\SharedProject\Navigation\ICustomSearchListProvider.cs" />
+    <Compile Include="Project\SharedProject\Navigation\ILibraryManager.cs" />
+    <Compile Include="Project\SharedProject\Navigation\IScopeNode.cs" />
+    <Compile Include="Project\SharedProject\Navigation\ISimpleObject.cs" />
+    <Compile Include="Project\SharedProject\Navigation\Library.cs" />
+    <Compile Include="Project\SharedProject\Navigation\LibraryManager.cs" />
+    <Compile Include="Project\SharedProject\Navigation\LibraryNode.cs" />
+    <Compile Include="Project\SharedProject\Navigation\LibraryTask.cs" />
+    <Compile Include="Project\SharedProject\Navigation\ModuleId.cs" />
+    <Compile Include="Project\SharedProject\Navigation\ProjectLibraryNode.cs" />
+    <Compile Include="Project\SharedProject\Navigation\SimpleObject.cs" />
+    <Compile Include="Project\SharedProject\Navigation\SimpleObjectList.cs" />
+    <Compile Include="Project\SharedProject\Navigation\SourceLocation.cs" />
+    <Compile Include="Project\SharedProject\Navigation\TextLineEventListener.cs" />
+    <Compile Include="Project\SharedProject\NodeProperties.cs" />
+    <Compile Include="Project\SharedProject\ObservableCollectionExtensions.cs" />
+    <Compile Include="Project\SharedProject\OleServiceProvider.cs" />
+    <Compile Include="Project\SharedProject\Output.cs" />
+    <Compile Include="Project\SharedProject\OutputGroup.cs" />
+    <Compile Include="Project\SharedProject\OutputWindowRedirector.cs" />
+    <Compile Include="Project\SharedProject\OverwriteFileDialog.xaml.cs">
+      <DependentUpon>OverwriteFileDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project\SharedProject\ProcessOutput.cs" />
+    <Compile Include="Project\SharedProject\ProjectConfig.cs" />
+    <Compile Include="Project\SharedProject\ProjectDesignerDocumentManager.cs" />
+    <Compile Include="Project\SharedProject\ProjectDocumentsListener.cs" />
+    <Compile Include="Project\SharedProject\ProjectDocumentsListenerForStartupFileUpdates.cs" />
+    <Compile Include="Project\SharedProject\ProjectElement.cs" />
+    <Compile Include="Project\SharedProject\ProjectFactory.cs" />
+    <Compile Include="Project\SharedProject\ProjectFileConstants.cs" />
+    <Compile Include="Project\SharedProject\ProjectNode.CopyPaste.cs" />
+    <Compile Include="Project\SharedProject\ProjectNode.cs" />
+    <Compile Include="Project\SharedProject\ProjectNode.Events.cs" />
+    <Compile Include="Project\SharedProject\ProjectNode.IOleCommandTarget.cs" />
+    <Compile Include="Project\SharedProject\ProjectPackage.cs" />
+    <Compile Include="Project\SharedProject\ProjectReferenceNode.cs" />
+    <Compile Include="Project\SharedProject\ProjectResources.cs" />
+    <Compile Include="Project\SharedProject\PropertiesEditorLauncher.cs" />
+    <Compile Include="Project\SharedProject\ProvideCodeExpansionPathAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideCodeExpansionsAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideDebugEngineAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideDebugExceptionAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideDebugLanguageAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideDebugPortPickerAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideDebugPortSupplierAttribute.cs" />
+    <Compile Include="Project\SharedProject\ProvideTextEditorAutomationAttribute.cs" />
+    <Compile Include="Project\SharedProject\PublishFailedException.cs" />
+    <Compile Include="Project\SharedProject\PublishFile.cs" />
+    <Compile Include="Project\SharedProject\PublishProject.cs" />
+    <Compile Include="Project\SharedProject\PublishProjectOptions.cs" />
+    <Compile Include="Project\SharedProject\ReferenceContainerNode.cs" />
+    <Compile Include="Project\SharedProject\ReferenceNode.cs" />
+    <Compile Include="Project\SharedProject\SharedCommands.cs" />
+    <Compile Include="Project\SharedProject\SolutionEventsListener.cs" />
+    <Compile Include="Project\SharedProject\SolutionListener.cs" />
+    <Compile Include="Project\SharedProject\SolutionListenerForBuildDependencyUpdate.cs" />
+    <Compile Include="Project\SharedProject\SolutionListenerForProjectEvents.cs" />
+    <Compile Include="Project\SharedProject\SolutionListenerForProjectOpen.cs" />
+    <Compile Include="Project\SharedProject\StructuresEnums.cs" />
+    <Compile Include="Project\SharedProject\SuspendFileChanges.cs" />
+    <Compile Include="Project\SharedProject\TaskDialog.cs" />
+    <Compile Include="Project\SharedProject\TaskExtensions.cs" />
+    <Compile Include="Project\SharedProject\TaskProgressBar.xaml.cs">
+      <DependentUpon>TaskProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Project\SharedProject\TrackDocumentsHelper.cs" />
+    <Compile Include="Project\SharedProject\UIThread.cs" />
+    <Compile Include="Project\SharedProject\UIThreadBase.cs" />
+    <Compile Include="Project\SharedProject\UIThreadSynchronizer.cs" />
+    <Compile Include="Project\SharedProject\UpdateSolutionEventsListener.cs" />
+    <Compile Include="Project\SharedProject\Utilities.cs" />
+    <Compile Include="Project\SharedProject\VirtualProjectElement.cs" />
+    <Compile Include="Project\SharedProject\VsCommands.cs" />
+    <Compile Include="Project\SharedProject\VsExtensions.cs" />
+    <Compile Include="Project\SharedProject\VSShellUtilities.cs" />
+    <Compile Include="Project\SharedProject\VsTaskExtensions.cs" />
+    <Compile Include="Project\SharedProject\WaitDialog.cs" />
+    <Compile Include="Project\SharedProject\WebPiComponentPickerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Project\SharedProject\WebPiComponentPickerControl.designer.cs">
+      <DependentUpon>WebPiComponentPickerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\SharedProject\WebSocketStream.cs" />
+    <Compile Include="Project\SharedProject\Wpf\Commands.cs" />
+    <Compile Include="Project\SharedProject\Wpf\ConfigurationControl.cs" />
+    <Compile Include="Project\SharedProject\Wpf\Controls.cs" />
+    <Compile Include="Project\SharedProject\Wpf\Dialogs.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LabelledButton.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LabelledControl.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LambdaConverter\ILambdaConverterProvider.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LambdaConverter\LambdaConverter.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LambdaConverter\LambdaExtension.cs" />
+    <Compile Include="Project\SharedProject\Wpf\LambdaConverter\LambdaProperties.cs" />
+    <Compile Include="Project\SharedProject\Wpf\NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
     <None Include="packages.config" />
+    <None Include="Project\SharedProject\ProcessOutput.cs.rej" />
+    <None Include="Project\SharedProject\SharedProject.proj" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -84,24 +263,39 @@
     <Reference Include="EnvDTE90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.Build" />
     <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.CommandBars, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.14.2.25123\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Debugger.Interop, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Designer.Interfaces, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Editor, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Imaging, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Imaging.14.2.25123\lib\net45\Microsoft.VisualStudio.Imaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\packages\Microsoft.VisualStudio.OLE.Interop.7.10.6070\lib\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Package.LanguageService.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.ProjectAggregator, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Shell.14.0.14.2.25123\lib\Microsoft.VisualStudio.Shell.14.0.dll</HintPath>
       <Private>True</Private>
@@ -199,16 +393,49 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj2, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\HSPVSPackage.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Project\SharedProject\ProjectResources.resx">
+      <DependentUpon>ProjectResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\SharedProject\WebPiComponentPickerControl.resx">
+      <DependentUpon>WebPiComponentPickerControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ItemTemplates\" />
+    <Folder Include="ProjectTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Project\SharedProject\OverwriteFileDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project\SharedProject\TaskProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Project\SharedProject\Wpf\Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
