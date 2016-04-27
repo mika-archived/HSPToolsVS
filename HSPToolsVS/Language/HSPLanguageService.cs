@@ -36,19 +36,5 @@ namespace HSPToolsVS.Language
         }
 
         public override string GetFormatFilterList() => "HSP Script Files(*.hsp,*.as)|*.hsp;*.as";
-
-        /*
-        public override int GetItemCount(out int count)
-        {
-            count = HSPColorable.ColorableItems.Length;
-            return VSConstants.S_OK;
-        }
-
-        public override int GetColorableItem(int index, out IVsColorableItem item)
-        {
-            item = HSPColorable.ColorableItems[index];
-            return VSConstants.S_OK;
-        }
-        */
     }
 }
