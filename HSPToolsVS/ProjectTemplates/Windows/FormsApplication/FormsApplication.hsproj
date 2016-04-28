@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <HSPInstalledRootPath Condition=" '$(HSPInstalledRootPath)' == '' ">C:\hsp34</HSPInstalledRootPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid></ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>FormsApplication</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.hsp">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

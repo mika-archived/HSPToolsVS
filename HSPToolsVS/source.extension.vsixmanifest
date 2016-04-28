@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="HSPToolsVS.Mikazuki Fuyuno.62324c32-5e95-438f-8b4d-a14b3efae149" Version="1.0" Language="en-US" Publisher="Mikazuki Fuyuno" />
+    <Identity Id="HSPToolsVS" Version="1.0" Language="en-US" Publisher="Mikazuki Fuyuno" />
     <DisplayName>HSPToolsVS</DisplayName>
-    <Description xml:space="preserve">HSPToolsVs add Hot Soup Processor support to your Visual Studio.</Description>
+    <Description xml:space="preserve">HSPToolsVS add Hot Soup Processor support to your Visual Studio.</Description>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0)" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Enterprise" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>HSP3 Windows Forms Application Project</Name>
+    <Description>A project for creating a new HSP3 Windows Forms application.</Description>
+    <Icon>FormsApplication.png</Icon>
+    <ProjectType>HSP3</ProjectType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FormsApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.hsproj" File="FormsApplication.hsproj" ReplaceParameters="true">
+      <ProjectItem OpenInEditor="true">Program.hsp</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

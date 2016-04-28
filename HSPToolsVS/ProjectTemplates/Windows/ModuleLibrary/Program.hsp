@@ -1,0 +1,4 @@
+﻿#module $className$
+
+
+#global
