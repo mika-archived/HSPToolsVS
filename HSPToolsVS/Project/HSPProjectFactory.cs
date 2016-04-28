@@ -1,9 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 using Microsoft.VisualStudioTools.Project;
-
-using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
 
 namespace HSPToolsVS.Project
 {
@@ -13,14 +12,15 @@ namespace HSPToolsVS.Project
     {
         public HSPProjectFactory(IServiceProvider serviceProvider) : base(serviceProvider)
         {
-
+            Debug.WriteLine("HSPProjectFactory");
         }
 
         #region Overrides of ProjectFactory
 
         internal override ProjectNode CreateProject()
         {
-            return new HSPProjectNode(Site);
+            var stream = GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.imagelis.bmp");
+            return new HSPProjectNode(Site, Utilities.GetImageList(stream));
         }
 
         #endregion

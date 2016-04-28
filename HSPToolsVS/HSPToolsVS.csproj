@@ -62,9 +62,15 @@
     <Compile Include="LanguageService\ParseState.cs" />
     <Compile Include="LanguageService\Token.cs" />
     <Compile Include="LanguageService\HSPTokenType.cs" />
+    <Compile Include="Project\HSPLibraryManager.cs" />
     <Compile Include="Project\HSPProjectFactory.cs" />
     <Compile Include="Project\HSPProjectNode.cs" />
     <Compile Include="Project\HSPProjectPackage.cs" />
+    <Compile Include="Project\Resources\ProjectResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Project\SharedProject\AllFilesProjectElement.cs" />
     <Compile Include="Project\SharedProject\AssemblyReferenceNode.cs" />
     <Compile Include="Project\SharedProject\Attributes.cs" />
@@ -247,13 +253,10 @@
   <ItemGroup>
     <None Include="Key.snk" />
     <None Include="packages.config" />
-    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.ico">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.vstemplate">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.ico">
+    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.vstemplate">
@@ -262,7 +265,12 @@
     <None Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.vstemplate">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.png" />
+    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="ProjectTemplates\Windows\ConsoleApplication\Program.hsp">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -275,16 +283,21 @@
     <None Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.vstemplate">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png" />
-    <Content Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png" />
+    <Content Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="ProjectTemplates\Windows\ModuleLibrary\Program.hsp">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png" />
-    <Content Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
-      <SubType>Designer</SubType>
+    <Content Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.vstemplate">
       <SubType>Designer</SubType>
     </None>
@@ -482,9 +495,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Project\Resources\imagelis.bmp" />
+    <EmbeddedResource Include="Project\Resources\hspimagelist.bmp" />
     <Content Include="Resources\HSPVSPackage.ico" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Project\Resources\ProjectResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProjectResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Project\SharedProject\ProjectResources.resx">
       <DependentUpon>ProjectResources.cs</DependentUpon>
     </EmbeddedResource>

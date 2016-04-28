@@ -185,7 +185,7 @@ namespace Microsoft.VisualStudioTools.Project {
         internal const string UpgradeCannotLoadProject = "UpgradeCannotLoadProject";
 
         private static readonly Lazy<ResourceManager> _manager = new Lazy<ResourceManager>(
-            () => new ResourceManager("Microsoft.VisualStudio.Project", typeof(SR).Assembly),
+            () => new ResourceManager("HSPToolsVS.Project.Resources.ProjectResources", typeof(SR).Assembly),
             LazyThreadSafetyMode.ExecutionAndPublication
         );
 

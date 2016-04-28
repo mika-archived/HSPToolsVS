@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 using Microsoft.VisualStudioTools.Project;
 
@@ -10,7 +11,7 @@ namespace HSPToolsVS.Project
     // ReSharper disable once InconsistentNaming
     internal class HSPProjectNode : CommonProjectNode
     {
-        public HSPProjectNode(IServiceProvider serviceProvider) : base(serviceProvider, null)
+        public HSPProjectNode(IServiceProvider serviceProvider, ImageList imageList) : base(serviceProvider, imageList)
         {
 
         }
@@ -20,9 +21,7 @@ namespace HSPToolsVS.Project
         internal override string IssueTrackerUrl => "https://github.com/fuyuno/HSPToolsVS/issues";
 
         protected override Stream ProjectIconsImageStripStream
-        {
-            get { throw new NotSupportedException("Python Tools does not support project image strip"); }
-        }
+            => GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.hspimagelist.bmp");
 
         #endregion
 
@@ -38,7 +37,7 @@ namespace HSPToolsVS.Project
 
         public override Type GetGeneralPropertyPageType() => null;
 
-        public override Type GetLibraryManagerType() => null;
+        public override Type GetLibraryManagerType() => typeof(HSPLibraryManager);
 
         public override IProjectLauncher GetLauncher() => null;
 

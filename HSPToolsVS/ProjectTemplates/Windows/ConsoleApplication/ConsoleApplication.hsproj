@@ -16,9 +16,11 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
+  <!--
   <ItemGroup>
     <Reference Include="$(HSPInstalledRootPath)\runtime\hsp3cl.hrt" Type="Runtime" />
   </ItemGroup>
+  -->
   <ItemGroup>
     <Compile Include="Program.hsp">
       <SubType>Code</SubType>
