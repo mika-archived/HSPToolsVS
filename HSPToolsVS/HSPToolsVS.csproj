@@ -253,90 +253,62 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Project\Resources\hspimagelist.png" />
+    <ZipProject Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.vstemplate">
+      <SubType>Designer</SubType>
+    </ZipProject>
+    <VSCTCompile Include="Resources\HSP3ProjectTemplates.vsct" />
     <Content Include="Resources\LICENSE.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="Key.snk" />
     <None Include="packages.config" />
-    <None Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.vstemplate">
+    <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\HSP3DishApplication.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <None Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.vstemplate">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\HSP3DishApplication.png" />
+    <ZipProject Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.ico">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ConsoleApplication\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\hsp3dish.ini">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <None Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.vstemplate">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.ico" />
+    <ZipProject Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.png" />
+    <ZipProject Include="ProjectTemplates\Windows\ConsoleApplication\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\hsp3dish.ini" />
+    <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <Content Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ModuleLibrary\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <None Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png" />
+    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png" />
+    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png" />
+    <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.vstemplate">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.vstemplate">
       <SubType>Designer</SubType>
-    </None>
-    <Content Include="ProjectTemplates\Windows\FormsApplication\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.hsproj">
-      <IncludeInVSIX>true</IncludeInVSIX>
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Windows\FormsApplication\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.hsproj">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.hsproj">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\HSP3DishApplication.hsproj">
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.hsproj">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.hsproj">
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Web\HSP3DishApplication\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.hsproj">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Web\HSP3DishApplication\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.hsproj">
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.hsproj">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.hsproj">
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\ScreenSaver\Program.hsp">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.hsproj">
+    </ZipProject>
+    <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\Program.hsp" />
+    <ZipProject Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.hsproj">
       <SubType>Designer</SubType>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    </ZipProject>
     <None Include="Project\SharedProject\ProcessOutput.cs.rej" />
     <None Include="Project\SharedProject\SharedProject.proj" />
     <None Include="source.extension.vsixmanifest">
@@ -499,7 +471,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Project\Resources\imagelis.bmp" />
-    <EmbeddedResource Include="Project\Resources\hspimagelist.bmp" />
     <Content Include="Resources\HSPVSPackage.ico" />
   </ItemGroup>
   <ItemGroup>

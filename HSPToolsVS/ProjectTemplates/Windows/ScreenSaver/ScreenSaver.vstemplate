@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>HSP3 Windows Screen Saver Project</Name>
+    <Name>Windows Screen Saver Project</Name>
     <Description>A project for creating a new HSP3 Windows screen saver application.</Description>
     <Icon>ScreenSaver.png</Icon>
-    <ProjectType>HSP3</ProjectType>
+    <ProjectType>HSP</ProjectType>
     <SortOrder>20</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>ScreenSaver</DefaultName>

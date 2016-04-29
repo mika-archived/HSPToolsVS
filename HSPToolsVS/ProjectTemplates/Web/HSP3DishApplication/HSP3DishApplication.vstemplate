@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>HSP3 Smartphone Application Project</Name>
-    <Description>A project for creating a new HSP3 smartphone application.</Description>
-    <Icon>HSP3DishApplication.png</Icon>
-    <ProjectType>HSP3</ProjectType>
+    <Name>Web Application Project</Name>
+    <Description>A project for creating a new HSP3 web application.</Description>
+    <Icon>HSP3DishApplication.ico</Icon>
+    <ProjectType>HSP</ProjectType>
     <SortOrder>20</SortOrder>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>HSP3DishApplication</DefaultName>
@@ -15,7 +15,6 @@
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.hsproj" File="HSP3DishApplication.hsproj" ReplaceParameters="true">
       <ProjectItem OpenInEditor="true">Program.hsp</ProjectItem>
-      <ProjectItem>hsp3dish.ini</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

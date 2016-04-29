@@ -9,9 +9,9 @@ namespace HSPToolsVS.Project
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [Guid(HSPToolsConstants.ProjectPackageGuid)]
     // Register project templates.
-    [ProvideProjectFactory(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName,
+    [ProvideProjectFactory(typeof(HSPProjectFactory), null,
         HSPToolsConstants.ProjectFileFormatFilter, HSPToolsConstants.ProjectFileExtension,
-        HSPToolsConstants.ProjectFileExtension, @"ProjectTemplates",
+        HSPToolsConstants.ProjectFileExtension, @".\NullPath",
         LanguageVsTemplate = HSPToolsConstants.LanguageName)]
     [ProvideProjectItem(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName, @"ItemTemplates", 500)]
     [Export]
