@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -13,15 +14,19 @@ namespace HSPToolsVS.Project
     {
         public HSPProjectNode(IServiceProvider serviceProvider, ImageList imageList) : base(serviceProvider, imageList)
         {
-
+            ImageIndex = ImageHandler.ImageList.Images.Count;
+            foreach (var image in Utilities.GetImageList(ProjectIconsImageStripStream).Images)
+            {
+                ImageHandler.AddImage((Image) image);
+            }
         }
 
         #region Overrides of ProjectNode
 
         internal override string IssueTrackerUrl => "https://github.com/fuyuno/HSPToolsVS/issues";
 
-        protected override Stream ProjectIconsImageStripStream
-            => GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.hspimagelist.bmp");
+        protected sealed override Stream ProjectIconsImageStripStream
+            => GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.hspimagelist.png");
 
         #endregion
 
@@ -40,6 +45,8 @@ namespace HSPToolsVS.Project
         public override Type GetLibraryManagerType() => typeof(HSPLibraryManager);
 
         public override IProjectLauncher GetLauncher() => null;
+
+        public override int ImageIndex { get; }
 
         #endregion
     }
