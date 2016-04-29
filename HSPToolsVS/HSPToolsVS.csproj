@@ -263,13 +263,10 @@
     <Content Include="ProjectTemplates\Smartphone\HSP3DishApplication\HSP3DishApplication.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.vstemplate">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.vstemplate">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.png">
+    <Content Include="ProjectTemplates\Web\HSP3DishApplication\HSP3DishApplication.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ProjectTemplates\Windows\ConsoleApplication\ConsoleApplication.png">
