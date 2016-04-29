@@ -4,6 +4,8 @@
     <Identity Id="HSPToolsVS" Version="1.0" Language="en-US" Publisher="Mikazuki Fuyuno" />
     <DisplayName>HSPToolsVS</DisplayName>
     <Description xml:space="preserve">HSPToolsVS add Hot Soup Processor support to your Visual Studio.</Description>
+    <MoreInfo>https://github.com/fuyuno/HSPToolsVS</MoreInfo>
+    <License>Resources\LICENSE.txt</License>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0)" />
