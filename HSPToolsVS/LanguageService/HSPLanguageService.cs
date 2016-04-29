@@ -9,7 +9,7 @@ namespace HSPToolsVS.LanguageService
         private LanguagePreferences _languagePreferences;
         private IScanner _scanner;
 
-        public override string Name => "HSP";
+        public override string Name => HSPToolsConstants.LanguageName;
 
         public override LanguagePreferences GetLanguagePreferences()
         {
@@ -35,6 +35,6 @@ namespace HSPToolsVS.LanguageService
             return new HSPSource(this, buffer, GetColorizer(buffer));
         }
 
-        public override string GetFormatFilterList() => "HSP Script Files(*.hsp,*.as)|*.hsp;*.as";
+        public override string GetFormatFilterList() => HSPToolsConstants.FileFormatFilter;
     }
 }

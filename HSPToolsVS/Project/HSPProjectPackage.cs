@@ -7,11 +7,13 @@ using Microsoft.VisualStudioTools.Project;
 namespace HSPToolsVS.Project
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
-    [Guid("6B824039-8F0F-4439-BCEB-70E14D1D9C15")]
+    [Guid(HSPToolsConstants.ProjectPackageGuid)]
     // Register project templates.
-    [ProvideProjectFactory(typeof(HSPProjectFactory), "HSP", "HSP Project Files(*.hsproj);*.hsproj", "hsproj", "hsproj",
-        @"ProjectTemplates", LanguageVsTemplate = "HSP")]
-    [ProvideProjectItem(typeof(HSPProjectFactory), "HSP", @"ItemTemplates", 500)]
+    [ProvideProjectFactory(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName,
+        HSPToolsConstants.ProjectFileFormatFilter, HSPToolsConstants.ProjectFileExtension,
+        HSPToolsConstants.ProjectFileExtension, @"ProjectTemplates",
+        LanguageVsTemplate = HSPToolsConstants.LanguageName)]
+    [ProvideProjectItem(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName, @"ItemTemplates", 500)]
     [Export]
     // ReSharper disable once InconsistentNaming
     public sealed class HSPProjectPackage : CommonProjectPackage
@@ -26,9 +28,9 @@ namespace HSPToolsVS.Project
 
         public override uint GetIconIdForSplashScreen() => 0; // IconID is not defined;
 
-        public override string GetProductName() => "HSP";
+        public override string GetProductName() => HSPToolsConstants.LanguageName;
 
-        public override string GetProductDescription() => "HSP";
+        public override string GetProductDescription() => HSPToolsConstants.LanguageName;
 
         public override string GetProductVersion() => GetType().Assembly.GetName().Version.ToString();
 

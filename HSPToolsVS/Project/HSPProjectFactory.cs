@@ -6,7 +6,7 @@ using Microsoft.VisualStudioTools.Project;
 
 namespace HSPToolsVS.Project
 {
-    [Guid("6FF3FD2E-8172-48B0-8DA3-333FB5115DA2")]
+    [Guid(HSPToolsConstants.ProjectFactoryGuid)]
     // ReSharper disable once InconsistentNaming
     internal class HSPProjectFactory : ProjectFactory
     {

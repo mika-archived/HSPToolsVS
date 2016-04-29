@@ -34,22 +34,17 @@ namespace HSPToolsVS
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About
-    [Guid(PackageGuidString)]
+    [Guid(HSPToolsConstants.PackageGuid)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     // Register a Language Service
-    [ProvideService(typeof(HSPLanguageService), ServiceName = "HSP Language Service")]
-    [ProvideLanguageService(typeof(HSPLanguageService), "HSP", 0)]
-    [ProvideLanguageExtension(typeof(HSPLanguageService), ".hsp")]
-    [ProvideLanguageExtension(typeof(HSPLanguageService), ".as")]
+    [ProvideService(typeof(HSPLanguageService))]
+    [ProvideLanguageService(typeof(HSPLanguageService), HSPToolsConstants.LanguageName, 0)]
+    [ProvideLanguageExtension(typeof(HSPLanguageService), HSPToolsConstants.ScriptExtension)]
+    [ProvideLanguageExtension(typeof(HSPLanguageService), HSPToolsConstants.ModuleExtension)]
     // ReSharper disable once InconsistentNaming
     public sealed class HSPVSPackage : Package /*, IOleComponent */
     {
-        /// <summary>
-        ///     HSPVSPackage GUID string.
-        /// </summary>
-        public const string PackageGuidString = "d831da21-d940-4ad0-aa2a-4a7a04e3d6c4";
-
         #region Package Members
 
         /// <summary>

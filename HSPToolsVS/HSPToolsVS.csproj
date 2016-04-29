@@ -51,6 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HSPToolsConstants.cs" />
     <Compile Include="HSPVSPackage.cs" />
     <Compile Include="LanguageService\HSPAuthoringScope.cs" />
     <Compile Include="LanguageService\HSPLanguagePreferences.cs" />

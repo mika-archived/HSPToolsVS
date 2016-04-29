@@ -7,7 +7,7 @@ using Microsoft.VisualStudioTools.Project;
 
 namespace HSPToolsVS.Project
 {
-    [Guid("AEF81872-262D-4783-9ADF-DF52CC8BEF1C")]
+    [Guid(HSPToolsConstants.ProjectNodeGuid)]
     // ReSharper disable once InconsistentNaming
     internal class HSPProjectNode : CommonProjectNode
     {
@@ -31,9 +31,9 @@ namespace HSPToolsVS.Project
 
         public override Type GetEditorFactoryType() => null;
 
-        public override string GetProjectName() => "HSPProject";
+        public override string GetProjectName() => HSPToolsConstants.LanguageName;
 
-        public override string GetFormatList() => "HSP Script Files(*.hsp,*.as)|*.hsp;*.as";
+        public override string GetFormatList() => HSPToolsConstants.FileFormatFilter;
 
         public override Type GetGeneralPropertyPageType() => null;
 
