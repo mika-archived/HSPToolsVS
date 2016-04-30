@@ -13,7 +13,7 @@ namespace HSPToolsVS.Project
         HSPToolsConstants.ProjectFileFormatFilter, HSPToolsConstants.ProjectFileExtension,
         HSPToolsConstants.ProjectFileExtension, @".\NullPath",
         LanguageVsTemplate = HSPToolsConstants.LanguageName)]
-    [ProvideProjectItem(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName, @"ItemTemplates", 500)]
+    [ProvideProjectItem(typeof(HSPProjectFactory), HSPToolsConstants.LanguageName, @".\NullPath", 500)]
     [Export]
     // ReSharper disable once InconsistentNaming
     public sealed class HSPProjectPackage : CommonProjectPackage

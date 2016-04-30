@@ -257,10 +257,16 @@
       <SubType>Designer</SubType>
     </ZipProject>
     <VSCTCompile Include="Resources\HSP3ProjectTemplates.vsct" />
+    <ZipProject Include="ItemTemplates\ModuleItem\Module.as" />
+    <ZipProject Include="ItemTemplates\ModuleItem\ModuleItem.png" />
+    <ZipProject Include="ItemTemplates\ModuleItem\ModuleItem.vstemplate" />
+    <ZipProject Include="ItemTemplates\ScriptItem\ScriptItem.png" />
+    <ZipProject Include="ItemTemplates\ScriptItem\ScriptItem.vstemplate" />
     <Content Include="Resources\LICENSE.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <ZipProject Include="ItemTemplates\ScriptItem\Script.hsp" />
     <None Include="Key.snk" />
     <None Include="packages.config" />
     <ZipProject Include="ProjectTemplates\Smartphone\HSP3DishSPApplication\HSP3DishApplication.vstemplate">
@@ -280,7 +286,7 @@
     </ZipProject>
     <ZipProject Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png" />
     <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png" />
-    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\Program.hsp" />
+    <None Include="ProjectTemplates\Windows\ModuleLibrary\Program.as" />
     <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png" />
     <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
       <SubType>Designer</SubType>
@@ -490,9 +496,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ItemTemplates\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Project\SharedProject\OverwriteFileDialog.xaml">
       <Generator>MSBuild:Compile</Generator>

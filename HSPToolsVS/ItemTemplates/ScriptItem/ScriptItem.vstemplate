@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Script</Name>
+    <Description>An empty script file.</Description>
+    <Icon>ScriptItem.png</Icon>
+    <ProjectType>HSP</ProjectType>
+    <SortOrder>20</SortOrder>
+    <DefaultName>Script</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem OpenInEditor="true">Script.hsp</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
+

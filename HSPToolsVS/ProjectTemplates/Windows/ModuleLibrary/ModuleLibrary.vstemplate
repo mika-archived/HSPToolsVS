@@ -14,7 +14,7 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="$safeprojectname$.hsproj" File="ModuleLibrary.hsproj" ReplaceParameters="true">
-      <ProjectItem OpenInEditor="true">Program.hsp</ProjectItem>
+      <ProjectItem OpenInEditor="true">Program.as</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
