@@ -287,7 +287,7 @@
     </ZipProject>
     <ZipProject Include="ProjectTemplates\Windows\FormsApplication\FormsApplication.png" />
     <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\ModuleLibrary.png" />
-    <None Include="ProjectTemplates\Windows\ModuleLibrary\Program.as" />
+    <ZipProject Include="ProjectTemplates\Windows\ModuleLibrary\Program.as" />
     <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.png" />
     <ZipProject Include="ProjectTemplates\Windows\ScreenSaver\ScreenSaver.vstemplate">
       <SubType>Designer</SubType>
