@@ -63,6 +63,7 @@
     <Compile Include="LanguageService\ParseState.cs" />
     <Compile Include="LanguageService\Token.cs" />
     <Compile Include="LanguageService\HSPTokenType.cs" />
+    <Compile Include="Project\HSPFileNode.cs" />
     <Compile Include="Project\HSPLibraryManager.cs" />
     <Compile Include="Project\HSPProjectFactory.cs" />
     <Compile Include="Project\HSPProjectNode.cs" />

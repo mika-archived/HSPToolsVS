@@ -28,6 +28,12 @@ namespace HSPToolsVS.Project
         protected sealed override Stream ProjectIconsImageStripStream
             => GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.hspimagelist.png");
 
+        public override bool IsCodeFile(string fileName)
+        {
+            return fileName.EndsWith(HSPToolsConstants.ScriptExtension) ||
+                   fileName.EndsWith(HSPToolsConstants.ModuleExtension);
+        }
+
         #endregion
 
         #region Overrides of CommonProjectNode
@@ -47,6 +53,8 @@ namespace HSPToolsVS.Project
         public override IProjectLauncher GetLauncher() => null;
 
         public override int ImageIndex { get; }
+
+        public override FileNode CreateFileNode(ProjectElement item) => new HSPFileNode(this, item);
 
         #endregion
     }
