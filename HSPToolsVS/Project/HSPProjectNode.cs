@@ -30,8 +30,10 @@ namespace HSPToolsVS.Project
 
         public override bool IsCodeFile(string fileName)
         {
-            return fileName.EndsWith(HSPToolsConstants.ScriptExtension) ||
-                   fileName.EndsWith(HSPToolsConstants.ModuleExtension);
+            if (string.IsNullOrWhiteSpace(fileName))
+                return false;
+            var extension = Path.GetExtension(fileName);
+            return extension == HSPToolsConstants.ScriptExtension || extension == HSPToolsConstants.ModuleExtension;
         }
 
         #endregion
