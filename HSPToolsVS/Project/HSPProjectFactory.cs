@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 using Microsoft.VisualStudioTools.Project;
+
+using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;
 
 namespace HSPToolsVS.Project
 {
@@ -10,9 +11,11 @@ namespace HSPToolsVS.Project
     // ReSharper disable once InconsistentNaming
     internal class HSPProjectFactory : ProjectFactory
     {
-        public HSPProjectFactory(IServiceProvider serviceProvider) : base(serviceProvider)
+        private readonly CommonProjectPackage _package;
+
+        public HSPProjectFactory(CommonProjectPackage package) : base((IServiceProvider) package)
         {
-            Debug.WriteLine("HSPProjectFactory");
+            _package = package;
         }
 
         #region Overrides of ProjectFactory
@@ -20,7 +23,10 @@ namespace HSPToolsVS.Project
         internal override ProjectNode CreateProject()
         {
             var stream = GetType().Assembly.GetManifestResourceStream("HSPToolsVS.Project.Resources.imagelis.bmp");
-            return new HSPProjectNode(Site, Utilities.GetImageList(stream));
+            var project = new HSPProjectNode(Site, Utilities.GetImageList(stream));
+            var package = ((IServiceProvider) _package).GetService(typeof(IOleServiceProvider));
+            project.SetSite((IOleServiceProvider) package);
+            return project;
         }
 
         #endregion
