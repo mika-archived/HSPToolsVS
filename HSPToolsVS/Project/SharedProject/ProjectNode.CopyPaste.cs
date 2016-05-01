@@ -1537,7 +1537,7 @@ namespace Microsoft.VisualStudioTools.Project {
         /// <returns></returns>
         protected internal bool AllowPasteCommand() {
             try {
-                IOleDataObject dataObject = Site.GetClipboardService().GetClipboard();
+                IOleDataObject dataObject = Site.GetClipboardService()?.GetClipboard();
                 if (dataObject == null) {
                     return false;
                 }

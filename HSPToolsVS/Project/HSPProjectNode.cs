@@ -58,6 +58,8 @@ namespace HSPToolsVS.Project
 
         public override FileNode CreateFileNode(ProjectElement item) => new HSPFileNode(this, item);
 
+        protected override NodeProperties CreatePropertiesObject() => new HSPProjectNodeProperties(this);
+
         #endregion
     }
 }

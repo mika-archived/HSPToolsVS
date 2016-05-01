@@ -67,6 +67,7 @@
     <Compile Include="Project\HSPLibraryManager.cs" />
     <Compile Include="Project\HSPProjectFactory.cs" />
     <Compile Include="Project\HSPProjectNode.cs" />
+    <Compile Include="Project\HSPProjectNodeProperties.cs" />
     <Compile Include="Project\HSPProjectPackage.cs" />
     <Compile Include="Project\Resources\ProjectResources.Designer.cs">
       <AutoGen>True</AutoGen>
