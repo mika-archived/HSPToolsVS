@@ -22,7 +22,6 @@ namespace HSPToolsVS.LanguageService
 
         public Token GetNextToken(ref int state)
         {
-            // InComment?
             if (_source.Length <= _offset)
                 return null;
             var source = _source.Substring(_offset);
@@ -32,7 +31,7 @@ namespace HSPToolsVS.LanguageService
             var charHistory = new List<char>();
             foreach (var c in source)
             {
-                if (char.IsWhiteSpace(c))
+                if (!IsInBlockComment(state) && char.IsWhiteSpace(c))
                 {
                     if (charHistory.Count != 0)
                         if (_isStringCharsIn)
@@ -55,7 +54,24 @@ namespace HSPToolsVS.LanguageService
                 if (c == '\'' || c == '"')
                     _isStringCharsIn = true;
                 charHistory.Add(c);
-                if (!_isStringCharsIn && string.Join(string.Empty, charHistory) == "//")
+
+                // Comments
+                var str = string.Join(string.Empty, charHistory);
+                if (IsInBlockComment(state))
+                {
+                    if (!str.EndsWith("*/"))
+                        continue;
+                    var index = _offset;
+                    _offset += str.Length;
+                    state = (int) ParseState.InNormal;
+                    return new Token(str, index, HSPTokenType.Comment);
+                }
+                if (!_isStringCharsIn && str == "/*")
+                {
+                    state = (int) ParseState.InBlockComment;
+                    continue;
+                }
+                if (!_isStringCharsIn && str == "//")
                 {
                     var index = _offset;
                     _offset += source.Length;
@@ -65,7 +81,14 @@ namespace HSPToolsVS.LanguageService
                 if (token != null)
                     return token;
             }
-            return ProduceToken(charHistory, true); // Last
+            if (IsInBlockComment(state))
+            {
+                var str = string.Join(string.Empty, charHistory);
+                var index = _offset;
+                _offset += str.Length;
+                return new Token(str, index, HSPTokenType.Comment);
+            }
+            return ProduceToken(charHistory, true);
         }
 
         private Token ProduceToken(List<char> charHistory, bool isForce = false)
@@ -171,6 +194,11 @@ namespace HSPToolsVS.LanguageService
         private bool IsMatch(string str, string regex)
         {
             return Regex.IsMatch(str, regex);
+        }
+
+        private bool IsInBlockComment(int state)
+        {
+            return state == (int) ParseState.InBlockComment;
         }
     }
 }
