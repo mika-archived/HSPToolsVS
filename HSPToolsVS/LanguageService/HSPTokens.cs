@@ -50,6 +50,8 @@ namespace HSPToolsVS.LanguageService
                 "notesel", "noteunsel", "split", "strrep", "system", "hspstat", "hspver", "stat", "cnt", "err",
                 "strsize", "looplev", "sublev", "iparam", "wparam", "lparam", "refstr", "refdval", "hwnd",
                 "hinstance", "hdc", "thismod",
+                // #func, #cfunc Extensions
+                "pval", "bmscr", "comobj", "wstr", "sptr", "wptr", "prefstr", "pexinfo", "nullptr", "label", "var",
                 // HSP 3.4
                 "setease", "getease", "geteasef",
                 // HSP 3.5
@@ -63,7 +65,7 @@ namespace HSPToolsVS.LanguageService
                 "#addition", "#aht", "#ahtmes", "#cfunc", "#cmd", "#cmpopt", "#comfunc", "#const", "#defcfunc",
                 "#deffunc", "#define", "#else", "#endif", "#enum", "#epack", "#func", "#global", "#if", "#ifdef",
                 "#ifndef", "#include", "#modcfunc", "#modfunc", "#modinit", "#modterm", "#module", "#pack", "#packopt",
-                "#regcmd", "#runtime", "#undef", "#usecom", "#uselib", "#defint", "#defdouble", "#defnone",
+                "#regcmd", "#runtime", "#undef", "#usecom", "#uselib", "#defint", "#defdouble", "#defnone", "#struct",
                 // HSP 3.5
                 "#bootopt"
             };

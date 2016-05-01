@@ -498,7 +498,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IntelliSense\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Project\SharedProject\OverwriteFileDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
