@@ -8,7 +8,7 @@ HSPToolsVS provide below features.
 
 
 ### Create and Manage Projects
-![alt](img/new-project.png)  
+![alt](img/new-project.PNG)  
 Create new projects and manage projects on Visual Studio.  
 Supported types is ...
 
