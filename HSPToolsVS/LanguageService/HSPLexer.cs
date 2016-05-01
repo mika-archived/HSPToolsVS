@@ -100,6 +100,8 @@ namespace HSPToolsVS.LanguageService
             }
             if (IsMatch(str, "^\".*?\"$"))
             {
+                if (charHistory[charHistory.Count - 2] == '\\')
+                    return null;
                 charHistory.Clear();
                 _isStringCharsIn = false;
                 _offset += str.Length;
