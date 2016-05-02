@@ -64,12 +64,12 @@ namespace HSPToolsVS.LanguageService
 
         private IList<string> GetWordCandidatesFromIdentifier(string text)
         {
-            var temp =
-                _tokens.Where(w => w.Type == HSPTokenType.Idenfitier && w.Text != text)
-                       .Select(w => w.Text)
-                       .Distinct()
-                       .Concat(HSPTokens.AllKeywords.ToList());
-            return temp.Where(w => w.StartsWith(text) || text.ToUpper() == _upperCharRegex.Replace(w, "")).ToList();
+            return _tokens.Where(w => w.Type == HSPTokenType.Idenfitier && w.Text != text)
+                          .Select(w => w.Text)
+                          .Distinct()
+                          .Concat(HSPTokens.AllKeywords.ToList())
+                          .Where(w => w.StartsWith(text) || text.ToUpper() == _upperCharRegex.Replace(w, ""))
+                          .ToList();
         }
     }
 }
