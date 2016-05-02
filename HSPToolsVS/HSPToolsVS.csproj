@@ -54,6 +54,7 @@
     <Compile Include="HSPToolsConstants.cs" />
     <Compile Include="HSPVSPackage.cs" />
     <Compile Include="LanguageService\HSPAuthoringScope.cs" />
+    <Compile Include="LanguageService\HSPColorizer.cs" />
     <Compile Include="LanguageService\HSPLanguagePreferences.cs" />
     <Compile Include="LanguageService\HSPLanguageService.cs" />
     <Compile Include="LanguageService\HSPLexer.cs" />

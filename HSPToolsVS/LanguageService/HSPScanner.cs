@@ -1,4 +1,8 @@
-﻿using Microsoft.VisualStudio.Package;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+
+using Microsoft.VisualStudio.Package;
 using Microsoft.VisualStudio.TextManager.Interop;
 
 namespace HSPToolsVS.LanguageService
@@ -8,18 +12,26 @@ namespace HSPToolsVS.LanguageService
     internal class HSPScanner : IScanner
     {
         private readonly HSPLexer _lexer;
-        private IVsTextBuffer _textBuffer;
+        private readonly IVsTextLines _textLines;
+        private readonly List<Token> _tokens;
+        private int _line;
 
-        public HSPScanner(IVsTextBuffer textBuffer)
+        public ReadOnlyCollection<Token> Tokens => new ReadOnlyCollection<Token>(_tokens);
+
+        public HSPScanner(IVsTextLines textBuffer)
         {
-            _textBuffer = textBuffer;
+            _textLines = textBuffer;
             _lexer = new HSPLexer();
+            _tokens = new List<Token>();
+            _line = 0;
         }
 
         public void SetSource(string source, int offset)
         {
-            _lexer.SetCurLine(source, offset);
-            // Debug.WriteLine("--- NEWLINE ---");
+            _lexer.SetCurLine(source, _line, offset);
+            var t = _tokens.Where(w => w.Line == _line).ToArray();
+            foreach (var token in t)
+                _tokens.Remove(token);
         }
 
         public bool ScanTokenAndProvideInfoAboutIt(TokenInfo tokenInfo, ref int state)
@@ -27,13 +39,18 @@ namespace HSPToolsVS.LanguageService
             var token = _lexer.GetNextToken(ref state);
             if (token == null)
                 return false;
-            // Debug.WriteLine(token.ToString());
+            _tokens.Add(token);
             tokenInfo.StartIndex = token.StartIndex;
             tokenInfo.EndIndex = token.EndIndex;
             tokenInfo.Type = token.Type.ToTokenType();
             tokenInfo.Color = token.Type.ToColor();
             tokenInfo.Token = (int) token.Type;
             return true;
+        }
+
+        public void SetLineNumber(int line)
+        {
+            _line = line;
         }
     }
 }

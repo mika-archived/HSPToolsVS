@@ -7,7 +7,7 @@ namespace HSPToolsVS.LanguageService
     internal class HSPLanguageService : Microsoft.VisualStudio.Package.LanguageService
     {
         private LanguagePreferences _languagePreferences;
-        private IScanner _scanner;
+        private HSPScanner _scanner;
 
         public override string Name => HSPToolsConstants.LanguageName;
 
@@ -27,12 +27,18 @@ namespace HSPToolsVS.LanguageService
 
         public override AuthoringScope ParseSource(ParseRequest req)
         {
-            return new HSPAuthoringScope();
+            return new HSPAuthoringScope(_scanner.Tokens);
         }
 
         public override Source CreateSource(IVsTextLines buffer)
         {
             return new HSPSource(this, buffer, GetColorizer(buffer));
+        }
+
+        // Cache system ?
+        public override Colorizer GetColorizer(IVsTextLines buffer)
+        {
+            return new HSPColorizer(this, buffer, GetScanner(buffer));
         }
 
         public override string GetFormatFilterList() => HSPToolsConstants.FileFormatFilter;
