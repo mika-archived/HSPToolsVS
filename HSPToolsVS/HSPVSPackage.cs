@@ -42,7 +42,7 @@ namespace HSPToolsVS
     [ProvideLanguageService(typeof(HSPLanguageService), HSPToolsConstants.LanguageName, 0,
         EnableLineNumbers = true,
         CodeSense = true,
-        CodeSenseDelay = 500,
+        CodeSenseDelay = 50,
         ShowCompletion = true,
         QuickInfo = true)]
     [ProvideLanguageExtension(typeof(HSPLanguageService), HSPToolsConstants.ScriptExtension)]
