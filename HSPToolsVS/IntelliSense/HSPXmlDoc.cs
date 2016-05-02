@@ -29,6 +29,8 @@ namespace HSPToolsVS.IntelliSense
 
     public class HSPXmlDocMember
     {
+        public string Assembly { get; set; }
+
         [XmlAttribute("name")]
         public string Name { get; set; }
 

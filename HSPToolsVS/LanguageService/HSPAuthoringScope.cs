@@ -28,11 +28,14 @@ namespace HSPToolsVS.LanguageService
             if (token == null || token.Type == HSPTokenType.Comment || token.Type == HSPTokenType.Numeric)
                 return null;
 
+            var doc = HSPDocs.Documents.SingleOrDefault(w => w.Name == token.Text);
+            if (doc == null)
+                return null;
             span.iStartLine = line;
             span.iEndLine = line;
             span.iStartIndex = token.StartIndex;
             span.iEndIndex = token.EndIndex;
-            return $"{token.Type} : {token.Text}";
+            return $"{doc.Assembly} {doc.Summary}";
         }
 
         public override Declarations GetDeclarations(IVsTextView view, int line, int col, TokenInfo info,

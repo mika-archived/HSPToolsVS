@@ -26,7 +26,10 @@ namespace HSPToolsVS.IntelliSense
                 if (data == null)
                     continue;
                 foreach (var member in data.Members.List)
+                {
+                    member.Assembly = data.Assembly.Name;
                     Documents.Add(member);
+                }
             }
         }
     }
