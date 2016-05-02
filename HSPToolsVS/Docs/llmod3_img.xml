@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/img</name>
+  </assembly>
+  <members>
+    <member name="draw_icon">
+      <summary>アイコンの描画</summary>
+      <param name="n1">描画するアイコン(get_iconで取得したもの)</param>
+      <param name="n2">x座標</param>
+      <param name="n3">y座標</param>
+      <param name="n4">redrawしないかどうかのフラグ</param>
+    </member>
+    <member name="get_fileicon">
+      <summary>ファイルに使用されているアイコンの取得</summary>
+      <param name="v1">取得したアイコンを入れる変数</param>
+      <param name="s2">ファイル名</param>
+      <param name="n3">取得するもの</param>
+    </member>
+    <member name="get_icon">
+      <summary>アイコンの取得</summary>
+      <param name="v1">取得したアイコンを入れる数値変数</param>
+      <param name="s2">アイコンを含むファイル名</param>
+      <param name="n3">アイコンの番号</param>
+      <param name="n4">小さいアイコンを取得するかどうかのフラグ</param>
+    </member>
+  </members>
+</doc>

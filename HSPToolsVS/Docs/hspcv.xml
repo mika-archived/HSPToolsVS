@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspcv</name>
+  </assembly>
+  <members>
+    <member name="cvreset">
+      <summary>HSPCVの初期化</summary>
+    </member>
+    <member name="cvsel">
+      <summary>対象CVバッファの設定</summary>
+      <param name="p1">CVバッファID</param>
+    </member>
+    <member name="cvbuffer">
+      <summary>CVバッファを初期化</summary>
+      <param name="p1">CVバッファID</param>
+      <param name="p2">横のピクセルサイズ</param>
+      <param name="p3">縦のピクセルサイズ</param>
+    </member>
+    <member name="cvresize">
+      <summary>画像のリサイズ</summary>
+      <param name="p1">横のピクセルサイズ</param>
+      <param name="p2">縦のピクセルサイズ</param>
+      <param name="p3">CVバッファID</param>
+      <param name="p4">補間アルゴリズム</param>
+    </member>
+    <member name="cvgetimg">
+      <summary>画像の取得</summary>
+      <param name="p1">CVバッファID</param>
+      <param name="p2">取得モード</param>
+    </member>
+    <member name="cvputimg">
+      <summary>CVバッファに書き込み</summary>
+      <param name="p1">CVバッファID</param>
+    </member>
+    <member name="cvload">
+      <summary>画像ファイル読み込み</summary>
+      <param name="filename">画像ファイル名</param>
+      <param name="p1">CVバッファID</param>
+    </member>
+    <member name="cvsave">
+      <summary>画像ファイル書き込み</summary>
+      <param name="filename">画像ファイル名</param>
+      <param name="p1">CVバッファID</param>
+      <param name="p2">オプション値</param>
+    </member>
+    <member name="cvgetinfo">
+      <summary>CVバッファ情報を取得</summary>
+      <param name="p1">CVバッファ情報が取得される変数</param>
+      <param name="p2">CVバッファID</param>
+      <param name="p3">CVバッファ情報ID</param>
+    </member>
+    <member name="cvsmooth">
+      <summary>画像のスムージング</summary>
+      <param name="p1">スムージングのタイプ</param>
+      <param name="p2">param1</param>
+      <param name="p3">param2</param>
+      <param name="p4">param3</param>
+      <param name="p5">CVバッファID</param>
+    </member>
+    <member name="cvthreshold">
+      <summary>画像を閾値で取得</summary>
+      <param name="p1">２値化タイプ</param>
+      <param name="p2">閾値(実数)</param>
+      <param name="p3">二値化後の画素値(実数)</param>
+      <param name="p4">CVバッファID</param>
+    </member>
+    <member name="cvrotate">
+      <summary>画像の回転</summary>
+      <param name="p1">角度(実数)</param>
+      <param name="p2">スケール(実数)</param>
+      <param name="p3">中心座標のXオフセット(実数)</param>
+      <param name="p4">中心座標のYオフセット(実数)</param>
+      <param name="p5">補間アルゴリズム</param>
+      <param name="p6">CVバッファID</param>
+    </member>
+    <member name="cvarea">
+      <summary>コピー元領域の指定</summary>
+      <param name="p1">コピー元 X座標</param>
+      <param name="p2">コピー元 Y座標</param>
+      <param name="p3">コピー領域 Xサイズ</param>
+      <param name="p4">コピー領域 Yサイズ</param>
+    </member>
+    <member name="cvcopy">
+      <summary>画像のコピー</summary>
+      <param name="p1">コピー元CVバッファID</param>
+      <param name="p2">コピー先 X座標</param>
+      <param name="p3">コピー先 Y座標</param>
+      <param name="p4">コピー先CVバッファID</param>
+      <param name="p5">演算オプション</param>
+    </member>
+    <member name="cvxors">
+      <summary>画像のXOR演算</summary>
+      <param name="p1">XOR演算で使用するR値</param>
+      <param name="p2">XOR演算で使用するG値</param>
+      <param name="p3">XOR演算で使用するB値</param>
+      <param name="p4">コピー先CVバッファID</param>
+    </member>
+    <member name="cvflip">
+      <summary>画像の反転</summary>
+      <param name="p1">反転のモード</param>
+      <param name="p2">コピー先CVバッファID</param>
+    </member>
+    <member name="cvloadxml">
+      <summary>XMLファイルの読み込み</summary>
+      <param name="filename">読み込むXMLファイル名</param>
+    </member>
+    <member name="cvfacedetect">
+      <summary>画像の顔認識</summary>
+      <param name="p1">CVバッファID</param>
+      <param name="p2">スケール値(実数)</param>
+    </member>
+    <member name="cvgetface">
+      <summary>認識された座標の取得</summary>
+      <param name="p1">認識されたX座標が代入される変数</param>
+      <param name="p2">認識されたY座標が代入される変数</param>
+      <param name="p3">認識されたXサイズが代入される変数</param>
+      <param name="p4">認識されたYサイズが代入される変数</param>
+    </member>
+    <member name="cvmatch">
+      <summary>画像のマッチング検査</summary>
+      <param name="p1">認識されたX座標が代入される変数</param>
+      <param name="p2">認識されたY座標が代入される変数</param>
+      <param name="p3">マッチングのタイプ</param>
+      <param name="p4">マッチング元のCVバッファID</param>
+      <param name="p5">マッチング先のCVバッファID</param>
+    </member>
+    <member name="cvconvert">
+      <summary>色モードの変換</summary>
+      <param name="p1">変換モード</param>
+      <param name="p2">CVバッファID</param>
+    </member>
+    <member name="cvcapture">
+      <summary>カメラキャプチャの開始</summary>
+      <param name="p1">カメラID</param>
+      <param name="p2">CVバッファID</param>
+    </member>
+    <member name="cvgetcapture">
+      <summary>キャプチャ画像の取得</summary>
+    </member>
+    <member name="cvendcapture">
+      <summary>カメラキャプチャの終了</summary>
+    </member>
+    <member name="cvopenavi">
+      <summary>aviファイル取得の開始</summary>
+      <param name="filename">avi動画ファイル名</param>
+      <param name="p1">CVバッファID</param>
+    </member>
+    <member name="cvgetavi">
+      <summary>aviファイル画像の取得</summary>
+    </member>
+    <member name="cvcloseavi">
+      <summary>aviファイル取得の終了</summary>
+    </member>
+    <member name="cvmakeavi">
+      <summary>aviファイル出力の開始</summary>
+      <param name="filename">出力するavi動画ファイル名</param>
+      <param name="p1">32bit Codecコード</param>
+      <param name="p2">実数によるフレームレート(fps)</param>
+      <param name="p3">CVバッファID</param>
+    </member>
+    <member name="cvputavi">
+      <summary>aviファイルに画像を出力</summary>
+    </member>
+    <member name="cvendavi">
+      <summary>aviファイル出力の終了</summary>
+    </member>
+    <member name="cvj2opt">
+      <summary>JPEG-2000保存オプション設定</summary>
+      <param name="format">フォーマット文字列</param>
+      <param name="option">オプション文字列</param>
+    </member>
+  </members>
+</doc>

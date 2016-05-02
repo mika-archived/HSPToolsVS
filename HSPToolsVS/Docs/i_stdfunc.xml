@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="int">
+      <summary>整数値に変換</summary>
+      <param name="p1">変換元の値または変数</param>
+    </member>
+    <member name="rnd">
+      <summary>乱数を発生</summary>
+      <param name="p1">乱数の範囲</param>
+    </member>
+    <member name="strlen">
+      <summary>文字列の長さを調べる</summary>
+      <param name="p1">文字列の長さを調べたい文字列かまたは文字列型の変数名</param>
+    </member>
+    <member name="length">
+      <summary>配列の1次元要素数を返す</summary>
+      <param name="p1">配列を調べる変数</param>
+    </member>
+    <member name="length2">
+      <summary>配列の2次元要素数を返す</summary>
+      <param name="p1">配列を調べる変数</param>
+    </member>
+    <member name="length3">
+      <summary>配列の3次元要素数を返す</summary>
+      <param name="p1">配列を調べる変数</param>
+    </member>
+    <member name="length4">
+      <summary>配列の4次元要素数を返す</summary>
+      <param name="p1">配列を調べる変数</param>
+    </member>
+    <member name="vartype">
+      <summary>変数の型を返す</summary>
+      <param name="p1">型を調べる変数、または文字列</param>
+    </member>
+    <member name="varptr">
+      <summary>変数データのポインタを返す</summary>
+      <param name="p1">ポインタを調べる変数、または命令</param>
+    </member>
+    <member name="gettime">
+      <summary>時間・日付を取得する</summary>
+      <param name="p1">取得するタイプ</param>
+    </member>
+    <member name="str">
+      <summary>文字列に変換</summary>
+      <param name="p1">変換元の値または変数</param>
+    </member>
+    <member name="dirinfo">
+      <summary>ディレクトリ情報の取得</summary>
+      <param name="p1">取得するタイプ</param>
+    </member>
+    <member name="double">
+      <summary>実数値に変換</summary>
+      <param name="p1">変換元の値または変数</param>
+    </member>
+    <member name="sin">
+      <summary>サイン値を返す</summary>
+      <param name="p1">角度値(ラジアン)</param>
+    </member>
+    <member name="cos">
+      <summary>コサイン値を返す</summary>
+      <param name="p1">角度値(ラジアン)</param>
+    </member>
+    <member name="tan">
+      <summary>タンジェント値を返す</summary>
+      <param name="p1">角度値(ラジアン)</param>
+    </member>
+    <member name="atan">
+      <summary>アークタンジェント値を返す</summary>
+      <param name="p1">Y値</param>
+      <param name="p2">X値</param>
+    </member>
+    <member name="sqrt">
+      <summary>ルート値を返す</summary>
+      <param name="p1">ルートを求める値</param>
+    </member>
+    <member name="sysinfo">
+      <summary>システム情報の取得</summary>
+      <param name="p1">取得するタイプ</param>
+    </member>
+    <member name="peek">
+      <summary>バッファから1byte読み出し</summary>
+      <param name="p1">内容を読み出す元の変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+    </member>
+    <member name="wpeek">
+      <summary>バッファから2byte読み出し</summary>
+      <param name="p1">内容を読み出す元の変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+    </member>
+    <member name="lpeek">
+      <summary>バッファから4byte読み出し</summary>
+      <param name="p1">内容を読み出す元の変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+    </member>
+    <member name="callfunc">
+      <summary>外部関数の呼び出し</summary>
+      <param name="p1">パラメーターが格納されている配列変数</param>
+      <param name="p2">関数アドレス</param>
+      <param name="p3">パラメーター数</param>
+    </member>
+    <member name="absf">
+      <summary>実数の絶対値を返す</summary>
+      <param name="p1">絶対値に変換する実数値</param>
+    </member>
+    <member name="abs">
+      <summary>整数の絶対値を返す</summary>
+      <param name="p1">絶対値に変換する整数値</param>
+    </member>
+    <member name="logf">
+      <summary>対数を返す</summary>
+      <param name="p1">対数を求める値</param>
+    </member>
+    <member name="expf">
+      <summary>指数を返す</summary>
+      <param name="p1">指数を求める値</param>
+    </member>
+    <member name="limit">
+      <summary>一定範囲内の整数を返す</summary>
+      <param name="p1">対象となる値</param>
+      <param name="p2">最小値</param>
+      <param name="p3">最大値</param>
+    </member>
+    <member name="limitf">
+      <summary>一定範囲内の実数を返す</summary>
+      <param name="p1">対象となる値</param>
+      <param name="p2">最小値</param>
+      <param name="p3">最大値</param>
+    </member>
+    <member name="varuse">
+      <summary>変数の使用状況を返す</summary>
+      <param name="p1">使用状況を調べる変数</param>
+    </member>
+    <member name="libptr">
+      <summary>外部呼出しコマンドの情報アドレスを得る</summary>
+      <param name="p1">アドレスを調べるコマンド</param>
+    </member>
+    <member name="comevdisp">
+      <summary>COMイベントの内容を確認</summary>
+      <param name="p1">変数名</param>
+    </member>
+    <member name="powf">
+      <summary>累乗（べき乗）を求める</summary>
+      <param name="p1">底（0以上）</param>
+      <param name="p2">指数</param>
+    </member>
+    <member name="getease">
+      <summary>イージング値を整数で取得</summary>
+      <param name="p1">時間経過値(整数値)</param>
+      <param name="p2">時間経過値の最大(整数値)</param>
+    </member>
+    <member name="geteasef">
+      <summary>イージング値を実数で取得</summary>
+      <param name="p1">時間経過値(実数値)</param>
+      <param name="p2">時間経過値の最大(実数値)</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspda</name>
+  </assembly>
+  <members>
+    <member name="sortval">
+      <summary>配列変数を数値でソート</summary>
+      <param name="p1 : 数値型の配列変数名">並び順 (0=小さい順/1=大きい順)</param>
+    </member>
+    <member name="sortstr">
+      <summary>配列変数を文字列でソート</summary>
+      <param name="p1">文字列型の配列変数名</param>
+      <param name="p2">並び順 (0=小さい順/1=大きい順)</param>
+    </member>
+    <member name="sortnote">
+      <summary>メモリノート文字列をソート</summary>
+      <param name="p1">メモリノート形式の文字列型の変数名</param>
+      <param name="p2">並び順 (0=小さい順/1=大きい順)</param>
+    </member>
+    <member name="sortget">
+      <summary>ソート元のインデックスを取得</summary>
+      <param name="p1">結果が代入される変数名</param>
+      <param name="p2">インデックスNo.</param>
+    </member>
+    <member name="csvstr">
+      <summary>CSVの１行を配列に変換</summary>
+      <param name="p1">結果が代入される文字列型の配列変数名</param>
+      <param name="p2">CSVの１行を取り出した文字列</param>
+    </member>
+    <member name="csvnote">
+      <summary>CSVの１行をメモリノート変換</summary>
+      <param name="p1">結果が代入される文字列型の変数名</param>
+      <param name="p2">CSVの１行を取り出した文字列</param>
+    </member>
+    <member name="xnotesel">
+      <summary>排他メモリノート初期化</summary>
+      <param name="p1">対象となる文字列型の変数名</param>
+      <param name="p2">項目の最大数(省略時は256)</param>
+    </member>
+    <member name="xnoteadd">
+      <summary>排他メモリノート項目追加</summary>
+      <param name="p1">排他メモリノートに追加される文字列</param>
+    </member>
+    <member name="csvsel">
+      <summary>CSV検索の対象バッファを選択</summary>
+      <param name="val">CSV検索の対象となる文字列を格納した変数名</param>
+      <param name="mode">区切りキャラクタコード</param>
+    </member>
+    <member name="csvres">
+      <summary>CSV検索の結果出力バッファを指定</summary>
+      <param name="val">CSV検索結果を出力する変数名</param>
+    </member>
+    <member name="csvflag">
+      <summary>CSV検索の項目フラグを設定</summary>
+      <param name="id">項目ID</param>
+      <param name="val">設定値(0～255)</param>
+    </member>
+    <member name="csvopt">
+      <summary>CSV検索のオプションを設定</summary>
+      <param name="p1">オプション値</param>
+    </member>
+    <member name="csvfind">
+      <summary>CSV検索を実行</summary>
+      <param name="string">検索キーワード</param>
+      <param name="p1">結果出力の最大数(0=無制限)</param>
+      <param name="p2">結果出力の開始インデックス(0=先頭)</param>
+    </member>
+    <member name="rndf_ini">
+      <summary>実数乱数の初期化</summary>
+      <param name="p1">初期化のシード値</param>
+    </member>
+    <member name="rndf_get">
+      <summary>実数乱数を取得</summary>
+      <param name="p1">実数乱数を代入する変数名</param>
+    </member>
+    <member name="rndf_geti">
+      <summary>乱数を取得</summary>
+      <param name="p1">実数乱数を代入する変数名</param>
+      <param name="p2">生成する乱数の範囲値</param>
+    </member>
+    <member name="getvarid">
+      <summary>変数IDを取得</summary>
+      <param name="p1">結果が代入される変数名</param>
+      <param name="name">変数名</param>
+    </member>
+    <member name="getvarname">
+      <summary>変数名を取得</summary>
+      <param name="p1">結果が代入される変数名</param>
+      <param name="p2">変数ID</param>
+    </member>
+    <member name="getmaxvar">
+      <summary>変数IDの最大数を取得</summary>
+      <param name="p1">結果が代入される変数名</param>
+    </member>
+    <member name="vsave">
+      <summary>すべての変数を保存</summary>
+      <param name="filename">ファイル名</param>
+    </member>
+    <member name="vload">
+      <summary>すべての変数を読み込み</summary>
+      <param name="filename">ファイル名</param>
+    </member>
+    <member name="vsave_start">
+      <summary>変数保存の開始</summary>
+    </member>
+    <member name="vsave_put">
+      <summary>保存する変数の指定</summary>
+      <param name="p1">保存する変数</param>
+    </member>
+    <member name="vsave_end">
+      <summary>変数保存の終了</summary>
+      <param name="filename">ファイル名</param>
+    </member>
+    <member name="vload_start">
+      <summary>変数読み込みの開始</summary>
+      <param name="filename">ファイル名</param>
+    </member>
+    <member name="vload_get">
+      <summary>読み込む変数の指定</summary>
+      <param name="p1">読み込みを行なう変数</param>
+    </member>
+    <member name="vload_end">
+      <summary>変数読み込みの終了</summary>
+    </member>
+  </members>
+</doc>

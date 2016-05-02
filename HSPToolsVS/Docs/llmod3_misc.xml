@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/misc</name>
+  </assembly>
+  <members>
+    <member name="tooltip">
+      <summary>ツールチップを付ける</summary>
+      <param name="n1">button,input,treeboxなどのID</param>
+      <param name="n2">ツールチップ上に表示する文字列</param>
+      <param name="n3">ツールチップの背景色 (IE3.0以上)</param>
+    </member>
+    <member name="strtoint">
+      <summary>文字列を数値に変換</summary>
+      <param name="s1">数値に変換する文字列</param>
+      <param name="n2">基数(2～36)</param>
+    </member>
+    <member name="btnimg">
+      <summary>buttonに画像を貼りつける</summary>
+      <param name="n1">イメージを貼りつけるボタンのID(0～63)</param>
+      <param name="n2">イメージが描画されているウィンドウのID(0～7)</param>
+      <param name="n3">イメージの位置</param>
+      <param name="n4">イメージの位置</param>
+      <param name="n5">イメージの幅</param>
+      <param name="n6">イメージの高さ</param>
+    </member>
+  </members>
+</doc>

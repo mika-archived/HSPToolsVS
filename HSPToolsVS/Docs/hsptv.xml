@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hsptv</name>
+  </assembly>
+  <members>
+    <member name="hsptv_up">
+      <summary>HSPTVデータ更新</summary>
+      <param name="p1">スコア値（32bit整数値）</param>
+      <param name="コメント">コメント文字列(256byteまで)</param>
+      <param name="p2">オプション機能値</param>
+    </member>
+    <member name="hsptv_getrank">
+      <summary>HSPTVデータ取得</summary>
+      <param name="p1">スコア情報が代入される変数名</param>
+      <param name="p2">ユーザー名情報が代入される変数名</param>
+      <param name="p3">コメント情報が代入される変数名</param>
+      <param name="rank">順位のインデックス(0～29)</param>
+    </member>
+  </members>
+</doc>

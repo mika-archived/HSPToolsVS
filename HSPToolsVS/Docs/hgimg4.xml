@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hgimg4</name>
+  </assembly>
+  <members>
+    <member name="gpreset">
+      <summary>HGIMG4の初期化</summary>
+      <param name="option">初期化オプション</param>
+    </member>
+    <member name="gpdraw">
+      <summary>シーン内の全オブジェクトを描画する</summary>
+      <param name="option">描画オプション</param>
+    </member>
+    <member name="gpusescene">
+      <summary>シーンの切り替え</summary>
+      <param name="id">選択するシーンID</param>
+    </member>
+    <member name="gpsetprm">
+      <summary>オブジェクトのコアパラメーター設定</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="prmid">コアパラメーターID</param>
+      <param name="value">設定する値(整数値)</param>
+    </member>
+    <member name="gpgetprm">
+      <summary>オブジェクトのコアパラメーター取得</summary>
+      <param name="var">値が代入される変数名</param>
+      <param name="objid">オブジェクトID</param>
+      <param name="prmid">コアパラメーターID</param>
+    </member>
+    <member name="gppostefx">
+      <summary>ポストエフェクト生成</summary>
+      <param name="var">エフェクトIDが代入される変数名</param>
+    </member>
+    <member name="gpuselight">
+      <summary>ライトオブジェクトの切り替え</summary>
+      <param name="id">選択するライトオブジェクトのID</param>
+    </member>
+    <member name="gpusecamera">
+      <summary>カメラオブジェクトの切り替え</summary>
+      <param name="id">選択するカメラオブジェクトのID</param>
+    </member>
+    <member name="gpmatprm">
+      <summary>マテリアルのパラメーター設定</summary>
+      <param name="id">マテリアルID</param>
+      <param name="name">パラメーター名</param>
+      <param name="x">Xの設定値(実数値)</param>
+      <param name="y">Yの設定値(実数値)</param>
+      <param name="z">Zの設定値(実数値)</param>
+    </member>
+    <member name="gpmatstate">
+      <summary>マテリアルのステート設定</summary>
+      <param name="objid">マテリアルID</param>
+      <param name="name">設定項目名(文字列)</param>
+      <param name="value">設定値(文字列)</param>
+    </member>
+    <member name="gpviewport">
+      <summary>ビューポート設定</summary>
+      <param name="x">ビューポート左上X座標</param>
+      <param name="y">ビューポート左上Y座標</param>
+      <param name="sx">ビューポートのXサイズ</param>
+      <param name="sy">ビューポートのYサイズ</param>
+    </member>
+    <member name="setobjname">
+      <summary>オブジェクトのノード名を設定する</summary>
+      <param name="objid">オブジェクトのID</param>
+      <param name="name">設定される名称(文字列)</param>
+    </member>
+    <member name="getobjname">
+      <summary>オブジェクトのノード名を取得する</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="objid">オブジェクトのID</param>
+    </member>
+    <member name="gpcolormat">
+      <summary>カラーマテリアルの生成</summary>
+      <param name="var">生成されたマテリアルIDが代入される変数名</param>
+      <param name="color">マテリアルカラー(24bitRGB値)</param>
+      <param name="opt">マテリアルオプション値</param>
+    </member>
+    <member name="gptexmat">
+      <summary>テクスチャマテリアルの生成</summary>
+      <param name="var">生成されたマテリアルIDが代入される変数名</param>
+      <param name="file">マテリアルオプション値</param>
+      <param name="opt"></param>
+    </member>
+    <member name="gpusermat">
+      <summary>カスタムマテリアルの生成</summary>
+      <param name="var">生成されたマテリアルIDが代入される変数名</param>
+      <param name="vsh">バーテックスシェーダーファイル名</param>
+      <param name="fsh">フラグメントシェーダーファイル名</param>
+      <param name="defs">追加のラベル定義</param>
+      <param name="color">マテリアルカラー(24bitRGB値)</param>
+      <param name="opt">マテリアルオプション値</param>
+    </member>
+    <member name="gpclone">
+      <summary>ノードを複製</summary>
+      <param name="var">複製されたオブジェクトのIDが代入される変数名</param>
+      <param name="objid">複製元のオブジェクトID</param>
+    </member>
+    <member name="gpnull">
+      <summary>ヌルノードを生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+    </member>
+    <member name="gpload">
+      <summary>3Dモデルノードを生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+      <param name="file">読み込みを行なうgpbファイル名</param>
+      <param name="name">読み込み対象となるノード名</param>
+    </member>
+    <member name="gpplate">
+      <summary>板ノードを生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+      <param name="sizex">生成されるXサイズ</param>
+      <param name="sizey">生成されるYサイズ</param>
+      <param name="color">マテリアルカラー(24bitRGB値)</param>
+      <param name="matobj">マテリアルID</param>
+    </member>
+    <member name="gpfloor">
+      <summary>床ノードを生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+      <param name="sizex"></param>
+      <param name="sizey"></param>
+      <param name="color"></param>
+      <param name="matobj"></param>
+    </member>
+    <member name="gpbox">
+      <summary>箱ノードを生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+      <param name="size"></param>
+      <param name="color"></param>
+      <param name="matobj"></param>
+    </member>
+    <member name="gpspr">
+      <summary>2Dスプライトノード生成</summary>
+      <param name="var">生成されたオブジェクトIDが代入される変数名</param>
+      <param name="bufid"></param>
+      <param name="celid"></param>
+      <param name="gmode"></param>
+    </member>
+    <member name="gplight">
+      <summary>ライトノードを設定</summary>
+      <param name="id">オブジェクトのID</param>
+      <param name="opt">ライト生成オプション</param>
+      <param name="range">影響範囲パラメーター</param>
+      <param name="inner">内側の減衰パラメーター</param>
+      <param name="outer">外側の減衰パラメーター</param>
+    </member>
+    <member name="gpcamera">
+      <summary>カメラノードを設定</summary>
+      <param name="id">オブジェクトのID</param>
+      <param name="fov">視野(FOV)パラメーター</param>
+      <param name="aspect">アスペクト比</param>
+      <param name="near">ニアクリップZ値</param>
+      <param name="far">ファークリップZ値</param>
+    </member>
+    <member name="gplookat">
+      <summary>指定座標に向けてノードを回転</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="x">目標となるX座標</param>
+      <param name="y">目標となるY座標</param>
+      <param name="z">目標となるZ座標</param>
+    </member>
+    <member name="gppbind">
+      <summary>ノードに標準的な物理特性を設定</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="mass">重さ</param>
+      <param name="friction">摩擦係数</param>
+    </member>
+    <member name="getwork2">
+      <summary>ノードワーク値2を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getwork2i">
+      <summary>ノードワーク値2を取得(整数値)</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="selquat">
+      <summary>オブジェク回転情報をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="selwork2">
+      <summary>オブジェクトワーク2をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="setwork2">
+      <summary>work2グループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="addwork2">
+      <summary>work2グループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="gpcnvaxis">
+      <summary>3D座標の変換を行なう</summary>
+      <param name="var_x">X値が代入される変数</param>
+      <param name="var_y">Y値が代入される変数</param>
+      <param name="var_z">Z値が代入される変数</param>
+      <param name="x">変換元のX値</param>
+      <param name="y">変換元のY値</param>
+      <param name="z">変換元のZ値</param>
+      <param name="mode">変換モード</param>
+    </member>
+    <member name="gppset">
+      <summary>ノードの物理パラメーターを設定</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="prmid">パラメーターID</param>
+      <param name="x">設定パラメーターX値</param>
+      <param name="y">設定パラメーターY値</param>
+      <param name="z">設定パラメーターZ値</param>
+    </member>
+    <member name="gpobjpool">
+      <summary>オブジェクトID生成の設定</summary>
+      <param name="start">割り当て開始番号</param>
+      <param name="num">最大割り当て数</param>
+    </member>
+    <member name="gppapply">
+      <summary>ノードに物理的な力を適用する</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="action">力の種類(タイプ)</param>
+      <param name="x">設定パラメーターX値</param>
+      <param name="y">設定パラメーターY値</param>
+      <param name="z">設定パラメーターZ値</param>
+    </member>
+    <member name="gpmatprm1">
+      <summary>マテリアルのパラメーター設定(2)</summary>
+      <param name="id">マテリアルID</param>
+      <param name="name">パラメーター名</param>
+      <param name="value">Xの設定値(実数値)</param>
+    </member>
+    <member name="gpmatprm4">
+      <summary>マテリアルのパラメーター設定(3)</summary>
+      <param name="id">マテリアルID</param>
+      <param name="name">パラメーター名</param>
+      <param name="x">Xの設定値(実数値)</param>
+      <param name="y">Yの設定値(実数値)</param>
+      <param name="z">Zの設定値(実数値)</param>
+      <param name="w">Wの設定値(実数値)</param>
+    </member>
+    <member name="setalpha">
+      <summary>オブジェクトの透明度(α値)設定</summary>
+      <param name="objid">オブジェクトID</param>
+      <param name="value">設定する値(整数値)(0～255)</param>
+    </member>
+  </members>
+</doc>

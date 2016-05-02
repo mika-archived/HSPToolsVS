@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspinet</name>
+  </assembly>
+  <members>
+    <member name="netinit">
+      <summary>ネット接続の初期化</summary>
+    </member>
+    <member name="netterm">
+      <summary>ネット接続の終了</summary>
+    </member>
+    <member name="netexec">
+      <summary>最小単位の処理を実行</summary>
+      <param name="p1">処理の結果が代入される変数</param>
+    </member>
+    <member name="netmode">
+      <summary>モードの取得</summary>
+      <param name="p1">モード値が代入される変数</param>
+    </member>
+    <member name="neterror">
+      <summary>ネットエラー文字列の取得</summary>
+      <param name="p1">エラー文字列が代入される変数</param>
+    </member>
+    <member name="neturl">
+      <summary>URLの設定</summary>
+      <param name="URL">URLを示す文字列</param>
+    </member>
+    <member name="netrequest">
+      <summary>httpリクエスト発行</summary>
+      <param name="FileName">リクエストを行なうファイル名</param>
+    </member>
+    <member name="netload">
+      <summary>httpファイル取得</summary>
+      <param name="FileName">リクエストを行なうファイル名</param>
+    </member>
+    <member name="netfileinfo">
+      <summary>httpファイル情報取得</summary>
+      <param name="p1">ファイル情報が代入される変数名</param>
+      <param name="FileName">リクエストを行なうファイル名</param>
+    </member>
+    <member name="netdlname">
+      <summary>ダウンロード名の設定</summary>
+      <param name="FileName">ダウンロードされた時のファイル名</param>
+    </member>
+    <member name="netproxy">
+      <summary>プロキシの設定</summary>
+      <param name="ServerName">リクエストを行なうファイル名</param>
+      <param name="p1">ポート番号</param>
+      <param name="p2">ローカル接続フラグ</param>
+    </member>
+    <member name="netagent">
+      <summary>エージェントの設定</summary>
+      <param name="AgentName">設定するエージェント名</param>
+    </member>
+    <member name="netheader">
+      <summary>ヘッダ文字列の設定</summary>
+      <param name="HeaderString">ヘッダに追加される文字列</param>
+    </member>
+    <member name="netsize">
+      <summary>ファイル受信サイズの取得</summary>
+      <param name="p1">ファイル受信サイズが代入される変数</param>
+    </member>
+    <member name="filecrc">
+      <summary>ファイルのCRC32を取得</summary>
+      <param name="p1">CRC値が代入される変数名</param>
+      <param name="FileName">CRCチェックを行なうファイル名</param>
+    </member>
+    <member name="filemd5">
+      <summary>ファイルのMD5を取得</summary>
+      <param name="p1">MD5値が代入される変数名</param>
+      <param name="FileName">MD5チェックを行なうファイル名</param>
+    </member>
+    <member name="ftpopen">
+      <summary>FTPセッションの開始</summary>
+      <param name="p1">ftpサーバーアドレス(文字列)</param>
+      <param name="p2">ftpログインユーザー名(文字列)</param>
+      <param name="p3">ftpログインユーザーパスワード(文字列)</param>
+      <param name="p4">ポート番号(省略可能)</param>
+      <param name="p5">PASSIVEモードフラグ(省略可能)</param>
+    </member>
+    <member name="ftpclose">
+      <summary>FTPセッションの終了</summary>
+    </member>
+    <member name="ftpresult">
+      <summary>FTP処理結果文字列の取得</summary>
+      <param name="p1">FTP処理結果文字列が代入される変数</param>
+    </member>
+    <member name="ftpdir">
+      <summary>FTPディレクトリ移動</summary>
+      <param name="p1">現在のディレクトリ位置が代入される変数</param>
+      <param name="p2">移動先のディレクトリ名(文字列)</param>
+    </member>
+    <member name="ftpdirlist">
+      <summary>FTPディレクトリリスト取得1</summary>
+    </member>
+    <member name="ftpdirlist2">
+      <summary>FTPディレクトリリスト取得2</summary>
+      <param name="p1">ファイルリストが代入される変数</param>
+    </member>
+    <member name="ftpcmd">
+      <summary>FTPコマンドの実行</summary>
+      <param name="p1">実行するFTPコマンド文字列</param>
+    </member>
+    <member name="ftprmdir">
+      <summary>FTPディレクトリの削除</summary>
+      <param name="p1">削除するディレクトリを示す文字列</param>
+    </member>
+    <member name="ftpmkdir">
+      <summary>FTPディレクトリの作成</summary>
+      <param name="p1">作成するディレクトリを示す文字列</param>
+    </member>
+    <member name="ftpget">
+      <summary>FTPファイル取得</summary>
+      <param name="p1">サーバー上から取得するファイル名(文字列)</param>
+      <param name="p2">ローカルに作成されるファイル名(文字列)</param>
+      <param name="p3">転送モード(0=バイナリ/1=アスキー)</param>
+    </member>
+    <member name="ftpput">
+      <summary>FTPファイル送信</summary>
+      <param name="p1">サーバー上に作成するファイル名(文字列)</param>
+      <param name="p2">ローカルから送信されるファイル名(文字列)</param>
+      <param name="p3">転送モード(0=バイナリ/1=アスキー)</param>
+    </member>
+    <member name="ftprename">
+      <summary>FTPファイル名前変更</summary>
+      <param name="p1">変更元のファイル名(文字列)</param>
+      <param name="p2">新しいファイル名(文字列)</param>
+    </member>
+    <member name="ftpdelete">
+      <summary>FTPファイル削除</summary>
+      <param name="p1">削除するファイル名(文字列)</param>
+    </member>
+    <member name="netrequest_get">
+      <summary>httpリクエスト発行(GET)</summary>
+      <param name="FileName">リクエストを行なうファイル名</param>
+    </member>
+    <member name="netrequest_post">
+      <summary>httpリクエスト発行(POST)</summary>
+      <param name="FileName">リクエストを行なうファイル名</param>
+      <param name="p1">POST用のデータを格納した文字列型変数名</param>
+    </member>
+    <member name="netgetv">
+      <summary>httpリクエストの結果を取得</summary>
+      <param name="p1">データが代入される変数</param>
+    </member>
+    <member name="varmd5">
+      <summary>変数バッファのMD5を取得</summary>
+      <param name="p1">MD5値が代入される変数名</param>
+      <param name="p2">参照される変数名</param>
+      <param name="p3">バッファサイズ</param>
+    </member>
+    <member name="b64encode">
+      <summary>BASE64エンコード</summary>
+      <param name="p1">BASE64変換された文字列が代入される変数名</param>
+      <param name="p2">変換元データを持つ変数名</param>
+      <param name="p3">バッファサイズ</param>
+    </member>
+    <member name="b64decode">
+      <summary>BASE64デコード</summary>
+      <param name="p1">デコードされたデータが代入される変数名</param>
+      <param name="p2">BASE64形式のデータを持つ変数名</param>
+      <param name="p3">バッファサイズ</param>
+    </member>
+    <member name="rc4encode">
+      <summary>RC4エンコード</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">パスワード文字列</param>
+      <param name="p3">バッファサイズ</param>
+    </member>
+    <member name="urlencode">
+      <summary>URLエンコード</summary>
+      <param name="p1">URLエンコードされた文字列が代入される変数名</param>
+      <param name="p2">変換元データを持つ変数名</param>
+    </member>
+    <member name="urldecode">
+      <summary>URLデコード</summary>
+      <param name="p1">デコードされたデータが代入される変数名</param>
+      <param name="p2">URLエンコード形式のデータを持つ変数名</param>
+    </member>
+    <member name="jsonopen">
+      <summary>JSON形式を開く</summary>
+      <param name="p1">JSONポインタ値が代入される変数名</param>
+      <param name="p2">JSON形式のデータを持つ変数名</param>
+    </member>
+    <member name="jsonclose">
+      <summary>JSON形式の終了処理</summary>
+    </member>
+    <member name="jsonout">
+      <summary>JSON形式データを変数に出力する</summary>
+      <param name="p1">JSON形式のデータが代入される変数名</param>
+      <param name="p2">JSONポインタ値</param>
+    </member>
+    <member name="jsongetobj">
+      <summary>JSONオブジェクトを得る</summary>
+      <param name="p1">JSONポインタ値が代入される変数名</param>
+      <param name="name">オブジェクト識別名</param>
+      <param name="p2">JSONポインタ値</param>
+    </member>
+    <member name="jsonnext">
+      <summary>次のJSONオブジェクトを得る</summary>
+      <param name="p1">JSONポインタ値が代入される変数名</param>
+      <param name="p2">JSONポインタ値</param>
+      <param name="p3">取得オプション</param>
+    </member>
+    <member name="jsongets">
+      <summary>JSONオブジェクトから文字列を得る</summary>
+      <param name="p1">取得された文字列が代入される変数名</param>
+      <param name="name">オブジェクト識別名</param>
+      <param name="p2">JSONポインタ値</param>
+    </member>
+    <member name="jsongeti">
+      <summary>JSONオブジェクトから整数値を得る</summary>
+      <param name="p1">取得された整数値が代入される変数名</param>
+      <param name="name">オブジェクト識別名</param>
+      <param name="p2">JSONポインタ値</param>
+    </member>
+    <member name="jsonnewobj">
+      <summary>JSONオブジェクトを新規作成</summary>
+      <param name="p1">JSONポインタ値が代入される変数名</param>
+      <param name="p2">親のJSONポインタ値</param>
+      <param name="name">オブジェクト識別名</param>
+    </member>
+    <member name="jsondelobj">
+      <summary>JSONオブジェクトを削除</summary>
+      <param name="p1">JSONポインタ値</param>
+    </member>
+    <member name="jsonsetprm">
+      <summary>JSONオブジェクトに値を設定する</summary>
+      <param name="p1">JSONポインタ値</param>
+      <param name="p2">設定値</param>
+      <param name="p3">設定オプション</param>
+    </member>
+    <member name="jsonputs">
+      <summary>JSONオブジェクトに文字列を追加</summary>
+      <param name="p1">JSONポインタ値</param>
+      <param name="name">オブジェクト識別名</param>
+      <param name="strings">設定する文字列</param>
+    </member>
+    <member name="jsonputi">
+      <summary>JSONオブジェクトに数値を追加</summary>
+      <param name="p1">JSONポインタ値</param>
+      <param name="name">オブジェクト識別名</param>
+      <param name="p2">設定する値</param>
+      <param name="p3">設定オプション</param>
+    </member>
+    <member name="jsonnkf">
+      <summary>JSON文字列変換の設定</summary>
+      <param name="option1">取得時変換オプション</param>
+      <param name="option2">設定時変換オプション</param>
+    </member>
+    <member name="nkfcnv">
+      <summary>NKFによる文字コード変換を行なう</summary>
+      <param name="p1">変換後の文字列が代入される変数</param>
+      <param name="p2">変換元の文字列が代入されている変数</param>
+      <param name="option">NKF変換オプション</param>
+      <param name="p3">変換元の文字列サイズ</param>
+      <param name="p4">出力先の最大バッファサイズ</param>
+    </member>
+    <member name="nkfguess">
+      <summary>NKFによる文字コード認識結果を取得する</summary>
+      <param name="p1">結果の文字列が代入される変数</param>
+    </member>
+    <member name="getenv">
+      <summary>環境変数の取得</summary>
+      <param name="p1">結果の文字列が代入される変数</param>
+      <param name="name">環境変数名</param>
+    </member>
+    <member name="getctime">
+      <summary>文字列による日付と時刻の取得</summary>
+      <param name="p1">結果の文字列が代入される変数</param>
+      <param name="p2">取得される形式の指定</param>
+    </member>
+    <member name="getenvprm">
+      <summary>指定文字列要素の取得</summary>
+      <param name="p1">結果の文字列が代入される変数</param>
+      <param name="p2">検索内容が代入されている文字列型変数</param>
+      <param name="name">要素名</param>
+      <param name="code">区切り文字コード(省略時は'&')</param>
+    </member>
+  </members>
+</doc>

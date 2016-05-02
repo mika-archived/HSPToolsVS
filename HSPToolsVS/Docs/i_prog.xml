@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="await">
+      <summary>一定の時間で待つ</summary>
+      <param name="p1">待ち時間(1ms単位)</param>
+    </member>
+    <member name="exec">
+      <summary>Windowsのファイルを実行する</summary>
+      <param name="filename">対象となるファイル名</param>
+      <param name="p1">ファイル実行モード</param>
+      <param name="command">コンテキストメニューの操作名</param>
+    </member>
+    <member name="end">
+      <summary>プログラム終了</summary>
+      <param name="p1">終了コード</param>
+    </member>
+    <member name="gosub">
+      <summary>指定ラベルにサブルーチンジャンプ</summary>
+      <param name="*label">ラベル名</param>
+    </member>
+    <member name="goto">
+      <summary>指定ラベルにジャンプ</summary>
+      <param name="*label">ラベル名</param>
+    </member>
+    <member name="if">
+      <summary>条件を満たしていればその行の命令を実行</summary>
+      <param name="p1">条件式</param>
+    </member>
+    <member name="loop">
+      <summary>ループの始まりに戻る</summary>
+    </member>
+    <member name="onexit">
+      <summary>終了時にジャンプ</summary>
+      <param name="goto/gosub *label">ラベル名</param>
+    </member>
+    <member name="return">
+      <summary>サブルーチンから復帰</summary>
+      <param name="p1">システム変数代入値</param>
+    </member>
+    <member name="run">
+      <summary>指定したファイルに制御を移す</summary>
+      <param name="filename">実行するHSPオブジェクトファイル名</param>
+      <param name="cmdline">システム変数dir_cmdlineに代入される文字列</param>
+    </member>
+    <member name="stop">
+      <summary>プログラム中断</summary>
+    </member>
+    <member name="wait">
+      <summary>実行を一定時間中断する</summary>
+      <param name="p1">待ち時間(10ms単位)</param>
+    </member>
+    <member name="repeat">
+      <summary>ループの始まりの場所を示す</summary>
+      <param name="p1">ループ回数</param>
+      <param name="p2">システム変数cntのスタート値</param>
+    </member>
+    <member name="break">
+      <summary>ループから抜ける</summary>
+    </member>
+    <member name="continue">
+      <summary>ループをやり直す</summary>
+      <param name="p1">繰り返しカウンタ変更値</param>
+    </member>
+    <member name="onkey">
+      <summary>キー割り込み実行指定</summary>
+      <param name="goto/gosub *label">ラベル名</param>
+    </member>
+    <member name="onclick">
+      <summary>クリック割り込み実行指定</summary>
+      <param name="goto/gosub *label">ラベル名</param>
+    </member>
+    <member name="onerror">
+      <summary>エラー発生時にジャンプ</summary>
+      <param name="goto/gosub *label">ラベル名</param>
+    </member>
+    <member name="exgoto">
+      <summary>指定ラベルに条件ジャンプ</summary>
+      <param name="var">比較に使用される変数</param>
+      <param name="p1">比較フラグ</param>
+      <param name="p2">比較値</param>
+      <param name="*label">ラベル名</param>
+    </member>
+    <member name="on">
+      <summary>数値による分岐</summary>
+      <param name="p1 goto/gosub ラベル0">分岐のための値</param>
+      <param name="ラベル1…">分岐先のラベル名</param>
+    </member>
+    <member name="while">
+      <summary>while繰り返し開始</summary>
+      <param name="p1">繰り返しを行なう条件</param>
+    </member>
+    <member name="wend">
+      <summary>while繰り返し終了</summary>
+    </member>
+    <member name="until">
+      <summary>do繰り返し終了</summary>
+      <param name="p1">繰り返しを行なう条件</param>
+    </member>
+    <member name="do">
+      <summary>do繰り返し開始</summary>
+    </member>
+    <member name="for">
+      <summary>指定回数繰り返し開始</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">初期値</param>
+      <param name="p3">終値</param>
+      <param name="p4">増分</param>
+    </member>
+    <member name="next">
+      <summary>指定回数繰り返し終了</summary>
+    </member>
+    <member name="switch">
+      <summary>比較ブロック開始</summary>
+      <param name="p1">比較元</param>
+    </member>
+    <member name="swend">
+      <summary>比較ブロック終了</summary>
+    </member>
+    <member name="default">
+      <summary>デフォルト比較指定</summary>
+    </member>
+    <member name="case">
+      <summary>比較値指定</summary>
+      <param name="p1">比較値</param>
+    </member>
+    <member name="swbreak">
+      <summary>比較実行脱出指定</summary>
+    </member>
+    <member name="_continue">
+      <summary>マクロループをやり直す</summary>
+    </member>
+    <member name="_break">
+      <summary>マクロループを脱出する</summary>
+    </member>
+    <member name="foreach">
+      <summary>変数の要素数だけ繰り返す</summary>
+      <param name="p1">ループの対象となる変数</param>
+    </member>
+    <member name="oncmd">
+      <summary>Windowsメッセージ割り込み実行指定</summary>
+      <param name="goto/gosub *label">ラベル名</param>
+      <param name="p1">メッセージID</param>
+    </member>
+    <member name="else">
+      <summary>条件を満たしていなければその行の命令を実行</summary>
+    </member>
+  </members>
+</doc>

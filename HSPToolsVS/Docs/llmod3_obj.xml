@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/obj</name>
+  </assembly>
+  <members>
+    <member name="objgray">
+      <summary>オブジェクトの使用可、不可設定</summary>
+      <param name="n1">オブジェクトのID</param>
+      <param name="n2">使用可にするか不可するかのフラグ</param>
+    </member>
+    <member name="p_wndscr">
+      <summary>ウィンドウ座標系をスクリーン座標系に変換</summary>
+      <param name="v1">ウィンドウ座標系が入った数値変数</param>
+    </member>
+    <member name="resizeobj">
+      <summary>オブジェクトのサイズ変更</summary>
+      <param name="n1">オブジェクトのID</param>
+      <param name="v2">サイズ、位置が入った数値変数</param>
+      <param name="n3">位置、サイズを変更しないかどうかのフラグ</param>
+    </member>
+    <member name="getobjsize">
+      <summary>オブジェクトのサイズと位置取得</summary>
+      <param name="v1">オブジェクトのサイズ、位置を取得するための数値変数</param>
+      <param name="n2">オブジェクトのID</param>
+    </member>
+    <member name="p_scrwnd">
+      <summary>スクリーン座標系をウィンドウ座標系に変換</summary>
+      <param name="v1">スクリーン座標系が入った数値変数</param>
+    </member>
+  </members>
+</doc>

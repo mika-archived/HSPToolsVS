@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>mod_menu</name>
+  </assembly>
+  <members>
+    <member name="addmenu">
+      <summary>メニュー項目を追加する</summary>
+      <param name="p1">メニューハンドル</param>
+      <param name="p2">メニュー文字列</param>
+      <param name="p3">メニューアイテムID値</param>
+      <param name="p4">メニュー項目属性</param>
+    </member>
+    <member name="applymenu">
+      <summary>メニューをウィンドウに割り当てる</summary>
+      <param name="p1">メニューハンドル</param>
+    </member>
+    <member name="newmenu">
+      <summary>新しいメニューハンドルを取得する</summary>
+      <param name="p1">結果を格納する変数名</param>
+      <param name="p2">種類の指定</param>
+    </member>
+  </members>
+</doc>

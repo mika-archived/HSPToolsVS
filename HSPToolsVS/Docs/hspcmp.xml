@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspcmp</name>
+  </assembly>
+  <members>
+    <member name="hsc_ini">
+      <summary>HSPCMP.DLLの初期化</summary>
+      <param name="filename">コンパイルの対象となるファイル名</param>
+    </member>
+    <member name="hsc_refname">
+      <summary>エラー表示ファイル名の指定</summary>
+      <param name="filename">エラーメッセージで表示されるファイル名</param>
+    </member>
+    <member name="hsc_objname">
+      <summary>出力オブジェクトファイル名の指定</summary>
+      <param name="filename">出力オブジェクトファイル名</param>
+    </member>
+    <member name="hsc_compath">
+      <summary>共通ディレクトリの指定</summary>
+      <param name="pathname">共通ディレクトリパス</param>
+    </member>
+    <member name="hsc_comp">
+      <summary>オブジェクトファイル作成</summary>
+      <param name="p1">コンパイルの設定オプション</param>
+      <param name="p2">プリプロセッサの設定オプション</param>
+      <param name="p3">デバッグウィンドウ表示の有無</param>
+    </member>
+    <member name="hsc_getmes">
+      <summary>エラーメッセージ出力先指定</summary>
+      <param name="p1">エラーメッセージを受け取る文字列型変数</param>
+    </member>
+    <member name="hsc_clrmes">
+      <summary>エラーメッセージのクリア</summary>
+    </member>
+    <member name="hsc_ver">
+      <summary>コンパイラのバージョンを取得</summary>
+    </member>
+    <member name="hsc_bye">
+      <summary>コンパイラの終了処理</summary>
+    </member>
+    <member name="pack_ini">
+      <summary>PACKFILEマネージャの初期化</summary>
+      <param name="filename">操作対象ファイル名</param>
+    </member>
+    <member name="pack_view">
+      <summary>PACKFILEの内容一覧を表示</summary>
+    </member>
+    <member name="pack_make">
+      <summary>DPMファイルを作成</summary>
+      <param name="p1">作成モード( 0=標準EXEファイル用 / 1=外部DPMファイル用 )</param>
+      <param name="p2">暗号化キー( 0=標準キーを使用する / その他=暗号化キー )</param>
+    </member>
+    <member name="pack_exe">
+      <summary>実行ファイルを作成</summary>
+      <param name="p1">作成モード(0=標準 / 1=フルスクリーンモード / 2=スクリーンセーバー)</param>
+    </member>
+    <member name="pack_opt">
+      <summary>実行ファイル作成オプションを指定</summary>
+      <param name="p1">画面Xサイズ</param>
+      <param name="p2">画面Yサイズ</param>
+      <param name="p3">起動時の動作スイッチ</param>
+    </member>
+    <member name="pack_rt">
+      <summary>HSPランタイムファイルを指定</summary>
+      <param name="filename">HSPランタイムファイル(hsprt)のあるフルパス名</param>
+    </member>
+    <member name="pack_get">
+      <summary>packfileからファイルを取り出す</summary>
+      <param name="filename">取り出すファイル名</param>
+    </member>
+    <member name="hsc3_getsym">
+      <summary>シンボル名を取得</summary>
+    </member>
+    <member name="hsc3_messize">
+      <summary>コンパイラメッセージのサイズを取得</summary>
+      <param name="val">サイズを受け取る数値型変数</param>
+    </member>
+    <member name="hsc3_make">
+      <summary>実行ファイルの自動作成</summary>
+      <param name="path">HSPランタイムライブラリのあるフルパス</param>
+    </member>
+    <member name="hsc3_getruntime">
+      <summary>ランタイムファイルの取得</summary>
+      <param name="val">ランタイム名を取得する変数</param>
+      <param name="objfile">オブジェクトファイル名</param>
+    </member>
+    <member name="hsc3_run">
+      <summary>ランタイム実行</summary>
+      <param name="string">実行コマンドライン</param>
+    </member>
+  </members>
+</doc>

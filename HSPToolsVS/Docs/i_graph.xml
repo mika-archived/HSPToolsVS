@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="cls">
+      <summary>画面クリア</summary>
+      <param name="p1">クリアする時の色</param>
+    </member>
+    <member name="mes">
+      <summary>メッセージ表示</summary>
+      <param name="strings">表示するメッセージ、または変数</param>
+    </member>
+    <member name="print">
+      <summary>メッセージ表示</summary>
+      <param name="strings">表示するメッセージまたは変数</param>
+    </member>
+    <member name="title">
+      <summary>タイトルバー設定</summary>
+      <param name="strings">指定する文字列</param>
+    </member>
+    <member name="dialog">
+      <summary>ダイアログを開く</summary>
+      <param name="message">ダイアログのタイプ設定</param>
+      <param name="p1"></param>
+      <param name="option"></param>
+    </member>
+    <member name="bgscr">
+      <summary>枠のないウィンドウを初期化</summary>
+      <param name="p1">ウィンドウID</param>
+      <param name="p2">初期化する画面サイズX（1ドット単位）</param>
+      <param name="p3">初期化する画面サイズY（1ドット単位）</param>
+      <param name="p4">初期化する画面モード</param>
+      <param name="p5">ウィンドウの配置X（1ドット単位）</param>
+      <param name="p6">ウィンドウの配置Y（1ドット単位）</param>
+      <param name="p7">ウィンドウのサイズX（1ドット単位）</param>
+      <param name="p8">ウィンドウのサイズY（1ドット単位）</param>
+    </member>
+    <member name="bmpsave">
+      <summary>画面イメージセーブ</summary>
+      <param name="filename">セーブするファイル名</param>
+    </member>
+    <member name="boxf">
+      <summary>矩形を塗りつぶす</summary>
+      <param name="p1">矩形の左上X座標</param>
+      <param name="p2">矩形の左上Y座標</param>
+      <param name="p3">矩形の右下X座標</param>
+      <param name="p4">矩形の右下Y座標</param>
+    </member>
+    <member name="buffer">
+      <summary>仮想画面を初期化</summary>
+      <param name="p1">ウィンドウID</param>
+      <param name="p2">初期化する画面サイズX（1ドット単位）</param>
+      <param name="p3">初期化する画面サイズY（1ドット単位）</param>
+      <param name="p4">初期化する画面モード</param>
+    </member>
+    <member name="chgdisp">
+      <summary>画像解像度を変更する</summary>
+      <param name="p1">モードの設定</param>
+      <param name="p2">X方向の画像解像度の設定</param>
+      <param name="p3">Y方向の画像解像度の設定</param>
+    </member>
+    <member name="color">
+      <summary>カラー設定</summary>
+      <param name="p1">色コード（R,G,Bの輝度）</param>
+      <param name="p2"></param>
+      <param name="p3"></param>
+    </member>
+    <member name="font">
+      <summary>フォント設定</summary>
+      <param name="fontname">フォント名</param>
+      <param name="p1">フォントの大きさ</param>
+      <param name="p2">フォントのスタイル</param>
+    </member>
+    <member name="gcopy">
+      <summary>画面コピー</summary>
+      <param name="p1">ウィンドウID</param>
+      <param name="p2">コピー元の左上X座標</param>
+      <param name="p3">コピー元の左上Y座標</param>
+      <param name="p4">コピーする大きさX（ドット単位）</param>
+      <param name="p5">コピーする大きさY（ドット単位）</param>
+    </member>
+    <member name="gmode">
+      <summary>画面コピーモード設定</summary>
+      <param name="p1">画面コピーモード</param>
+      <param name="p2">コピーする大きさX（ドット単位）</param>
+      <param name="p3">コピーする大きさY（ドット単位）</param>
+      <param name="p4">半透明合成時のブレンド率</param>
+    </member>
+    <member name="gsel">
+      <summary>描画先指定、ウィンドウ最前面、非表示設定</summary>
+      <param name="p1">ウィンドウID</param>
+      <param name="p2">ウィンドウアクティブスイッチ</param>
+    </member>
+    <member name="gzoom">
+      <summary>変倍して画面コピー</summary>
+      <param name="p1">画面にコピーする時の大きさX（ドット単位）</param>
+      <param name="p2">画面にコピーする時の大きさY（ドット単位）</param>
+      <param name="p3">ウィンドウID</param>
+      <param name="p4">コピー元の左上X座標</param>
+      <param name="p5">コピー元の左上Y座標</param>
+      <param name="p6">コピーする大きさX（ドット単位）</param>
+      <param name="p7">コピーする大きさY（ドット単位）</param>
+      <param name="p8">ズームのモード</param>
+    </member>
+    <member name="palcolor">
+      <summary>描画パレット設定</summary>
+      <param name="p1">パレットコード</param>
+    </member>
+    <member name="palette">
+      <summary>パレット設定</summary>
+      <param name="p1">パレットコード</param>
+      <param name="p2">色コード（R,G,Bの輝度）</param>
+      <param name="p3">更新スイッチ</param>
+      <param name="p4"></param>
+      <param name="p5"></param>
+    </member>
+    <member name="pget">
+      <summary>1dotの点を取得</summary>
+      <param name="p1">画面上のX座標</param>
+      <param name="p2">画面上のY座標</param>
+    </member>
+    <member name="picload">
+      <summary>画像ファイルをロード</summary>
+      <param name="filename">ロードするファイル名</param>
+      <param name="p1">画像ロードモード</param>
+    </member>
+    <member name="pos">
+      <summary>カレントポジション設定</summary>
+      <param name="p1">カレントポジションのX座標</param>
+      <param name="p2">カレントポジションのY座標</param>
+    </member>
+    <member name="pset">
+      <summary>1dotの点を表示</summary>
+      <param name="p1">画面上のX座標</param>
+      <param name="p2">画面上のY座標</param>
+    </member>
+    <member name="redraw">
+      <summary>再描画の設定</summary>
+      <param name="p1">描画モードの設定</param>
+      <param name="p2">再描画する左上X座標</param>
+      <param name="p3">再描画する左上Y座標</param>
+      <param name="p4">再描画する大きさX（ドット単位）</param>
+      <param name="p5">再描画する大きさY（ドット単位）</param>
+    </member>
+    <member name="screen">
+      <summary>ウィンドウを初期化</summary>
+      <param name="p1">ウィンドウID</param>
+      <param name="p2">初期化する画面サイズX（1ドット単位）</param>
+      <param name="p3">初期化する画面サイズY（1ドット単位）</param>
+      <param name="p4">初期化する画面モード</param>
+      <param name="p5">ウィンドウの配置X（1ドット単位）</param>
+      <param name="p6">ウィンドウの配置Y（1ドット単位）</param>
+      <param name="p7">ウィンドウのサイズX（1ドット単位）</param>
+      <param name="p8">ウィンドウのサイズY（1ドット単位）</param>
+    </member>
+    <member name="width">
+      <summary>ウィンドウサイズ設定</summary>
+      <param name="p1">クライアントエリアのサイズX（1ドット単位）</param>
+      <param name="p2">クライアントエリアのサイズY（1ドット単位）</param>
+      <param name="p3">ディスプレイ上でのウィンドウX座標（1ドット単位）</param>
+      <param name="p4">ディスプレイ上でのウィンドウY座標（1ドット単位）</param>
+    </member>
+    <member name="sysfont">
+      <summary>システムフォント選択</summary>
+      <param name="p1">フォント種類指定</param>
+    </member>
+    <member name="line">
+      <summary>直線を描画</summary>
+      <param name="p1">ラインの終点X座標</param>
+      <param name="p2">ラインの終点Y座標</param>
+      <param name="p3">ラインの始点X座標</param>
+      <param name="p4">ラインの始点Y座標</param>
+    </member>
+    <member name="circle">
+      <summary>円を描画する</summary>
+      <param name="p1">矩形の左上X座標</param>
+      <param name="p2">矩形の左上Y座標</param>
+      <param name="p3">矩形の右下X座標</param>
+      <param name="p4">矩形の右下Y座標</param>
+      <param name="p5">描画モード(0=線,1=塗りつぶし)</param>
+    </member>
+    <member name="syscolor">
+      <summary>システムカラーを設定する</summary>
+      <param name="p1">設定するシステムカラーインデックス</param>
+    </member>
+    <member name="hsvcolor">
+      <summary>HSV形式でカラーを設定する</summary>
+      <param name="p1">HSV形式 H値</param>
+      <param name="p2">HSV形式 S値</param>
+      <param name="p3">HSV形式 V値</param>
+    </member>
+    <member name="ginfo">
+      <summary>ウィンドウ情報の取得</summary>
+      <param name="p1">取得するタイプ</param>
+    </member>
+    <member name="grect">
+      <summary>回転する矩形で塗りつぶす</summary>
+      <param name="p1">矩形の中心X座標</param>
+      <param name="p2">矩形の中心Y座標</param>
+      <param name="p3">回転角度(単位はラジアン)</param>
+      <param name="p4">Xサイズ</param>
+      <param name="p5">Yサイズ</param>
+      <param name="p6"></param>
+    </member>
+    <member name="grotate">
+      <summary>矩形画像を回転してコピー</summary>
+      <param name="p1">コピー元のウィンドウID</param>
+      <param name="p2">コピー元の左上X座標</param>
+      <param name="p3">コピー元の左上Y座標</param>
+      <param name="p4">回転角度(単位はラジアン)</param>
+      <param name="p5">Xサイズ</param>
+      <param name="p6">Yサイズ</param>
+    </member>
+    <member name="gsquare">
+      <summary>任意の四角形を描画</summary>
+      <param name="p1">コピー元のウィンドウID (マイナス値ならば塗りつぶし)</param>
+      <param name="p2">コピー先X座標が格納される数値型配列変数名</param>
+      <param name="p3">コピー先Y座標が格納される数値型配列変数名</param>
+      <param name="p4">コピー元X座標が格納される数値型配列変数名</param>
+      <param name="p5">コピー元Y座標が格納される数値型配列変数名</param>
+    </member>
+    <member name="objinfo">
+      <summary>ウィンドウオブジェクト情報の取得</summary>
+      <param name="p1">ウィンドウオブジェクトID</param>
+      <param name="p2">取得するタイプ</param>
+    </member>
+    <member name="axobj">
+      <summary>ActiveXコントロールの配置</summary>
+      <param name="p1">COMオブジェクトが代入される変数名</param>
+      <param name="IID">COMオブジェクトのクラスIDまたはプログラムID</param>
+      <param name="p2">オブジェクトのXサイズ</param>
+      <param name="p3">オブジェクトのYサイズ</param>
+    </member>
+    <member name="winobj">
+      <summary>ウィンドウオブジェクトの配置</summary>
+      <param name="Class">ウィンドウクラス名</param>
+      <param name="Title">ウィンドウ名</param>
+      <param name="p1">拡張ウィンドウスタイル</param>
+      <param name="p2">ウィンドウスタイル</param>
+      <param name="p3">Xサイズ</param>
+      <param name="p4">Yサイズ</param>
+      <param name="p5">メニューハンドルまたは子ウィンドウID</param>
+      <param name="p6">ウィンドウ作成データ</param>
+    </member>
+    <member name="sendmsg">
+      <summary>ウィンドウメッセージの送信</summary>
+      <param name="p1">ウィンドウハンドル</param>
+      <param name="p2">メッセージID</param>
+      <param name="p3">wParam値</param>
+      <param name="p4">lParam値</param>
+      <param name="p5"></param>
+    </member>
+    <member name="groll">
+      <summary>ウィンドウの描画基点を設定</summary>
+      <param name="p1">ウィンドウに描画する基点となるX座標</param>
+      <param name="p2">ウィンドウに描画する基点となるY座標</param>
+    </member>
+    <member name="gradf">
+      <summary>矩形をグラデーションで塗りつぶす</summary>
+      <param name="p1">矩形の左上X座標</param>
+      <param name="p2">矩形の左上Y座標</param>
+      <param name="p3">矩形のXサイズ</param>
+      <param name="p4">矩形のYサイズ</param>
+      <param name="p5">グラデーションのモード</param>
+      <param name="p6">塗りつぶし色1(RGBカラーコード)</param>
+      <param name="p7">塗りつぶし色2(RGBカラーコード)</param>
+    </member>
+    <member name="celload">
+      <summary>画像ファイルをバッファにロード</summary>
+      <param name="filename">ロードするファイル名</param>
+      <param name="p1">読み込み先ウインドゥID</param>
+      <param name="p2">初期化する画面モード</param>
+    </member>
+    <member name="celdiv">
+      <summary>画像素材の分割サイズを設定</summary>
+      <param name="p1">ウインドゥID</param>
+      <param name="p2">横方向の分割サイズ</param>
+      <param name="p3">縦方向の分割サイズ</param>
+      <param name="p4">横方向の中心座標</param>
+      <param name="p5">縦方向の中心座標</param>
+    </member>
+    <member name="celput">
+      <summary>画像素材を描画</summary>
+      <param name="id">画像素材を持つウインドゥID</param>
+      <param name="no">分割画像No.</param>
+      <param name="zoomx">横方向の表示倍率(実数)</param>
+      <param name="zoomy">縦方向の表示倍率(実数)</param>
+      <param name="angle">回転角度(単位はラジアン)</param>
+    </member>
+  </members>
+</doc>

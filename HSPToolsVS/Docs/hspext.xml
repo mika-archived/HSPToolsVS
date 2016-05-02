@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspext</name>
+  </assembly>
+  <members>
+    <member name="aplsel">
+      <summary>任意のウィンドウ捕獲</summary>
+      <param name="window name">取得するウィンドウのタイトル名</param>
+      <param name="p1">開始ID</param>
+    </member>
+    <member name="aplobj">
+      <summary>任意のオブジェクト捕獲</summary>
+      <param name="object name">取得するオブジェクトのクラス名</param>
+      <param name="p1">開始オブジェクトID</param>
+    </member>
+    <member name="aplact">
+      <summary>ウィンドウをアクティブにする</summary>
+    </member>
+    <member name="aplfocus">
+      <summary>キー送信先をデフォルトにする</summary>
+    </member>
+    <member name="aplstr">
+      <summary>文字列をキー送信</summary>
+      <param name="strings">キー送信する文字列</param>
+    </member>
+    <member name="aplkey">
+      <summary>キーコード送信</summary>
+      <param name="p1">キーコード</param>
+      <param name="p2">特殊キーコード</param>
+    </member>
+    <member name="aplkeyd">
+      <summary>キー押し下げ送信</summary>
+      <param name="p1">キーコード</param>
+      <param name="p2">特殊キーコード</param>
+    </member>
+    <member name="aplkeyu">
+      <summary>キー押し上げ送信</summary>
+      <param name="p1">キーコード</param>
+      <param name="p2">特殊キーコード</param>
+    </member>
+    <member name="aplget">
+      <summary>オブジェクトの文字列を取得</summary>
+      <param name="p1">オブジェクトの文字列を読み出す変数名</param>
+      <param name="p2">最大文字数</param>
+    </member>
+    <member name="apledit">
+      <summary>エディットコントロール情報取得</summary>
+      <param name="p1">情報が格納される数値型変数名</param>
+      <param name="p2">取得情報No.</param>
+      <param name="p3">行インデックス指定</param>
+    </member>
+    <member name="clipset">
+      <summary>クリップボードテキスト転送</summary>
+      <param name="strings">クリップボードに送る文字列</param>
+    </member>
+    <member name="clipsetg">
+      <summary>クリップボード画像転送</summary>
+    </member>
+    <member name="clipget">
+      <summary>クリップボードテキスト取得</summary>
+      <param name="p1">情報が格納される変数名</param>
+      <param name="p2">最大文字数</param>
+    </member>
+    <member name="comopen">
+      <summary>シリアルポートを初期化</summary>
+      <param name="p1">COMポート番号</param>
+      <param name="protocol">プロトコル指定文字列</param>
+    </member>
+    <member name="comclose">
+      <summary>シリアルポートを解放</summary>
+    </member>
+    <member name="comput">
+      <summary>シリアルポートに送信</summary>
+      <param name="send-string">送出文字列</param>
+    </member>
+    <member name="computc">
+      <summary>シリアルポートに送信</summary>
+      <param name="p1">送信データ(1バイト)</param>
+    </member>
+    <member name="comgetc">
+      <summary>シリアルポートから受信</summary>
+      <param name="p1">受信データが代入される変数名</param>
+    </member>
+    <member name="comget">
+      <summary>シリアルポートから文字列を受信</summary>
+      <param name="p1">受信データが代入される変数名</param>
+      <param name="p2">受信文字数指定</param>
+    </member>
+    <member name="comcontrol">
+      <summary>シリアルポートの特殊コントロール</summary>
+      <param name="p1">特殊コントロール機能指定</param>
+    </member>
+    <member name="comstat">
+      <summary>シリアルポートの状態取得</summary>
+      <param name="p1">状態データが代入される変数名</param>
+    </member>
+    <member name="gfini">
+      <summary>対象画面を設定</summary>
+      <param name="p1">画面操作を行なうXサイズ(dot単位)</param>
+      <param name="p2">画面操作を行なうYサイズ(dot単位)</param>
+    </member>
+    <member name="gfcopy">
+      <summary>半透明コピー</summary>
+      <param name="p1">半透明コピーレート(%)</param>
+    </member>
+    <member name="gfdec">
+      <summary>画面の色減算</summary>
+      <param name="p1">色コード（R,G,Bの輝度)</param>
+      <param name="p2">色コード（R,G,Bの輝度)</param>
+      <param name="p3">色コード（R,G,Bの輝度)</param>
+    </member>
+    <member name="gfinc">
+      <summary>画面の色加算</summary>
+      <param name="p1">色コード（R,G,Bの輝度)</param>
+      <param name="p2">色コード（R,G,Bの輝度)</param>
+      <param name="p3">色コード（R,G,Bの輝度)</param>
+    </member>
+    <member name="fxcopy">
+      <summary>ファイルのコピー・移動</summary>
+      <param name="p1">コピー元のファイル名が格納された文字列型変数名</param>
+      <param name="dest">コピー先のパス名</param>
+      <param name="p2">モード指定( 0=コピー / 1=移動 )</param>
+    </member>
+    <member name="fxren">
+      <summary>ファイル名を変更</summary>
+      <param name="p1">オリジナルのファイル名が格納された文字列型変数名</param>
+      <param name="new name">新規ファイル名</param>
+    </member>
+    <member name="fxinfo">
+      <summary>ドライブ情報を取得</summary>
+      <param name="p1">情報が格納される変数名</param>
+      <param name="p2">ドライブ指定</param>
+      <param name="p3">情報タイプ指定</param>
+    </member>
+    <member name="fxaget">
+      <summary>ファイル属性を取得</summary>
+      <param name="p1">情報が格納される数値型変数名</param>
+      <param name="file">ファイル名指定</param>
+    </member>
+    <member name="fxaset">
+      <summary>ファイル属性を設定</summary>
+      <param name="file">ファイル名指定</param>
+      <param name="p1">設定する属性</param>
+    </member>
+    <member name="fxtget">
+      <summary>タイムスタンプを取得</summary>
+      <param name="p1">情報が格納される数値型の配列変数名</param>
+      <param name="file">ファイル名指定</param>
+    </member>
+    <member name="fxtset">
+      <summary>タイムスタンプを設定</summary>
+      <param name="p1">設定する情報が格納されている数値型の配列変数名</param>
+      <param name="file">ファイル名指定</param>
+    </member>
+    <member name="selfolder">
+      <summary>フォルダ選択ダイアログ</summary>
+      <param name="p1">選択されたパス名が格納される文字列型の変数名</param>
+      <param name="message">ダイアログに表示される文字列</param>
+    </member>
+    <member name="fxshort">
+      <summary>DOSファイルネームを取得</summary>
+      <param name="p1">情報が格納される文字列型変数名</param>
+      <param name="file">ファイル名指定</param>
+    </member>
+    <member name="fxdir">
+      <summary>特殊なディレクトリ名を取得</summary>
+      <param name="p1">情報が格納される文字列型変数名</param>
+      <param name="p2">取得するディレクトリ情報の種類</param>
+    </member>
+    <member name="fxlink">
+      <summary>ショートカットを作成</summary>
+      <param name="p1">ショートカット名が格納されている文字列型変数名</param>
+      <param name="path">元になるファイルのフルパス名</param>
+    </member>
+    <member name="lzdist">
+      <summary>圧縮解凍先ディレクトリ指定</summary>
+      <param name="path">lzcopy命令の解凍コピー先ディレクトリ</param>
+    </member>
+    <member name="lzcopy">
+      <summary>圧縮解凍コピー</summary>
+      <param name="name">圧縮ファイル名</param>
+    </member>
+    <member name="emath">
+      <summary>固定小数の精度を指定</summary>
+      <param name="p1">固定小数のビット精度</param>
+    </member>
+    <member name="emstr">
+      <summary>固定小数を文字列に変換</summary>
+      <param name="p1">文字列が格納される文字列型変数名</param>
+      <param name="p2">固定小数の値</param>
+      <param name="p3">変換される文字列の桁数</param>
+    </member>
+    <member name="emcnv">
+      <summary>文字列を固定小数に変換</summary>
+      <param name="p1">固定小数が格納される数値型変数名</param>
+      <param name="val">固定小数を示す文字列</param>
+    </member>
+    <member name="emint">
+      <summary>固定小数を整数に変換</summary>
+      <param name="p1">整数値が格納される数値型変数名</param>
+      <param name="p2">固定小数の値</param>
+    </member>
+    <member name="emsin">
+      <summary>サインを求める</summary>
+      <param name="p1">結果が格納される数値列型変数名</param>
+      <param name="p2">角度(固定小数)</param>
+    </member>
+    <member name="emcos">
+      <summary>コサインを求める</summary>
+      <param name="p1">結果が格納される数値列型変数名</param>
+      <param name="p2">角度(固定小数)</param>
+    </member>
+    <member name="emsqr">
+      <summary>平方根を求める</summary>
+      <param name="p1">結果が格納される数値列型変数名</param>
+      <param name="p2">固定小数</param>
+    </member>
+    <member name="ematan">
+      <summary>アークタンジェントを求める</summary>
+      <param name="p1">結果が格納される数値列型変数名</param>
+      <param name="p2">X値</param>
+      <param name="p3">Y値</param>
+    </member>
+    <member name="regkey">
+      <summary>レジストリキー指定</summary>
+      <param name="p1">キーグループ指定</param>
+      <param name="key-name">キー名指定</param>
+      <param name="p2">既存のキー(0)・新規作成(1) モードスイッチ</param>
+    </member>
+    <member name="getreg">
+      <summary>レジストリ読み出し</summary>
+      <param name="p1">読み出すための変数名</param>
+      <param name="section">セクション名指定</param>
+      <param name="p2">タイプ指定</param>
+      <param name="p3">読み出しサイズ指定</param>
+    </member>
+    <member name="setreg">
+      <summary>レジストリ書き込み</summary>
+      <param name="p1">書き込むための変数名</param>
+      <param name="section">セクション名指定</param>
+      <param name="p2">タイプ指定</param>
+      <param name="p3">書き込みサイズ指定</param>
+    </member>
+    <member name="regkill">
+      <summary>レジストリキー削除</summary>
+      <param name="p1">キーグループ指定</param>
+      <param name="key-name">キー名指定</param>
+    </member>
+    <member name="reglist">
+      <summary>レジストリ一覧取得</summary>
+      <param name="p1">読み出すための変数名</param>
+      <param name="p2">モード指定</param>
+    </member>
+    <member name="sysexit">
+      <summary>システムに終了を通知</summary>
+      <param name="p1">終了タイプ指定</param>
+    </member>
+    <member name="pipeexec">
+      <summary>パイプ付き実行</summary>
+      <param name="p1">標準出力が格納される文字列型変数名</param>
+      <param name="filename">実行されるファイル名</param>
+      <param name="p2">ウィンドウ表示スイッチ</param>
+    </member>
+    <member name="pipeget">
+      <summary>パイプ付き実行監視</summary>
+      <param name="p1">結果が格納される文字列型変数名</param>
+    </member>
+    <member name="pipeput">
+      <summary>パイプに1byte送る</summary>
+      <param name="p1">送信コード</param>
+    </member>
+    <member name="dirlist2">
+      <summary>拡張ディレクトリ取得</summary>
+      <param name="p1">ディレクトリ情報全体のサイズ</param>
+      <param name="filemask">一覧のためのファイルマスク</param>
+      <param name="p2">取得モード</param>
+      <param name="p3">ディレクトリ区切り記号</param>
+    </member>
+    <member name="dirlist2h">
+      <summary>拡張ディレクトリ取得設定</summary>
+      <param name="p1">一覧リストフラグ</param>
+      <param name="p2">リスト区切り記号</param>
+    </member>
+    <member name="dirlist2r">
+      <summary>拡張ディレクトリ取得2</summary>
+      <param name="p1">ディレクトリ情報を取得する変数</param>
+    </member>
+  </members>
+</doc>

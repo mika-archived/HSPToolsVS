@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="mci">
+      <summary>MCIにコマンドを送る</summary>
+      <param name="strings">MCIコマンド文字列</param>
+    </member>
+    <member name="mmplay">
+      <summary>サウンド再生</summary>
+      <param name="p1">再生するバッファの番号</param>
+    </member>
+    <member name="mmload">
+      <summary>サウンドファイル読み込み</summary>
+      <param name="filename">割り当てるバッファの番号</param>
+      <param name="p1">割り当てるモード</param>
+      <param name="p2"></param>
+    </member>
+    <member name="mmstop">
+      <summary>サウンド停止</summary>
+    </member>
+  </members>
+</doc>

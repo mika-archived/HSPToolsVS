@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="#define">
+      <summary>新規マクロを登録する</summary>
+      <param name="マクロ名 マクロ定義"></param>
+    </member>
+    <member name="#func">
+      <summary>外部DLL呼び出し命令登録</summary>
+      <param name="新規名称 関数名 タイプ名1"></param>
+      <param name="…"></param>
+    </member>
+    <member name="#cfunc">
+      <summary>外部DLL呼び出し関数登録</summary>
+      <param name="新規名称 関数名 タイプ名1"></param>
+      <param name="…"></param>
+    </member>
+    <member name="#include">
+      <summary>別ファイルを結合</summary>
+      <param name="filename">結合するファイル名</param>
+    </member>
+    <member name="#addition">
+      <summary>別ファイルを結合2</summary>
+      <param name="filename">結合するファイル名</param>
+    </member>
+    <member name="#uselib">
+      <summary>外部DLLの指定</summary>
+      <param name="filename">外部DLLファイル名</param>
+    </member>
+    <member name="#global">
+      <summary>モジュールの終了</summary>
+    </member>
+    <member name="#module">
+      <summary>モジュールの開始</summary>
+      <param name="モジュール名 変数名1">新規モジュール名</param>
+      <param name="…">登録するモジュール変数名</param>
+    </member>
+    <member name="#deffunc">
+      <summary>新規命令を登録する</summary>
+      <param name="p1 p2 p3">割り当てられる命令の名前</param>
+      <param name="…">パラメータータイプ名・エイリアス名</param>
+    </member>
+    <member name="#defcfunc">
+      <summary>新規関数を登録する</summary>
+      <param name="p1 p2 p3">登録する関数の名前</param>
+      <param name="…">パラメータータイプ名・エイリアス名</param>
+    </member>
+    <member name="#pack">
+      <summary>PACKFILE追加ファイル指定</summary>
+      <param name="filename">PACKFILEに追加されるファイル</param>
+    </member>
+    <member name="#epack">
+      <summary>PACKFILE暗号化ファイル指定</summary>
+      <param name="filename">PACKFILEに追加されるファイル</param>
+    </member>
+    <member name="#packopt">
+      <summary>自動作成オプション指定</summary>
+      <param name="p1 p2">キーワード</param>
+    </member>
+    <member name="#const">
+      <summary>マクロ名の定数定義</summary>
+      <param name="マクロ名 定数式"></param>
+    </member>
+    <member name="#undef">
+      <summary>マクロ名の取り消し</summary>
+      <param name="マクロ名"></param>
+    </member>
+    <member name="#if">
+      <summary>数値からコンパイル制御</summary>
+      <param name="数値式"></param>
+    </member>
+    <member name="#ifdef">
+      <summary>マクロ定義からコンパイル制御</summary>
+      <param name="マクロ名"></param>
+    </member>
+    <member name="#ifndef">
+      <summary>マクロ定義からコンパイル制御2</summary>
+      <param name="マクロ名"></param>
+    </member>
+    <member name="#else">
+      <summary>コンパイル制御を反転</summary>
+    </member>
+    <member name="#endif">
+      <summary>コンパイル制御ブロック終了</summary>
+    </member>
+    <member name="#modfunc">
+      <summary>新規命令を割り当てる</summary>
+      <param name="p1 p2 p3">割り当てられる命令の名前</param>
+      <param name="…">パラメータータイプ名・エイリアス名</param>
+    </member>
+    <member name="#modcfunc">
+      <summary>新規関数を割り当てる</summary>
+      <param name="p1 p2 p3">割り当てられる命令の名前</param>
+      <param name="…">パラメータータイプ名・エイリアス名</param>
+    </member>
+    <member name="#modinit">
+      <summary>モジュール初期化処理の登録</summary>
+      <param name="p1 p2">パラメータータイプ名・エイリアス名</param>
+      <param name="…"></param>
+    </member>
+    <member name="#modterm">
+      <summary>モジュール解放処理の登録</summary>
+    </member>
+    <member name="#regcmd">
+      <summary>拡張プラグインの登録</summary>
+      <param name="初期化関数名">プラグイン初期化関数のエクスポート名</param>
+      <param name="DLLファイル名">プラグイン初期化関数のDLL名</param>
+      <param name="変数型拡張数">プラグインで拡張される変数型の数</param>
+    </member>
+    <member name="#cmd">
+      <summary>拡張キーワードの登録</summary>
+      <param name="新規キーワード サブID">追加されるキーワード</param>
+    </member>
+    <member name="#usecom">
+      <summary>外部COMインターフェースの指定</summary>
+      <param name="インターフェース名 インターフェースIID クラスIID">インターフェースを識別するキーワード</param>
+    </member>
+    <member name="#comfunc">
+      <summary>外部COM呼び出し命令登録</summary>
+      <param name="新規名称 インデックス タイプ名1">命令として認識されるキーワード名</param>
+      <param name="…">メソッドindex値</param>
+    </member>
+    <member name="#enum">
+      <summary>マクロ名の定数を列挙</summary>
+      <param name="マクロ名 = p1">定数を割り当てるマクロ名</param>
+    </member>
+    <member name="#runtime">
+      <summary>ランタイムファイルの設定</summary>
+      <param name="ランタイム名">設定するランタイム名</param>
+    </member>
+    <member name="#cmpopt">
+      <summary>コンパイル時の設定</summary>
+      <param name="オプション名  パラメーター">オプションの種類</param>
+    </member>
+    <member name="#aht">
+      <summary>AHTファイルヘッダを記述</summary>
+      <param name="設定名 p1">定数を割り当てる設定項目の名前</param>
+    </member>
+    <member name="#ahtmes">
+      <summary>AHTメッセージの出力</summary>
+      <param name="p1">出力される文字列式</param>
+    </member>
+  </members>
+</doc>

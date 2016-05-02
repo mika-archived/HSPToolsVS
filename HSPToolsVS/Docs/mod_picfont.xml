@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>mod_picfont</name>
+  </assembly>
+  <members>
+    <member name="picfont">
+      <summary>画像を使用したフォント表示準備</summary>
+      <param name="id">フォント画像のあるバッファID</param>
+      <param name="cx">フォント１文字あたりのXYサイズ</param>
+      <param name="cy">表示時のモード(gmodeのモード値)</param>
+      <param name="mode">表示位置のオフセット</param>
+      <param name="offset"></param>
+    </member>
+    <member name="picfprt">
+      <summary>画像を使用したフォント表示</summary>
+      <param name="message">表示するメッセージ</param>
+    </member>
+  </members>
+</doc>

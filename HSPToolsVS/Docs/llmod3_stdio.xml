@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/stdio</name>
+  </assembly>
+  <members>
+    <member name="about">
+      <summary>プログラムのバージョンを表示するダイアログを作成</summary>
+      <param name="s1">アプリケーション名が入った文字列変数または文字列</param>
+      <param name="s2">製作者名が入った文字列変数または文字列</param>
+    </member>
+    <member name="msgdlg">
+      <summary>拡張dialog(type 0～3 )</summary>
+      <param name="s1">メッセージが入った文字列変数または文字列</param>
+      <param name="s2">タイトルが入った文字列変数または文字列</param>
+      <param name="n3">タイプ</param>
+      <param name="n4">アイコンタイプ</param>
+    </member>
+    <member name="multiopen">
+      <summary>複数のファイル名を取得</summary>
+      <param name="v1">選択されたファイル名を受け取るための変数</param>
+      <param name="v2">情報</param>
+      <param name="n3">フィルタのインデックス(1から)</param>
+      <param name="n4">Read Onlyボックスを付ける</param>
+    </member>
+    <member name="console_end">
+      <summary>コンソールウィンドウを閉じる</summary>
+    </member>
+    <member name="console">
+      <summary>コンソールウィンドウを作成</summary>
+    </member>
+    <member name="puts">
+      <summary>コンソールに文字列を書き込む</summary>
+      <param name="v1">コンソールに表示する文字列が入った文字列変数</param>
+    </member>
+    <member name="gets">
+      <summary>コンソールから文字列を読み込む</summary>
+      <param name="v1">コンソールからの文字列を取得する変数</param>
+      <param name="n2">取得する文字の数</param>
+    </member>
+    <member name="console_color">
+      <summary>コンソールのテキストの色設定</summary>
+      <param name="n1">コンソールの文字列の色</param>
+    </member>
+    <member name="console_pos">
+      <summary>コンソールの文字表示位置設定</summary>
+      <param name="n1">x座標</param>
+      <param name="n2">y座標</param>
+    </member>
+    <member name="to_uni">
+      <summary>Unicodeへ変換</summary>
+      <param name="v1">Unicodeを格納する変数</param>
+      <param name="v2">Unicodeに変換する文字列変数</param>
+      <param name="n3">Unicodeに変換する文字列の長さ</param>
+    </member>
+    <member name="from_uni">
+      <summary>UnicodeからANSIに変換</summary>
+      <param name="v1">Multibyteを格納する変数</param>
+      <param name="v2">Multibyteに変換するUnicode文字列が入っている変数</param>
+      <param name="n3">Multibyteに変換するUnicode文字列の長さ</param>
+    </member>
+    <member name="dd_accept">
+      <summary>ドラッグ&amp;ドロップをできるようにする</summary>
+      <param name="v1">ドラッグ&amp;ドロップされたファイル名を入れる変数</param>
+      <param name="v2">ドラッグ&amp;ドロップされたファイル数を入れる変数</param>
+      <param name="n3">ウィンドウID</param>
+    </member>
+    <member name="dd_reject">
+      <summary>ドラッグ&amp;ドロップをできないようにする</summary>
+      <param name="n1">ウィンドウID</param>
+      <param name="n2">フラグ</param>
+    </member>
+    <member name="keybd_event">
+      <summary>キーボード操作</summary>
+      <param name="n1">キーコード</param>
+      <param name="n2">キーを放すフラグ</param>
+      <param name="n3">オプション</param>
+    </member>
+    <member name="mouse_event">
+      <summary>マウス操作</summary>
+      <param name="n1">操作タイプ</param>
+      <param name="n2">水平方向の移動量</param>
+      <param name="n3">垂直方向の移動量</param>
+    </member>
+  </members>
+</doc>

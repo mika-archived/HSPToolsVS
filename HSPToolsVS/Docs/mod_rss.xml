@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>mod_rss</name>
+  </assembly>
+  <members>
+    <member name="rssload">
+      <summary>XMLパーサー(MSXML)を使用してRSSを読み込む</summary>
+      <param name="p1">RSSの内容を代入する文字列型配列変数</param>
+      <param name="p2">リンク先を代入する文字列型配列変数</param>
+      <param name="path">URLまたはファイルパス</param>
+      <param name="p3">読み込むRSSフィールドの数</param>
+    </member>
+  </members>
+</doc>

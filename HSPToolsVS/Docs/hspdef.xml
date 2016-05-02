@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspdef</name>
+  </assembly>
+  <members>
+    <member name="gmode_sub">
+      <summary>色減算合成コピーモード</summary>
+    </member>
+    <member name="gmode_add">
+      <summary>色加算合成コピーモード</summary>
+    </member>
+    <member name="gmode_gdi">
+      <summary>通常のコピーモード</summary>
+    </member>
+    <member name="gmode_rgb0">
+      <summary>透明色付きコピーモード</summary>
+    </member>
+    <member name="gmode_mem">
+      <summary>メモリ間コピーモード</summary>
+    </member>
+    <member name="gmode_alpha">
+      <summary>半透明合成コピーモード</summary>
+    </member>
+    <member name="gmode_rgb0alpha">
+      <summary>透明色付き半透明合成コピーモード</summary>
+    </member>
+    <member name="gmode_pixela">
+      <summary>ピクセルアルファブレンドコピーモード</summary>
+    </member>
+    <member name="objinfo_mode">
+      <summary>モードおよびオプションデータを取得</summary>
+      <param name="p1">ウィンドウオブジェクトID</param>
+    </member>
+    <member name="objinfo_bmscr">
+      <summary>オブジェクトが配置されているBMSCR構造体のポインタを取得</summary>
+      <param name="p1">ウィンドウオブジェクトID</param>
+    </member>
+    <member name="objinfo_hwnd">
+      <summary>ウィンドウオブジェクトのハンドルを取得</summary>
+      <param name="p1">ウィンドウオブジェクトID</param>
+    </member>
+    <member name="screen_normal">
+      <summary>通常のウィンドウを作成</summary>
+    </member>
+    <member name="screen_palette">
+      <summary>パレットモードのウィンドウを作成</summary>
+    </member>
+    <member name="screen_hide">
+      <summary>非表示のウィンドウを作成</summary>
+    </member>
+    <member name="screen_fixedsize">
+      <summary>サイズ固定ウィンドウを作成</summary>
+    </member>
+    <member name="screen_tool">
+      <summary>ツールウィンドウを作成</summary>
+    </member>
+    <member name="screen_frame">
+      <summary>深い縁のあるウィンドウを作成</summary>
+    </member>
+    <member name="font_normal">
+      <summary>通常のスタイルでフォント設定</summary>
+    </member>
+    <member name="font_bold">
+      <summary>太文字でフォント設定</summary>
+    </member>
+    <member name="font_italic">
+      <summary>イタリック体でフォント設定</summary>
+    </member>
+    <member name="font_underline">
+      <summary>下線付きでフォント設定</summary>
+    </member>
+    <member name="font_strikeout">
+      <summary>打ち消し線付きでフォント設定</summary>
+    </member>
+    <member name="font_antialias">
+      <summary>アンチエイリアスでフォント設定</summary>
+    </member>
+    <member name="objmode_normal">
+      <summary>HSP標準フォントを設定</summary>
+    </member>
+    <member name="objmode_guifont">
+      <summary>デフォルトGUIフォントを設定</summary>
+    </member>
+    <member name="objmode_usefont">
+      <summary>font命令で選択されているフォントを設定</summary>
+    </member>
+    <member name="msgothic">
+      <summary>MSゴシックフォント</summary>
+    </member>
+    <member name="msmincho">
+      <summary>MS明朝フォント</summary>
+    </member>
+    <member name="and">
+      <summary>論理積(演算子)</summary>
+    </member>
+    <member name="or">
+      <summary>論理和(演算子)</summary>
+    </member>
+    <member name="xor">
+      <summary>排他的論理和(演算子)</summary>
+    </member>
+    <member name="not">
+      <summary>否定(演算子)</summary>
+    </member>
+    <member name="M_PI">
+      <summary>円周率</summary>
+    </member>
+    <member name="rad2deg">
+      <summary>ラジアンを度に変換</summary>
+      <param name="p1">度に変換する角度（ラジアン）</param>
+    </member>
+    <member name="deg2rad">
+      <summary>度をラジアンに変換</summary>
+      <param name="p1">ラジアンに変換する角度（度）</param>
+    </member>
+  </members>
+</doc>

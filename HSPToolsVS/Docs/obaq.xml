@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>obaq</name>
+  </assembly>
+  <members>
+    <member name="qreset">
+      <summary>OBAQ初期化</summary>
+    </member>
+    <member name="qterm">
+      <summary>OBAQ終了処理</summary>
+    </member>
+    <member name="qexec">
+      <summary>OBAQフレーム処理</summary>
+    </member>
+    <member name="qdraw">
+      <summary>OBAQ描画処理</summary>
+      <param name="mode">デバッグ表示モード設定(0=ON/1=OFF)</param>
+    </member>
+    <member name="qview">
+      <summary>ビュー設定</summary>
+      <param name="zoomx">X方向のズーム倍率(実数)</param>
+      <param name="zoomy">Y方向のズーム倍率(実数)</param>
+      <param name="ofsx">X方向の表示オフセット(実数)</param>
+      <param name="ofsy">Y方向の表示オフセット(実数)</param>
+    </member>
+    <member name="qsetreq">
+      <summary>システムリクエスト設定</summary>
+      <param name="reqid">リクエストID</param>
+      <param name="val">設定値(実数)</param>
+    </member>
+    <member name="qgetreq">
+      <summary>システムリクエスト取得</summary>
+      <param name="var">内容を取得する変数</param>
+      <param name="reqid">リクエストID</param>
+    </member>
+    <member name="qborder">
+      <summary>外壁を設定</summary>
+      <param name="x1">左上X座標(実数)</param>
+      <param name="y1">左上Y座標(実数)</param>
+      <param name="x2">右下X座標(実数)</param>
+      <param name="y2">右下Y座標(実数)</param>
+    </member>
+    <member name="qgravity">
+      <summary>重力を設定</summary>
+      <param name="gx">X方向の重力(実数)</param>
+      <param name="gy">Y方向の重力(実数)</param>
+    </member>
+    <member name="qcnvaxis">
+      <summary>X,Y座標値を変換</summary>
+      <param name="var_x">Xを取得する変数</param>
+      <param name="var_y">Yを取得する変数</param>
+      <param name="x">変換元のX座標(実数)</param>
+      <param name="y">変換元のY座標(実数)</param>
+      <param name="opt">変換モード</param>
+    </member>
+    <member name="qgetaxis">
+      <summary>内部座標を取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_x">Xを取得する変数</param>
+      <param name="var_y">Yを取得する変数</param>
+      <param name="type">取得タイプ</param>
+    </member>
+    <member name="qdel">
+      <summary>オブジェクト削除</summary>
+      <param name="num">オブジェクトID</param>
+    </member>
+    <member name="qaddpoly">
+      <summary>多角形オブジェクト追加</summary>
+      <param name="var">オブジェクトIDを取得する変数</param>
+      <param name="shape">頂点数</param>
+      <param name="x">配置X座標(実数)</param>
+      <param name="y">配置Y座標(実数)</param>
+      <param name="r">配置角度(実数)(単位はラジアン)</param>
+      <param name="sx">配置Xサイズ(実数)</param>
+      <param name="sy">配置Yサイズ(実数)</param>
+      <param name="colsw">配置チェックのモード</param>
+      <param name="mygroup">自分が属するコリジョングループ</param>
+      <param name="exgroup">衝突を除外するグループ</param>
+      <param name="loggroup">コリジョンログを作成するグループ</param>
+    </member>
+    <member name="qaddmodel">
+      <summary>自由設定オブジェクト追加</summary>
+      <param name="var">オブジェクトIDを取得する変数</param>
+      <param name="shape_var">形状データを代入した配列変数</param>
+      <param name="nvertex">形状データの個数</param>
+      <param name="x">配置X座標(実数)</param>
+      <param name="y">配置Y座標(実数)</param>
+      <param name="r">配置角度(実数)(単位はラジアン)</param>
+      <param name="sx">配置Xサイズ(実数)</param>
+      <param name="sy">配置Yサイズ(実数)</param>
+      <param name="colsw">配置チェックのモード</param>
+      <param name="mygroup">自分が属するコリジョングループ</param>
+      <param name="exgroup">衝突を除外するグループ</param>
+      <param name="loggroup">コリジョンログを作成するグループ</param>
+    </member>
+    <member name="qtype">
+      <summary>typeパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="type">設定値</param>
+      <param name="option">設定オプション</param>
+    </member>
+    <member name="qstat">
+      <summary>statパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="stat">設定値</param>
+      <param name="sleepcount">スリープカウント値</param>
+    </member>
+    <member name="qpos">
+      <summary>位置、角度パラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="x">X座標設定値(実数)</param>
+      <param name="y">Y座標設定値(実数)</param>
+      <param name="angle">角度設定値(実数)(ラジアン)</param>
+    </member>
+    <member name="qspeed">
+      <summary>速度パラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="px">X方向設定値(実数)</param>
+      <param name="py">Y方向設定値(実数)</param>
+      <param name="pr">回転速度パラメーター(実数)</param>
+      <param name="option">設定オプション</param>
+    </member>
+    <member name="qweight">
+      <summary>重さなどのパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="weight">重さの値(実数)</param>
+      <param name="moment">モーメント値(実数)</param>
+    </member>
+    <member name="qdamper">
+      <summary>吸振などのパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="damper">吸振パラメーター値(実数)</param>
+      <param name="friction">摩擦抵抗値(実数)</param>
+    </member>
+    <member name="qinertia">
+      <summary>惰性などのパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="inertia">惰性パラメーター値(実数)</param>
+      <param name="gravity">オブジェクトの重力値(実数)</param>
+    </member>
+    <member name="qgroup">
+      <summary>グループパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="mygroup">自分が属するコリジョングループ値</param>
+      <param name="exgroup">衝突を除外するグループ値</param>
+      <param name="loggroup">コリジョンログを作成するグループ値</param>
+    </member>
+    <member name="qmat">
+      <summary>マテリアルパラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="type">マテリアルタイプ値</param>
+      <param name="id">参照id値</param>
+      <param name="subid">参照subid値</param>
+    </member>
+    <member name="qmat2">
+      <summary>マテリアル詳細パラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="offsetx">X方向表示オフセット</param>
+      <param name="offsety">Y方向表示オフセット</param>
+      <param name="zoomx">X方向表示倍率(実数)</param>
+      <param name="zoomy">Y方向表示倍率(実数)</param>
+    </member>
+    <member name="qmat3">
+      <summary>マテリアル表示パラメーターを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="gmode">コピーモード</param>
+      <param name="rate">半透明レート</param>
+    </member>
+    <member name="quser">
+      <summary>ユーザー定義データを設定</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="user1">ユーザー定義データ1</param>
+      <param name="user2">ユーザー定義データ2</param>
+      <param name="user3">ユーザー定義データ3</param>
+    </member>
+    <member name="quser2">
+      <summary>ユーザー定義データを設定2</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="user4">ユーザー定義データ4(実数)</param>
+      <param name="user5">ユーザー定義データ5(実数)</param>
+      <param name="user6">ユーザー定義データ6(実数)</param>
+    </member>
+    <member name="qfind">
+      <summary>オブジェクト検索</summary>
+      <param name="group">検索するグループ値</param>
+      <param name="stat">stat値指定</param>
+    </member>
+    <member name="qnext">
+      <summary>オブジェクト検索結果取得</summary>
+      <param name="var">検索結果を取得する変数</param>
+    </member>
+    <member name="qcollision">
+      <summary>コリジョン取得開始</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="target">コリジョンを取得する対象のオブジェクトID</param>
+    </member>
+    <member name="qgetcol">
+      <summary>コリジョン取得</summary>
+      <param name="var_id">オブジェクトIDを取得する変数</param>
+      <param name="var_x">X座標を取得する変数</param>
+      <param name="var_y">Y座標を取得する変数</param>
+    </member>
+    <member name="qgetcol2">
+      <summary>コリジョン詳細情報取得</summary>
+      <param name="var_depth">衝突の深さを取得する変数</param>
+      <param name="var_nx">衝突のX法線を取得する変数</param>
+      <param name="var_ny">衝突のY法線を取得する変数</param>
+    </member>
+    <member name="qgetcol3">
+      <summary>コリジョン詳細情報取得2</summary>
+      <param name="var_bound">垂直速度を取得する変数</param>
+      <param name="var_slide">水平速度を取得する変数</param>
+    </member>
+    <member name="qgettype">
+      <summary>typeパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_type">typeパラメーターを取得する変数</param>
+    </member>
+    <member name="qgetstat">
+      <summary>statパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_stat">stat設定値を取得する変数</param>
+      <param name="var_sleepcount">スリープカウント値を取得する変数</param>
+    </member>
+    <member name="qgetpos">
+      <summary>位置、角度パラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_x">X座標設定値を取得する変数</param>
+      <param name="var_y">Y座標設定値を取得する変数</param>
+      <param name="var_angle">角度設定値を取得する変数</param>
+    </member>
+    <member name="qgetspeed">
+      <summary>速度パラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_px">X方向速度値を取得する変数</param>
+      <param name="var_py">Y方向速度値を取得する変数</param>
+      <param name="var_pr">回転速度値を取得する変数</param>
+    </member>
+    <member name="qgetweight">
+      <summary>重さなどのパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_weight">重さの値を取得する変数</param>
+      <param name="var_moment">モーメント値を取得する変数</param>
+    </member>
+    <member name="qgetdamper">
+      <summary>吸振などのパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_damper">吸振パラメーター値を取得する変数</param>
+      <param name="var_friction">摩擦抵抗値を取得する変数</param>
+    </member>
+    <member name="qgetinertia">
+      <summary>惰性などのパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_inertia">惰性パラメーター値を取得する変数</param>
+      <param name="var_gravity">オブジェクトの重力値を取得する変数</param>
+    </member>
+    <member name="qgetgroup">
+      <summary>グループパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_mygroup">自分が属するコリジョングループ値を取得する変数</param>
+      <param name="var_exgroup">衝突を除外するグループ値を取得する変数</param>
+      <param name="var_loggroup">コリジョンログを作成するグループ値を取得する変数</param>
+    </member>
+    <member name="qgetmat">
+      <summary>マテリアルパラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_type">マテリアルタイプ値を取得する変数</param>
+      <param name="var_id">参照id値を取得する変数</param>
+      <param name="var_subid">参照subid値を取得する変数</param>
+    </member>
+    <member name="qgetmat2">
+      <summary>マテリアル詳細パラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_offsetx">X方向表示オフセット値を取得する変数</param>
+      <param name="var_offsety">Y方向表示オフセット値を取得する変数</param>
+      <param name="var_zoomx">X方向表示倍率値を取得する変数</param>
+      <param name="var_zoomy">Y方向表示倍率値を取得する変数</param>
+    </member>
+    <member name="qgetmat3">
+      <summary>マテリアル表示パラメーターを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_gmode">コピーモード値を取得する変数</param>
+      <param name="var_rate">半透明レート値を取得する変数</param>
+    </member>
+    <member name="qgetuser">
+      <summary>ユーザー定義データを取得</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_user1">ユーザー定義データ1の値を取得する変数</param>
+      <param name="var_user2">ユーザー定義データ2の値を取得する変数</param>
+      <param name="var_user3">ユーザー定義データ3の値を取得する変数</param>
+    </member>
+    <member name="qgetuser2">
+      <summary>ユーザー定義データを取得2</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="var_user4">ユーザー定義データ4の値を取得する変数</param>
+      <param name="var_user5">ユーザー定義データ5の値を取得する変数</param>
+      <param name="var_user6">ユーザー定義データ6の値を取得する変数</param>
+    </member>
+    <member name="qpush">
+      <summary>任意の場所に力を与える</summary>
+      <param name="num">オブジェクトID</param>
+      <param name="xw">X座標(実数)</param>
+      <param name="yw">Y座標(実数)</param>
+      <param name="ax">X方向の力(実数)</param>
+      <param name="ay">Y方向の力(実数)</param>
+      <param name="sw">設定オプション</param>
+    </member>
+    <member name="qblast">
+      <summary>任意の場所から放射状に力を与える</summary>
+      <param name="xw">X座標(実数)</param>
+      <param name="yw">Y座標(実数)</param>
+      <param name="power">力の大きさ(実数)</param>
+      <param name="near">一番近い距離(実数)</param>
+      <param name="far">一番遠い距離(実数)</param>
+    </member>
+    <member name="qgetversion">
+      <summary>バージョン情報を取得</summary>
+      <param name="var">バージョン情報を取得する変数</param>
+    </member>
+    <member name="qinner">
+      <summary>座標がオブジェクト内にあるかを取得</summary>
+      <param name="var">結果を取得する変数</param>
+      <param name="x">X座標(実数)</param>
+      <param name="y">Y座標(実数)</param>
+      <param name="num">オブジェクトID</param>
+    </member>
+    <member name="qgetptr">
+      <summary>システムポインタ値取得</summary>
+      <param name="var">内容を取得する変数</param>
+      <param name="option">オプション値</param>
+    </member>
+  </members>
+</doc>

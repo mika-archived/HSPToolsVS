@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="newcom">
+      <summary>COMオブジェクト型変数の新規作成</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">インターフェース名、またはクラスID</param>
+      <param name="p3">作成モード(オプション)</param>
+      <param name="p4">参照元ポインタ(オプション)</param>
+    </member>
+    <member name="delcom">
+      <summary>COMオブジェクト型変数の破棄</summary>
+      <param name="p1">変数名</param>
+    </member>
+    <member name="comres">
+      <summary>メソッド返値代入変数を設定する</summary>
+      <param name="p1">変数名</param>
+    </member>
+    <member name="querycom">
+      <summary>COMオブジェクト型変数の作成</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">参照される変数名</param>
+      <param name="p3">インターフェース名</param>
+    </member>
+    <member name="comevent">
+      <summary>COMイベントの取得開始</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">イベント取得元の変数名</param>
+      <param name="p3">コネクションポイントGUID</param>
+      <param name="*label">イベントサブルーチンのラベル</param>
+    </member>
+    <member name="comevarg">
+      <summary>COMイベントのパラメーターを取得</summary>
+      <param name="p1">結果が代入される変数名</param>
+      <param name="p2">参照されるCOMオブジェクト型変数名</param>
+      <param name="p3">パラメーターのインデックス</param>
+      <param name="p4">取得モード(0=通常の変換、1=文字列に変換 2=Variant変換)</param>
+    </member>
+    <member name="sarrayconv">
+      <summary>Variant型との一括変換を行なう</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">変換元の変数</param>
+      <param name="p3">変換のモード</param>
+      <param name="p4">バイナリーデータのサイズ</param>
+    </member>
+  </members>
+</doc>

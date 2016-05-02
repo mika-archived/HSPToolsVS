@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>form_decode</name>
+  </assembly>
+  <members>
+    <member name="form_decode">
+      <summary>テキストをデコード</summary>
+      <param name="p1">変換結果を格納する文字列型変数</param>
+      <param name="p2">変換する文字列を代入した文字列型変数</param>
+      <param name="p3">変換スイッチ(0)</param>
+    </member>
+  </members>
+</doc>

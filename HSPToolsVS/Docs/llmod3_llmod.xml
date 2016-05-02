@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/llmod</name>
+  </assembly>
+  <members>
+    <member name="getptr">
+      <summary>変数のポインタを取得する</summary>
+      <param name="v1">ポインタを代入する変数</param>
+      <param name="v2">ポインタを取得する変数</param>
+    </member>
+    <member name="dllproc">
+      <summary>外部dllの関数を呼び出す</summary>
+      <param name="s1">関数名</param>
+      <param name="v2">関数に渡すパラメータが代入された変数</param>
+      <param name="n3">関数に渡すパラメータの数</param>
+      <param name="n4">dllのインスタンス</param>
+    </member>
+    <member name="_makewnd">
+      <summary>WinAPIのCreateWindowAを呼び出す</summary>
+      <param name="v1">CreateWindowに渡すパラメータが代入された変数</param>
+      <param name="s2">ウィンドウのクラス名</param>
+    </member>
+    <member name="_objsel">
+      <summary>llmod3のモジュールで作成したオブジェクトをアクティブにする</summary>
+      <param name="n1">アクティブにするオブジェクトのID</param>
+    </member>
+    <member name="_clrobj">
+      <summary>llmod3のモジュールで作成したオブジェクトを消去する</summary>
+      <param name="n1">消去するオブジェクトのID</param>
+    </member>
+    <member name="_cls">
+      <summary>llmod3のモジュールで作成したものを含む全てのオブジェクトを消去する</summary>
+      <param name="n1">clsに渡すパラメータ</param>
+    </member>
+    <member name="charupper">
+      <summary>WinAPIのCharUpperAを使い変数内の英字を大文字に変換する</summary>
+      <param name="v1">CharUpperに渡す文字列変数</param>
+    </member>
+    <member name="charlower">
+      <summary>WinAPIのCharLowerAを使い変数内の英字を大文字に変換する</summary>
+      <param name="v1">CharLowerに渡す文字列変数</param>
+    </member>
+  </members>
+</doc>

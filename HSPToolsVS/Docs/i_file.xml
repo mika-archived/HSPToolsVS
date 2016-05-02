@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="bcopy">
+      <summary>ファイルのコピー</summary>
+      <param name="filename1">コピー元ファイル名</param>
+      <param name="filename2">コピー先ファイル名</param>
+    </member>
+    <member name="chdir">
+      <summary>ディレクトリ移動</summary>
+      <param name="dirname">移動先ディレクトリ名</param>
+    </member>
+    <member name="delete">
+      <summary>ファイル削除</summary>
+      <param name="filename">削除するファイル名</param>
+    </member>
+    <member name="dirlist">
+      <summary>ディレクトリ一覧を取得</summary>
+      <param name="p1">ディレクトリ一覧を格納する文字列型変数</param>
+      <param name="filemask">一覧のためのファイルマスク</param>
+      <param name="p2">ディレクトリ取得モード</param>
+    </member>
+    <member name="exist">
+      <summary>ファイルのサイズ取得</summary>
+      <param name="filename">サイズを調べるファイルの名前</param>
+    </member>
+    <member name="mkdir">
+      <summary>ディレクトリ作成</summary>
+      <param name="dirname">作成するディレクトリ名</param>
+    </member>
+    <member name="bload">
+      <summary>バッファにファイルをロード</summary>
+      <param name="filename">ロードするファイル名</param>
+      <param name="p1">変数名</param>
+      <param name="p2">ロードされるサイズ(Byte単位)</param>
+      <param name="p3">ファイルのオフセット</param>
+    </member>
+    <member name="bsave">
+      <summary>バッファをファイルにセーブ</summary>
+      <param name="filename">セーブするファイル名</param>
+      <param name="p1">変数名</param>
+      <param name="p2">セーブするサイズ(Byte単位)</param>
+      <param name="p3">ファイルのオフセット</param>
+    </member>
+    <member name="memfile">
+      <summary>メモリストリーム設定</summary>
+      <param name="p1">ストリーム対象となる変数名</param>
+      <param name="p2">バッファのオフセット</param>
+      <param name="p3">バッファのサイズ</param>
+    </member>
+    <member name="chdpm">
+      <summary>DPMファイル設定</summary>
+      <param name="dpmname">DPMファイル名</param>
+      <param name="p1">暗号化キー指定</param>
+    </member>
+  </members>
+</doc>

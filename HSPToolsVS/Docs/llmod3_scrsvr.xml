@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/scrsvr</name>
+  </assembly>
+  <members>
+    <member name="ss_running">
+      <summary>スクリーンセーバーが作動しているかシステムに知らせる</summary>
+      <param name="n1">作動しているか、いないかのフラグ</param>
+    </member>
+    <member name="ss_chkpwd">
+      <summary>Windows標準のパスワードチェックダイアログ</summary>
+    </member>
+    <member name="ss_chgpwd">
+      <summary>Windows標準のパスワード変更ダイアログ</summary>
+    </member>
+  </members>
+</doc>

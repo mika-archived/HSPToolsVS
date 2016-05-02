@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hsp3dish</name>
+  </assembly>
+  <members>
+    <member name="setreq">
+      <summary>システムリクエスト設定</summary>
+      <param name="type">設定タイプ(SYSREQ_???)</param>
+      <param name="val">設定する値</param>
+    </member>
+    <member name="getreq">
+      <summary>システムリクエスト取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="type">設定タイプ(SYSREQ_???)</param>
+    </member>
+    <member name="gfilter">
+      <summary>テクスチャ補間の設定</summary>
+      <param name="type">設定タイプ(FILTER_???)</param>
+    </member>
+    <member name="mtlist">
+      <summary>ポイントIDリスト取得</summary>
+      <param name="var">結果が代入される変数名</param>
+    </member>
+    <member name="mtinfo">
+      <summary>タッチ情報取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="id">ポイントID</param>
+    </member>
+    <member name="devinfo">
+      <summary>デバイス情報文字列取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="name">デバイス情報名</param>
+    </member>
+    <member name="devinfoi">
+      <summary>デバイス情報値取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="name">デバイス情報名</param>
+    </member>
+    <member name="devprm">
+      <summary>デバイス制御用のパラメーター設定</summary>
+      <param name="name">パラメーター名を示す文字列</param>
+      <param name="value">設定する文字列</param>
+    </member>
+    <member name="devcontrol">
+      <summary>デバイス制御を実行する</summary>
+      <param name="command">コマンド名を示す文字列</param>
+      <param name="p1">制御パラメーター1</param>
+      <param name="p2">制御パラメーター2</param>
+      <param name="p3">制御パラメーター3</param>
+    </member>
+    <member name="mmvol">
+      <summary>音量の設定</summary>
+      <param name="p1">メディアバッファID</param>
+      <param name="p2">ボリューム(音量)値(-1000～0)</param>
+    </member>
+    <member name="mmpan">
+      <summary>パンニングの設定</summary>
+      <param name="p1">メディアバッファID</param>
+      <param name="p2">パンニング値(-1000～1000)</param>
+    </member>
+    <member name="mmstat">
+      <summary>メディアの状態取得</summary>
+      <param name="p1">状態が取得される変数</param>
+      <param name="p2">メディアバッファID</param>
+      <param name="p3">取得モード</param>
+    </member>
+    <member name="setcls">
+      <summary>画面クリア設定</summary>
+      <param name="mode">画面クリアのモード</param>
+      <param name="color">画面クリア色(24bitRGBコード)</param>
+      <param name="tex"></param>
+    </member>
+    <member name="celputm">
+      <summary>複数のセルをまとめて描画</summary>
+      <param name="vxpos">表示X座標が格納された整数型配列変数名</param>
+      <param name="vypos">表示Y座標が格納された整数型配列変数名</param>
+      <param name="vcelid">セルIDが格納された整数型配列変数名</param>
+      <param name="bufid">セルが格納されているバッファID</param>
+      <param name="count">配列変数から取り出す項目数</param>
+    </member>
+  </members>
+</doc>

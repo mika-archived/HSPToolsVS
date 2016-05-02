@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="alloc">
+      <summary>バッファを確保</summary>
+      <param name="p1">バッファを割り当てる変数名</param>
+      <param name="p2">バッファのサイズ(Byte単位)</param>
+    </member>
+    <member name="dim">
+      <summary>配列変数を作成</summary>
+      <param name="p1">配列を割り当てる変数名</param>
+      <param name="p2...">要素の最大</param>
+    </member>
+    <member name="dimtype">
+      <summary>指定タイプの配列変数を作成</summary>
+      <param name="p1">配列を割り当てる変数名</param>
+      <param name="p2">変数の型タイプ</param>
+      <param name="p3...">要素の最大</param>
+    </member>
+    <member name="poke">
+      <summary>バッファに1byte書き込み</summary>
+      <param name="p1">バッファを割り当てた変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+      <param name="p3">バッファに書き込む値 または 文字列(Byte単位)</param>
+    </member>
+    <member name="wpoke">
+      <summary>バッファに2byte書き込み</summary>
+      <param name="p1">バッファを割り当てた変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+      <param name="p3">バッファに書き込む値(16bit整数値)</param>
+    </member>
+    <member name="lpoke">
+      <summary>バッファに4byte書き込み</summary>
+      <param name="p1">バッファを割り当てた変数名</param>
+      <param name="p2">バッファのインデックス(Byte単位)</param>
+      <param name="p3">バッファに書き込む値(32bit整数値)</param>
+    </member>
+    <member name="sdim">
+      <summary>文字列型配列変数を作成</summary>
+      <param name="p1">配列を割り当てる変数名</param>
+      <param name="p2">デフォルト文字数</param>
+      <param name="p3...">要素の最大</param>
+    </member>
+    <member name="ddim">
+      <summary>実数型配列変数を作成</summary>
+      <param name="p1">配列を割り当てる変数名</param>
+      <param name="p2...">要素の最大</param>
+    </member>
+    <member name="memcpy">
+      <summary>メモリブロックのコピー</summary>
+      <param name="p1">コピー先の変数</param>
+      <param name="p2">コピー元の変数</param>
+      <param name="p3">コピーするサイズ(1byte単位)</param>
+      <param name="p4">コピー先の変数メモリオフセット(省略時=0)</param>
+      <param name="p5">コピー元の変数メモリオフセット(省略時=0)</param>
+    </member>
+    <member name="memset">
+      <summary>メモリブロックのクリア</summary>
+      <param name="p1">書き込み先の変数</param>
+      <param name="p2">クリアする値(1byte)</param>
+      <param name="p3">クリアするサイズ(1byte単位)</param>
+      <param name="p4">書き込み先の変数メモリオフセット</param>
+    </member>
+    <member name="dup">
+      <summary>クローン変数を作成</summary>
+      <param name="変数名1">クローンを作成する変数名</param>
+      <param name="変数名2">クローン元の変数名</param>
+    </member>
+    <member name="dupptr">
+      <summary>ポインタからクローン変数を作成</summary>
+      <param name="変数名">クローンを作成する変数名</param>
+      <param name="p1">クローン元のメモリアドレス</param>
+      <param name="p2">クローン元のメモリサイズ</param>
+      <param name="p3">クローン変数の型指定</param>
+    </member>
+    <member name="mref">
+      <summary>特殊なメモリを変数に割り当てる</summary>
+      <param name="p1">割り当てられる変数名</param>
+      <param name="p2">リソースID (割り当てるメモリ内容)</param>
+    </member>
+    <member name="newmod">
+      <summary>モジュール型変数の作成</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">モジュール名</param>
+      <param name="p3...">初期化パラメーター</param>
+    </member>
+    <member name="delmod">
+      <summary>モジュール型変数の要素削除</summary>
+      <param name="p1">変数名</param>
+    </member>
+    <member name="memexpand">
+      <summary>メモリブロックの再確保</summary>
+      <param name="p1">対象となる変数</param>
+      <param name="p2">再確保サイズ(1byte単位)</param>
+    </member>
+    <member name="ldim">
+      <summary>ラベル型配列変数を作成</summary>
+      <param name="p1">配列を割り当てる変数名</param>
+      <param name="p2...">要素の最大</param>
+    </member>
+    <member name="newlab">
+      <summary>ラベル型変数を初期化</summary>
+      <param name="p1">初期化する変数名</param>
+      <param name="p2">参照されるラベルまたはオプション</param>
+    </member>
+  </members>
+</doc>

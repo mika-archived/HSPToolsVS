@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="getkey">
+      <summary>キー入力チェック</summary>
+      <param name="p1">読み込むための変数</param>
+      <param name="p2">キーコード</param>
+    </member>
+    <member name="mouse">
+      <summary>マウスカーソル座標設定</summary>
+      <param name="p1">設定するX,Y座標</param>
+      <param name="p2"></param>
+    </member>
+    <member name="randomize">
+      <summary>乱数発生の初期化</summary>
+      <param name="p1">乱数の初期化パラメーター</param>
+    </member>
+    <member name="stick">
+      <summary>キー入力情報取得</summary>
+      <param name="p1">読み込むための変数</param>
+      <param name="p2">非トリガータイプキー指定</param>
+      <param name="p3">ウィンドウアクティブチェックON/OFF</param>
+    </member>
+    <member name="logmes">
+      <summary>デバッグメッセージ送信</summary>
+      <param name="message">ログに記録するメッセージ</param>
+    </member>
+    <member name="assert">
+      <summary>デバッグウィンドウ表示</summary>
+      <param name="p1">デバッグ時の条件式</param>
+    </member>
+    <member name="mcall">
+      <summary>メソッドの呼び出し</summary>
+      <param name="p1">変数名</param>
+      <param name="p2">メソッド名</param>
+      <param name="p3…">パラメーター</param>
+    </member>
+    <member name="setease">
+      <summary>イージング関数の計算式を設定</summary>
+      <param name="p1">出力される最小値(実数値)</param>
+      <param name="p2">出力される最大値(実数値)</param>
+      <param name="p3">計算式のタイプ値</param>
+    </member>
+  </members>
+</doc>

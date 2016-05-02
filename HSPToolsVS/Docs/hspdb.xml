@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspdb</name>
+  </assembly>
+  <members>
+    <member name="dbini">
+      <summary>ODBCの初期化を行なう</summary>
+    </member>
+    <member name="dbbye">
+      <summary>HSPDBの終了処理を行なう</summary>
+    </member>
+    <member name="dbopen">
+      <summary>DBに接続を行なう</summary>
+      <param name="p1">接続指定文字列</param>
+      <param name="p2">接続モード</param>
+    </member>
+    <member name="dbclose">
+      <summary>DBの接続を切断する</summary>
+    </member>
+    <member name="dbstat">
+      <summary>現在の状態を得る</summary>
+    </member>
+    <member name="dbspchr">
+      <summary>区切り文字を指定する</summary>
+      <param name="p1">0～255</param>
+    </member>
+    <member name="dbsend">
+      <summary>SQL文字列を送信する</summary>
+      <param name="...">SQL文字列</param>
+    </member>
+    <member name="dbgets">
+      <summary>結果文字列を取得する</summary>
+      <param name="p1">結果の文字列が代入される変数名</param>
+    </member>
+  </members>
+</doc>

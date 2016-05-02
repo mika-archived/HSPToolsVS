@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/macro</name>
+  </assembly>
+  <members>
+    <member name="_debug">
+      <summary>デバッグモード時</summary>
+    </member>
+    <member name="__hsp30__">
+      <summary>ver3.0以降使用時</summary>
+    </member>
+    <member name="__file__">
+      <summary>使用時点で解析されているファイル名</summary>
+    </member>
+    <member name="__line__">
+      <summary>使用時点で解析されている行番号</summary>
+    </member>
+    <member name="__date__">
+      <summary>使用時点の日付</summary>
+    </member>
+    <member name="__time__">
+      <summary>使用時点の時刻</summary>
+    </member>
+    <member name="__hspver__">
+      <summary>HSPバージョン番号</summary>
+    </member>
+  </members>
+</doc>

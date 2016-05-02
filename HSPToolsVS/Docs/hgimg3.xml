@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hgimg3</name>
+  </assembly>
+  <members>
+    <member name="hgini">
+      <summary>プラグインの初期化</summary>
+      <param name="yofs">有効スクリーン範囲を縦に+yofsだけずらす</param>
+      <param name="ysize">有効スクリーン範囲を縦にysizeとする</param>
+    </member>
+    <member name="hgreset">
+      <summary>シーン情報の初期化</summary>
+    </member>
+    <member name="hgbye">
+      <summary>プラグインの解放</summary>
+    </member>
+    <member name="hgdraw">
+      <summary>描画の実行</summary>
+      <param name="p1">モード</param>
+    </member>
+    <member name="hgsync">
+      <summary>時間待ちを行なう</summary>
+      <param name="val">待ち時間</param>
+    </member>
+    <member name="hgsetreq">
+      <summary>システムリクエスト設定</summary>
+      <param name="type">設定タイプ(SYSREQ_???)</param>
+      <param name="val">設定する値</param>
+    </member>
+    <member name="hggetreq">
+      <summary>システムリクエスト取得</summary>
+      <param name="val">結果が代入される変数名</param>
+      <param name="type">設定タイプ(SYSREQ_???)</param>
+    </member>
+    <member name="hgrect">
+      <summary>矩形の直接描画</summary>
+      <param name="p1">矩形の中心X座標</param>
+      <param name="p2">矩形の中心Y座標</param>
+      <param name="p3">回転角度(単位はラジアン)</param>
+      <param name="p4">Xサイズ</param>
+      <param name="p5">Yサイズ</param>
+      <param name="p6"></param>
+    </member>
+    <member name="hgrotate">
+      <summary>矩形画像の直接描画</summary>
+      <param name="p1">テクスチャID</param>
+      <param name="p2">コピー元の左上X座標</param>
+      <param name="p3">コピー元の左上Y座標</param>
+      <param name="p4">回転角度(単位はラジアン)</param>
+      <param name="p5">Xサイズ</param>
+      <param name="p6">Yサイズ</param>
+    </member>
+    <member name="hgline">
+      <summary>直線の直接描画</summary>
+      <param name="p1">開始X座標</param>
+      <param name="p2">開始Y座標</param>
+      <param name="p3">終了X座標</param>
+      <param name="p4">終了Y座標</param>
+    </member>
+    <member name="settex">
+      <summary>テクスチャを登録</summary>
+      <param name="x">テクスチャ登録サイズ</param>
+      <param name="y">テクスチャ登録サイズ</param>
+      <param name="sw">テクスチャ登録スイッチ(0=通常/1=Y反転)</param>
+      <param name="mode">更新モード指定(-1=新規)</param>
+    </member>
+    <member name="texload">
+      <summary>テクスチャをファイルから登録</summary>
+      <param name="filename">登録するテクスチャの画像ファイル</param>
+    </member>
+    <member name="texload2">
+      <summary>テクスチャをファイルから登録</summary>
+      <param name="filename">登録するテクスチャの画像ファイル</param>
+      <param name="sx">基準となるテクスチャサイズ</param>
+      <param name="sy"></param>
+    </member>
+    <member name="loadtoon">
+      <summary>トゥーンテクスチャをファイルから登録</summary>
+      <param name="p1">モデルID</param>
+      <param name="filename">登録するテクスチャの画像ファイル</param>
+    </member>
+    <member name="maketoon">
+      <summary>トゥーンテクスチャを作成</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">作成モード</param>
+    </member>
+    <member name="setfont">
+      <summary>オリジナルフォント定義</summary>
+      <param name="cx">フォント1つあたりのXYサイズ</param>
+      <param name="cy">フォント1つあたりのXYサイズ</param>
+      <param name="px">1文字表示ごとに右に移動するドット数</param>
+      <param name="sw">0=透明色抜きなし / 1=透明色抜きあり</param>
+    </member>
+    <member name="fprt">
+      <summary>定義フォント文字列表示</summary>
+      <param name="mes">表示する文字列</param>
+      <param name="x">表示する座標</param>
+      <param name="y">表示する座標</param>
+    </member>
+    <member name="falpha">
+      <summary>フォント文字α値を設定</summary>
+      <param name="val">フォント表示に使用するα合成値</param>
+    </member>
+    <member name="setsizef">
+      <summary>登録モデルの幅、高さを指定</summary>
+      <param name="fsx">X,Yサイズ(実数値)</param>
+      <param name="fsy">X,Yサイズ(実数値)</param>
+    </member>
+    <member name="clscolor">
+      <summary>背景色設定</summary>
+      <param name="color">カラーコード</param>
+    </member>
+    <member name="clstex">
+      <summary>背景テクスチャ設定</summary>
+      <param name="id">テクスチャID</param>
+    </member>
+    <member name="clsblur">
+      <summary>ブラー設定</summary>
+      <param name="val">強度(0～255)</param>
+    </member>
+    <member name="texmake">
+      <summary>メッセージテクスチャの作成</summary>
+      <param name="p1">テクスチャXサイズ</param>
+      <param name="p2">テクスチャYサイズ</param>
+      <param name="p3">作成モード</param>
+    </member>
+    <member name="texcls">
+      <summary>メッセージテクスチャのクリア</summary>
+      <param name="p1">テクスチャID</param>
+      <param name="p2">カラーコード</param>
+    </member>
+    <member name="texmes">
+      <summary>メッセージテクスチャへの描画</summary>
+      <param name="message">メッセージ文字列</param>
+      <param name="p1">テクスチャID</param>
+      <param name="p2">描画先座標</param>
+      <param name="p3"></param>
+    </member>
+    <member name="texdel">
+      <summary>テクスチャの削除</summary>
+      <param name="p1">テクスチャID</param>
+    </member>
+    <member name="setuv">
+      <summary>登録テクスチャUV座標を指定</summary>
+      <param name="tx0">テクスチャの左上座標</param>
+      <param name="ty0">テクスチャの左上座標</param>
+      <param name="tx1">テクスチャの右下座標</param>
+      <param name="ty1">テクスチャの右下座標</param>
+    </member>
+    <member name="addspr">
+      <summary>2Dスプライトモデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="mode">0=透明色抜きなし / 1=透明色抜きあり</param>
+      <param name="x1">テクスチャの左上座標</param>
+      <param name="y1">テクスチャの左上座標</param>
+      <param name="x2">テクスチャの右下座標</param>
+      <param name="y2">テクスチャの右下座標</param>
+      <param name="texid">テクスチャのID</param>
+    </member>
+    <member name="regobj">
+      <summary>オブジェクトの登録</summary>
+      <param name="var">作成されたオブジェクトIDが代入される変数名</param>
+      <param name="ModelID">モデルID</param>
+      <param name="mode">モード値</param>
+      <param name="EventID">イベントID</param>
+    </member>
+    <member name="addplate">
+      <summary>板(PLATE)モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="mode">0=透明色抜きなし / 1=透明色抜きあり</param>
+      <param name="sx">X,Yサイズ</param>
+      <param name="sy">X,Yサイズ</param>
+      <param name="x1">テクスチャの左上座標</param>
+      <param name="y1">テクスチャの左上座標</param>
+      <param name="x2">テクスチャの右下座標</param>
+      <param name="y2">テクスチャの右下座標</param>
+      <param name="texid">テクスチャID</param>
+    </member>
+    <member name="addsplate">
+      <summary>板(SPLATE)モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="mode">0=透明色抜きなし / 1=透明色抜きあり</param>
+      <param name="sx">X,Yサイズ</param>
+      <param name="sy">X,Yサイズ</param>
+      <param name="texid">テクスチャID</param>
+    </member>
+    <member name="setcolor">
+      <summary>単色ポリゴン作成設定</summary>
+      <param name="r">RGB色情報(それぞれ0～255)</param>
+      <param name="g"></param>
+      <param name="b"></param>
+    </member>
+    <member name="addbox">
+      <summary>箱(BOX)モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="sx">X,Yサイズ</param>
+      <param name="sy">X,Yサイズ</param>
+      <param name="texid">テクスチャID</param>
+    </member>
+    <member name="addmesh">
+      <summary>板(MESH)モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="divx">メッシュの分割数X</param>
+      <param name="divy">メッシュの分割数Y</param>
+      <param name="mode">0=透明色抜きなし / 1=透明色抜きあり / 16=繰り返し</param>
+      <param name="sx">X,Yサイズ</param>
+      <param name="sy">X,Yサイズ</param>
+      <param name="texid">テクスチャID</param>
+    </member>
+    <member name="addeprim">
+      <summary>エフェクト(EPRIM)モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="mode">プリミティブモード</param>
+      <param name="option">オプション値</param>
+    </member>
+    <member name="seteprim">
+      <summary>エフェクト(EPRIM)モデルを設定</summary>
+      <param name="Model">モデルID</param>
+      <param name="Param">パラメーターID</param>
+      <param name="Value">パラメーターに設定する値</param>
+    </member>
+    <member name="setefx">
+      <summary>efxグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="addefx">
+      <summary>efxグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="getang">
+      <summary>angグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getangr">
+      <summary>angグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getefx">
+      <summary>efxグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getangi">
+      <summary>angグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getefxi">
+      <summary>efxグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="selefx">
+      <summary>オブジェクト特殊効果をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="objset1">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">設定する値</param>
+    </member>
+    <member name="objsetf1">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">設定する値(実数値)</param>
+    </member>
+    <member name="objadd1">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">加算する値</param>
+    </member>
+    <member name="objadd1r">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">加算する値(整数角度値)</param>
+    </member>
+    <member name="objaddf1">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">加算する値(実数値)</param>
+    </member>
+    <member name="objset1r">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">設定する値</param>
+    </member>
+    <member name="objset2">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">設定する値</param>
+      <param name="y">設定する値2</param>
+    </member>
+    <member name="objsetf2">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">設定する値(実数値)</param>
+      <param name="fy">設定する値2(実数値)</param>
+    </member>
+    <member name="objadd2">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">加算する値</param>
+      <param name="y">加算する値2</param>
+    </member>
+    <member name="objaddf2">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">加算する値(実数値)</param>
+      <param name="fy">加算する値2(実数値)</param>
+    </member>
+    <member name="objadd2r">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">加算する値(整数角度値)</param>
+      <param name="fy">加算する値2(整数角度値)</param>
+    </member>
+    <member name="objset2r">
+      <summary>MOC情報を設定</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="x">設定する値</param>
+      <param name="y">設定する値2</param>
+    </member>
+    <member name="dxfload">
+      <summary>DXF形式ファイルを読み込み</summary>
+      <param name="filename">読み込むモデルファイル(DXF形式)</param>
+      <param name="p1">表面の色指定(オプション)</param>
+    </member>
+    <member name="adddxf">
+      <summary>DXF形式データの登録</summary>
+      <param name="var1">作成されたモデルIDが代入される変数名</param>
+      <param name="var2">DXF形式のデータが代入されているバッファ変数名</param>
+      <param name="color">表面の色指定(オプション)</param>
+    </member>
+    <member name="modelscale">
+      <summary>モデルのサイズを変更する</summary>
+      <param name="id">モデルID</param>
+      <param name="x">X,Y,Z倍率(実数値)</param>
+      <param name="y">X,Y,Z倍率(実数値)</param>
+      <param name="z">X,Y,Z倍率(実数値)</param>
+    </member>
+    <member name="event_wait">
+      <summary>待ち時間イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="p1">待ち時間(フレーム)</param>
+    </member>
+    <member name="event_jump">
+      <summary>ジャンプイベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="p1">ジャンプ先のイベント番号</param>
+      <param name="p2">ジャンプ無視の確率(%)</param>
+    </member>
+    <member name="event_prmset">
+      <summary>パラメーター設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="p1">パラメーターID(PRMSET_*)</param>
+      <param name="p2">設定される値</param>
+    </member>
+    <member name="event_prmon">
+      <summary>パラメータービット設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="p1">パラメーターID(PRMSET_*)</param>
+      <param name="p2">設定されるビット</param>
+    </member>
+    <member name="event_prmoff">
+      <summary>パラメータービット消去イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="p1">パラメーターID(PRMSET_*)</param>
+      <param name="p2">消去されるビット</param>
+    </member>
+    <member name="event_setpos">
+      <summary>posグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setang">
+      <summary>angグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setangr">
+      <summary>angグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setscale">
+      <summary>scaleグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setdir">
+      <summary>dirグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setefx">
+      <summary>efxグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_setwork">
+      <summary>workグループ設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x1">設定される値(下限値)</param>
+      <param name="y1">設定される値(下限値)</param>
+      <param name="z1">設定される値(下限値)</param>
+      <param name="x2">設定される値(上限値)</param>
+      <param name="y2">設定される値(上限値)</param>
+      <param name="z2">設定される値(上限値)</param>
+    </member>
+    <member name="event_pos">
+      <summary>posグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_ang">
+      <summary>angグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_angr">
+      <summary>angグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+    </member>
+    <member name="event_scale">
+      <summary>scaleグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_dir">
+      <summary>dirグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_efx">
+      <summary>efxグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_work">
+      <summary>workグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="x1">設定される値</param>
+      <param name="y1">設定される値</param>
+      <param name="z1">設定される値</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_addpos">
+      <summary>posグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_addang">
+      <summary>angグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_addangr">
+      <summary>angグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_addscale">
+      <summary>scaleグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_adddir">
+      <summary>dirグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_addefx">
+      <summary>efxグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="event_addwork">
+      <summary>workグループ加算イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="x">加算される値</param>
+      <param name="y">加算される値</param>
+      <param name="z">加算される値</param>
+    </member>
+    <member name="setevent">
+      <summary>オブジェクトにイベントを設定</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">イベントID</param>
+      <param name="p3">イベントスロットID</param>
+    </member>
+    <member name="delevent">
+      <summary>イベントリストを削除</summary>
+      <param name="p1">イベントID</param>
+    </member>
+    <member name="newevent">
+      <summary>イベントリストを作成</summary>
+      <param name="p1">イベントIDが代入される変数名</param>
+    </member>
+    <member name="cammode">
+      <summary>カメラモードの設定</summary>
+      <param name="mode">モード値</param>
+    </member>
+    <member name="settoonedge">
+      <summary>トゥーンシェーディング時の設定</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">エッジの色(RGBコード)</param>
+      <param name="p3">Zオフセット</param>
+      <param name="p4">Xオフセット(0.0～1.0)</param>
+    </member>
+    <member name="event_uv">
+      <summary>UV設定イベントを追加</summary>
+      <param name="p1">イベントID</param>
+      <param name="p2">Xオフセット</param>
+      <param name="p3">Yオフセット</param>
+    </member>
+    <member name="setobjmodel">
+      <summary>オブジェクトのモデル設定</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="modelID">モデルID</param>
+    </member>
+    <member name="event_wpos">
+      <summary>posグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_wang">
+      <summary>angグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_wscale">
+      <summary>scaleグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_wdir">
+      <summary>dirグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_wefx">
+      <summary>efxグループ変化イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="frame">変化までのフレーム数</param>
+      <param name="sw">補間オプション</param>
+    </member>
+    <member name="event_delobj">
+      <summary>オブジェクト削除イベントを追加</summary>
+      <param name="id">イベントID</param>
+    </member>
+    <member name="event_regobj">
+      <summary>オブジェクト生成イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="model">モデルID</param>
+      <param name="event">イベントID</param>
+    </member>
+    <member name="event_eprim">
+      <summary>エフェクト設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="model">モデルID</param>
+      <param name="param">パラメーターID</param>
+      <param name="val1">設定値1</param>
+      <param name="val2">設定値2</param>
+    </member>
+    <member name="selcam">
+      <summary>カメラをMOC情報に設定</summary>
+      <param name="mocofs">MOCのグループ指定</param>
+    </member>
+    <member name="sellight">
+      <summary>光源をMOC情報に設定</summary>
+      <param name="id">光源のID(0～3)</param>
+      <param name="ofs">MOCのグループ指定</param>
+    </member>
+    <member name="selcpos">
+      <summary>カメラ座標をMOC情報に設定</summary>
+    </member>
+    <member name="selcang">
+      <summary>カメラ角度をMOC情報に設定</summary>
+    </member>
+    <member name="selcint">
+      <summary>カメラ注視点をMOC情報に設定</summary>
+    </member>
+    <member name="sellpos">
+      <summary>光源座標をMOC情報に設定</summary>
+      <param name="id">光源のID(0～3)</param>
+    </member>
+    <member name="sellang">
+      <summary>光源角度をMOC情報に設定</summary>
+      <param name="id">光源のID(0～3)</param>
+    </member>
+    <member name="sellcolor">
+      <summary>光源色をMOC情報に設定</summary>
+      <param name="id">光源のID(0～3)</param>
+    </member>
+    <member name="sellambient">
+      <summary>環境光色をMOC情報に設定</summary>
+      <param name="id">光源のID(0～3)</param>
+    </member>
+    <member name="objgetv">
+      <summary>MOC情報を整数値で取得</summary>
+      <param name="v">値が代入される変数名</param>
+    </member>
+    <member name="objsetv">
+      <summary>MOC情報を整数値で設定</summary>
+      <param name="v">値が代入されている変数名</param>
+    </member>
+    <member name="objgetstr">
+      <summary>MOC情報を文字列で取得</summary>
+      <param name="sval">結果が代入される文字列型変数名</param>
+    </member>
+    <member name="objact">
+      <summary>指定アニメーションを開始</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="Anim">アニメーションインデックス値</param>
+      <param name="mode">設定モード(0=即時/1=終了時)</param>
+    </member>
+    <member name="getanim">
+      <summary>アニメーション情報を取得</summary>
+      <param name="p1">情報が代入される変数</param>
+      <param name="p2">オブジェクトID</param>
+      <param name="p3">情報ID</param>
+    </member>
+    <member name="addxfile">
+      <summary>Xファイルモデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="filename">読み込みを行なうファイル名</param>
+    </member>
+    <member name="addxanim">
+      <summary>Xファイルアニメーションの追加</summary>
+      <param name="ModelID">モデルID</param>
+      <param name="filename">読み込みを行なうファイル名</param>
+    </member>
+    <member name="objspeed">
+      <summary>アニメーション再生速度の設定</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">１フレームあたりの再生速度(実数値)</param>
+    </member>
+    <member name="modelspeed">
+      <summary>アニメーション再生速度の設定(2)</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">１フレームあたりの再生速度(実数値)</param>
+    </member>
+    <member name="hgcapture">
+      <summary>DirectX画面データの取得</summary>
+    </member>
+    <member name="objlight">
+      <summary>参照されるライトの設定</summary>
+      <param name="p1">ライトが設定されるオブジェクトID</param>
+      <param name="p2">ライトとして参照されるオブジェクトID</param>
+      <param name="p3">設定モード</param>
+    </member>
+    <member name="reglight">
+      <summary>ライトオブジェクトの登録</summary>
+      <param name="p1">作成されたオブジェクトIDが代入される変数名</param>
+    </member>
+    <member name="getxinfo">
+      <summary>Xモデル表示情報の取得</summary>
+      <param name="p1">作成されたモデル情報文字列が代入される変数名</param>
+      <param name="p2">オブジェクトID</param>
+      <param name="p3">ノードID</param>
+    </member>
+    <member name="setxinfo">
+      <summary>Xモデル情報の詳細設定</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">ノードID</param>
+      <param name="p3">設定モード</param>
+      <param name="x">設定されるベクトル情報(実数値)</param>
+      <param name="y">設定されるベクトル情報(実数値)</param>
+      <param name="z">設定されるベクトル情報(実数値)</param>
+    </member>
+    <member name="getobjmodel">
+      <summary>オブジェクトのモデルID取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="modelcols">
+      <summary>コリジョンパラメーターの設定(2)</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">コリジョンパラメーターX(実数値)</param>
+    </member>
+    <member name="setcolscale">
+      <summary>コリジョンパラメーターの設定</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">コリジョンパラメーターX(実数値)</param>
+    </member>
+    <member name="modelshade">
+      <summary>シェーディングモードの設定</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">シェーディングモード</param>
+    </member>
+    <member name="modelorder">
+      <summary>回転順序モードの設定</summary>
+      <param name="p1">モデルID</param>
+      <param name="p2">回転順序モード</param>
+    </member>
+    <member name="objchild">
+      <summary>オブジェクトの親子関係設定</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="ChildObjID">子供のオブジェクトID</param>
+    </member>
+    <member name="objproj">
+      <summary>オブジェクトのプロジェクション変更</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="Mode">プロジェクションモード</param>
+    </member>
+    <member name="dmmini">
+      <summary>サウンド機能初期化</summary>
+    </member>
+    <member name="dmmreset">
+      <summary>サウンド機能の設定をリセット</summary>
+    </member>
+    <member name="dmmbye">
+      <summary>サウンド機能終了処理</summary>
+    </member>
+    <member name="dmmdel">
+      <summary>サウンドデータを削除</summary>
+      <param name="p1">サウンドID</param>
+    </member>
+    <member name="dmmvol">
+      <summary>サウンドデータの音量設定</summary>
+      <param name="p1">サウンドID</param>
+      <param name="p2">音量(-10000～0)</param>
+    </member>
+    <member name="dmmpan">
+      <summary>サウンドデータのパン設定</summary>
+      <param name="p1">サウンドID</param>
+      <param name="p2">パンニング値(-10000～10000)</param>
+    </member>
+    <member name="dmmloop">
+      <summary>サウンドデータのループ設定</summary>
+      <param name="p1">サウンドID</param>
+      <param name="p2">ループポイント(-1=ループなし)</param>
+    </member>
+    <member name="dmmload">
+      <summary>サウンドデータの読み込み</summary>
+      <param name="ファイル名">読み込みを行なうファイル名</param>
+      <param name="p1">登録するサウンドID (-1=自動割り当て)</param>
+      <param name="p2">再生モード(0=通常、1=リピート)</param>
+    </member>
+    <member name="dmmplay">
+      <summary>サウンドデータの再生</summary>
+      <param name="p1">サウンドID</param>
+      <param name="p2">開始ポイント</param>
+    </member>
+    <member name="dmmstop">
+      <summary>サウンドデータの再生停止</summary>
+      <param name="p1">サウンドID (-1=すべてのサウンド)</param>
+    </member>
+    <member name="dmmstat">
+      <summary>サウンドデータの状態取得</summary>
+      <param name="p1">状態が取得される変数</param>
+      <param name="p2">サウンドID</param>
+      <param name="p3">取得モード</param>
+    </member>
+    <member name="hgprm">
+      <summary>動作パラメーターの設定</summary>
+      <param name="p1">パラメーターID</param>
+      <param name="p2">設定する値</param>
+      <param name="p3…"></param>
+    </member>
+    <member name="objaim">
+      <summary>オブジェクトを目標に向けて操作する</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="Target">ターゲットモード(0=座標、1=角度)</param>
+      <param name="Mode">モード</param>
+      <param name="x">オプションパラメーターX</param>
+      <param name="y">オプションパラメーターY</param>
+      <param name="z">オプションパラメーターZ</param>
+    </member>
+    <member name="event_aim">
+      <summary>オブジェクト操作イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="Mode">モード</param>
+      <param name="x">オプションパラメーターX</param>
+      <param name="y">オプションパラメーターY</param>
+      <param name="z">オプションパラメーターZ</param>
+    </member>
+    <member name="event_objact">
+      <summary>アニメーション設定イベントを追加</summary>
+      <param name="id">イベントID</param>
+      <param name="Anim">アニメーションインデックス値</param>
+      <param name="mode">設定モード(0=即時/1=終了時)</param>
+      <param name="speed">アニメーション再生スピード</param>
+    </member>
+    <member name="hgview">
+      <summary>描画エリアの設定</summary>
+      <param name="x">描画エリアの左上座標(X)</param>
+      <param name="y">描画エリアの左上座標(Y)</param>
+      <param name="sx">描画エリアの横サイズ</param>
+      <param name="sy">描画エリアの縦サイズ</param>
+    </member>
+    <member name="texopt">
+      <summary>文字列描画モードを設定</summary>
+      <param name="space">文字間隔サイズ</param>
+      <param name="linespace">行間隔サイズ</param>
+      <param name="mode">描画モード指定</param>
+    </member>
+    <member name="hgsettime">
+      <summary>リアルタイムタイマー設定</summary>
+      <param name="val">設定する値</param>
+      <param name="max">タイマーの上限値</param>
+    </member>
+    <member name="hggettime">
+      <summary>リアルタイムタイマー取得</summary>
+      <param name="val">結果が代入される変数名</param>
+      <param name="type">取得タイプ</param>
+    </member>
+    <member name="meshmap">
+      <summary>メッシュマップ情報の更新</summary>
+      <param name="var">メッシュマップ情報が代入されている配列変数名</param>
+      <param name="id">処理の対象となるメッシュモデルID</param>
+      <param name="mode">更新モード</param>
+      <param name="factor">更新に使用される倍率(実数)</param>
+    </member>
+    <member name="getvarmap">
+      <summary>メッシュマップ情報の作成</summary>
+      <param name="var">メッシュマップ情報が代入される配列変数名</param>
+      <param name="sx">X方向分割数</param>
+      <param name="sy">Y方向分割数</param>
+      <param name="mode">取得モード</param>
+    </member>
+    <member name="objwalk">
+      <summary>メッシュマップ上の移動</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="id">移動を行なうオブジェクトID</param>
+      <param name="x">X方向の移動量(実数)</param>
+      <param name="y">Y方向の移動量(実数)</param>
+      <param name="z">Z方向の移動量(実数)</param>
+    </member>
+    <member name="objfloor">
+      <summary>地面からの表示オフセット設定</summary>
+      <param name="id">設定を行なうオブジェクトID</param>
+      <param name="offset">Y方向のオフセット値(実数)</param>
+    </member>
+    <member name="getcolvec">
+      <summary>コリジョン情報の取得</summary>
+      <param name="var1">Xの結果が代入される変数名</param>
+      <param name="var2">Yの結果が代入される変数名</param>
+      <param name="var3">Zの結果が代入される変数名</param>
+      <param name="id">対象となるオブジェクトID</param>
+      <param name="mode">取得モード</param>
+    </member>
+    <member name="getnearobj">
+      <summary>最も近くにあるオブジェクトを検索</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="id">検索元のオブジェクトID</param>
+      <param name="group">検索対象となるコリジョングループ</param>
+      <param name="range">検索を行なう距離(実数)</param>
+    </member>
+    <member name="wave_init">
+      <summary>波紋の初期化</summary>
+      <param name="p1">初期化Xサイズ</param>
+      <param name="p2">初期化Yサイズ</param>
+    </member>
+    <member name="wave_set">
+      <summary>波紋の高さを設定</summary>
+      <param name="x">頂点のX位置</param>
+      <param name="y">頂点のY位置</param>
+      <param name="pow">高さの値</param>
+      <param name="mode">設定モード</param>
+    </member>
+    <member name="wave_apply">
+      <summary>波紋の状態を取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="mode">取得モード</param>
+    </member>
+    <member name="delmodel">
+      <summary>モデルの削除</summary>
+      <param name="ModelID">モデルID</param>
+    </member>
+    <member name="hgcnvaxis">
+      <summary>3D座標の変換を行なう</summary>
+      <param name="var_x">X値が代入される変数</param>
+      <param name="var_y">Y値が代入される変数</param>
+      <param name="var_z">Z値が代入される変数</param>
+      <param name="x">変換元のX値</param>
+      <param name="y">変換元のY値</param>
+      <param name="z">変換元のZ値</param>
+      <param name="mode">変換モード</param>
+    </member>
+    <member name="hgobaq">
+      <summary>HGIMG3でのOBAQ初期化</summary>
+      <param name="p1">OBAQシステムポインタ値</param>
+      <param name="p2">デバッグ表示モード設定(0=ON/1=OFF)</param>
+      <param name="p3">2D/3D表示モード設定(0=2D/1=3D)</param>
+    </member>
+    <member name="hgceldiv">
+      <summary>HGIMG3でのセル分割指定</summary>
+      <param name="p1">テクスチャID</param>
+      <param name="p2">横方向の分割サイズ</param>
+      <param name="p3">縦方向の分割サイズ</param>
+      <param name="p4">横方向の中心座標</param>
+      <param name="p5">縦方向の中心座標</param>
+    </member>
+    <member name="addobaq3d">
+      <summary>OBAQ3Dモデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+    </member>
+    <member name="addline">
+      <summary>線分モデルを作成</summary>
+      <param name="var">作成されたモデルIDが代入される変数名</param>
+      <param name="p1">テクスチャID</param>
+      <param name="p2">セルID、カラーコード</param>
+      <param name="p3">線サイズ</param>
+    </member>
+    <member name="newemit">
+      <summary>エミッターを作成</summary>
+      <param name="p1">作成されたエミッターIDが代入される変数名</param>
+      <param name="p2">エミッターモード</param>
+      <param name="p3">オブジェクト生成数</param>
+      <param name="p4">エミッターID</param>
+    </member>
+    <member name="delemit">
+      <summary>エミッターを削除</summary>
+      <param name="p1">エミッターID</param>
+    </member>
+    <member name="emit_size">
+      <summary>エミッターの発生範囲を設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="dx">発生範囲X(実数)</param>
+      <param name="dy">発生範囲Y(実数)</param>
+      <param name="dz">発生範囲Z(実数)</param>
+    </member>
+    <member name="emit_speed">
+      <summary>エミッターのスピード設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="speed">スピード初期値(実数)</param>
+      <param name="spdopt">スピード範囲(実数)</param>
+    </member>
+    <member name="emit_angmul">
+      <summary>エミッターの角度係数を設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="dx">角度係数X(実数)</param>
+      <param name="dy">角度係数Y(実数)</param>
+      <param name="dz">角度係数Z(実数)</param>
+    </member>
+    <member name="emit_angopt">
+      <summary>エミッターの角度加算値を設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="dx">角度加算値X(実数)</param>
+      <param name="dy">角度加算値Y(実数)</param>
+      <param name="dz">角度加算値Z(実数)</param>
+    </member>
+    <member name="emit_model">
+      <summary>エミッターの発生モデルを設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="model">モデルID</param>
+      <param name="modelnum">モデルID範囲</param>
+      <param name="objmode">オブジェクトモード設定値</param>
+      <param name="efx">efx設定値</param>
+    </member>
+    <member name="emit_event">
+      <summary>エミッターのイベント設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="event">イベントID</param>
+      <param name="eventnum">イベントID範囲</param>
+    </member>
+    <member name="emit_num">
+      <summary>エミッターの発生数設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="num">オブジェクト発生数</param>
+      <param name="numopt">発生範囲</param>
+    </member>
+    <member name="emit_group">
+      <summary>エミッターのグループ設定</summary>
+      <param name="id">エミッターID</param>
+      <param name="mygroup">自分が属するグループ値</param>
+      <param name="enegroup">衝突を検出する対象となるグループ値</param>
+    </member>
+    <member name="hgemit">
+      <summary>エミッター発生実行</summary>
+      <param name="id">エミッターID</param>
+      <param name="dx">X座標値(実数)</param>
+      <param name="dy">Y座標値(実数)</param>
+      <param name="dz">Z座標値(実数)</param>
+    </member>
+    <member name="setobjemit">
+      <summary>オブジェクトにエミッター適用</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">エミッターID</param>
+    </member>
+    <member name="groupmod">
+      <summary>同一グループに演算適用</summary>
+      <param name="group">演算の対象となるコリジョングループ</param>
+      <param name="mocid">MOCの適用先</param>
+      <param name="dx">X演算値(実数)</param>
+      <param name="dy">Y演算値(実数)</param>
+      <param name="dz">Z演算値(実数)</param>
+      <param name="opt">演算方法</param>
+    </member>
+    <member name="hgqview">
+      <summary>HGIMG3上のOBAQビュー設定</summary>
+      <param name="ofsx">X方向の表示オフセット(実数)</param>
+      <param name="ofsy">Y方向の表示オフセット(実数)</param>
+      <param name="ofsz">Z方向の表示オフセット(実数)</param>
+      <param name="zoom">ズーム倍率(実数)</param>
+    </member>
+    <member name="hgqcnvaxis">
+      <summary>OBAQ座標をHGIMG3座標に変換</summary>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+      <param name="srcx">OBAQ上のX座標(実数)</param>
+      <param name="srcy">OBAQ上のY座標(実数)</param>
+    </member>
+    <member name="enumobj">
+      <summary>オブジェクトの検索開始</summary>
+      <param name="group">コリジョングループ</param>
+    </member>
+    <member name="getenum">
+      <summary>オブジェクトの検索結果を取得</summary>
+      <param name="var">結果が代入される変数名</param>
+    </member>
+  </members>
+</doc>

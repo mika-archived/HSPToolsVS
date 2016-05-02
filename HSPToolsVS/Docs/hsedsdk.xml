@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hsedsdk</name>
+  </assembly>
+  <members>
+    <member name="hsed_exist">
+      <summary>HSPスクリプトエディタの起動状態を取得</summary>
+    </member>
+    <member name="hsed_capture">
+      <summary>HSPスクリプトエディタのAPIウィンドウを捕捉</summary>
+    </member>
+    <member name="hsed_gettext">
+      <summary>編集中のテキストを取得</summary>
+      <param name="p1">テキストを代入する変数</param>
+      <param name="p2">取得したいFootyのID</param>
+    </member>
+    <member name="hsed_sendstr">
+      <summary>文字列を貼り付け</summary>
+      <param name="p1">スクリプトに挿入する文字列を格納した文字列型変数</param>
+    </member>
+    <member name="hsed_cancopy">
+      <summary>コピーの可否を取得</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">FootyのID</param>
+    </member>
+    <member name="hsed_cut">
+      <summary>指定したFootyから文字列を切り取る</summary>
+      <param name="p1">文字列を切り取るFootyのID</param>
+    </member>
+    <member name="hsed_redo">
+      <summary>リドゥを行う</summary>
+      <param name="p1">リドゥを行うFootyのID</param>
+    </member>
+    <member name="hsed_undo">
+      <summary>アンドゥを行う</summary>
+      <param name="p1">アンドゥを行うFootyのID</param>
+    </member>
+    <member name="hsed_indent">
+      <summary>インデントを行う</summary>
+      <param name="p1">インデントを行うFootyのID</param>
+    </member>
+    <member name="hsed_unindent">
+      <summary>アンインデントを行う</summary>
+      <param name="p1">アンインデントを行うFootyのID</param>
+    </member>
+    <member name="hsed_uninitduppipe">
+      <summary>パイプハンドルの解放</summary>
+    </member>
+    <member name="hsed_initduppipe">
+      <summary>パイプハンドルの作成</summary>
+      <param name="p1">文字列の長さ</param>
+    </member>
+    <member name="hsed_getmajorver">
+      <summary>メジャーバージョンを抽出</summary>
+      <param name="p1">バージョンを表す整数値</param>
+    </member>
+    <member name="hsed_getminorver">
+      <summary>マイナーバージョンを抽出</summary>
+      <param name="p1">バージョンを表す整数値</param>
+    </member>
+    <member name="hsed_getbetaver">
+      <summary>ベータバージョンを抽出</summary>
+      <param name="p1">バージョンを表す整数値</param>
+    </member>
+    <member name="hsed_getver">
+      <summary>スクリプトエディタのバージョンを取得</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">バージョンの種類を指定するための整数値</param>
+    </member>
+    <member name="hsed_getwnd">
+      <summary>スクリプトエディタの各種ハンドルを取得</summary>
+      <param name="p1"></param>
+      <param name="p2"></param>
+      <param name="p3"></param>
+    </member>
+    <member name="hsed_cnvverstr">
+      <summary>バージョンの数値を文字列に変換</summary>
+      <param name="p1">バージョンを表す整数値</param>
+    </member>
+    <member name="hsed_selectall">
+      <summary>テキストをすべて選択</summary>
+      <param name="p1">テキストを選択するFootyのID</param>
+    </member>
+    <member name="hsed_gettextlength">
+      <summary>テキストの文字列長を取得</summary>
+      <param name="p1">文字列長を代入する変数</param>
+      <param name="p2">文字列長を取得するFootyのID</param>
+    </member>
+    <member name="hsed_getlines">
+      <summary>テキストの行数を取得</summary>
+      <param name="p1">行数を代入する変数</param>
+      <param name="p2">行数を取得するFootyのID</param>
+    </member>
+    <member name="hsed_getlinelength">
+      <summary>行の文字列長を取得</summary>
+      <param name="p1">文字列長を代入する変数</param>
+      <param name="p2">文字列長を取得するFootyのID</param>
+      <param name="p3">文字列長を取得する行の番号（1～）</param>
+    </member>
+    <member name="hsed_getlinecode">
+      <summary>改行コードを取得</summary>
+      <param name="p1"></param>
+      <param name="p2"></param>
+    </member>
+    <member name="hsed_copy">
+      <summary>指定したFootyから文字列をコピー</summary>
+      <param name="p1">文字列をコピーするFootyのID</param>
+    </member>
+    <member name="hsed_paste">
+      <summary>指定したFootyへ文字列を貼り付け</summary>
+      <param name="p1">文字列を貼り付けるFootyのID</param>
+    </member>
+    <member name="hsed_canpaste">
+      <summary>貼り付けの可否を取得</summary>
+      <param name="p1">結果を格納する変数</param>
+    </member>
+    <member name="hsed_canundo">
+      <summary>アンドゥの可否を取得</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">FootyのID</param>
+    </member>
+    <member name="hsed_canredo">
+      <summary>リドゥの可否を取得</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">FootyのID</param>
+    </member>
+    <member name="hsed_getmodify">
+      <summary>変更フラグを取得</summary>
+      <param name="p1">結果を格納する変数</param>
+      <param name="p2">FootyのID</param>
+    </member>
+    <member name="hsed_settext">
+      <summary>テキストを変更</summary>
+      <param name="p1">変更したいFootyのID</param>
+      <param name="p2">変更するテキスト</param>
+    </member>
+    <member name="hsed_getfootyid">
+      <summary>タブのIDからFootyのIDを取得</summary>
+      <param name="p1">FootyのIDを代入する変数</param>
+      <param name="p2">タブのID</param>
+    </member>
+    <member name="hsed_gettabid">
+      <summary>FootyのIDからタブのIDを取得</summary>
+      <param name="p1">タブのIDを代入する変数</param>
+      <param name="p2">FootyのID</param>
+    </member>
+    <member name="hsed_gettabcount">
+      <summary>タブ数の取得</summary>
+      <param name="p1">タブ数を代入する変数</param>
+    </member>
+    <member name="hsed_getactfootyid">
+      <summary>アクティブなFootyのIDの取得</summary>
+      <param name="p1">FootyのIDを代入する変数</param>
+    </member>
+    <member name="hsed_getacttabid">
+      <summary>アクティブなタブのIDの取得</summary>
+      <param name="p1">タブのIDを代入する変数</param>
+    </member>
+    <member name="hsed_getpath">
+      <summary>タブIDからファイルパスを取得</summary>
+      <param name="p1">ファイルパスを代入する変数</param>
+      <param name="p2">タブのID</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>i_hsp3util</name>
+  </assembly>
+  <members>
+    <member name="bmppalette">
+      <summary>bmp画像パレット情報を読み込む</summary>
+      <param name="ファイル名">パレットを取り出すBMP画像ファイル名</param>
+    </member>
+    <member name="gettimestr">
+      <summary>現在の時刻を文字列で取得する</summary>
+      <param name="p1">文字列を取得する変数名</param>
+    </member>
+    <member name="getdatestr">
+      <summary>現在の日付を文字列で取得する</summary>
+      <param name="p1">文字列を取得する変数名</param>
+    </member>
+    <member name="text">
+      <summary>修飾文字表示の待ち時間を設定する</summary>
+      <param name="p1">表示待ち時間(ms)</param>
+    </member>
+    <member name="textmode">
+      <summary>修飾文字表示の設定を行なう</summary>
+      <param name="p1">修飾文字のモード</param>
+      <param name="p2">調整パラメーター</param>
+    </member>
+    <member name="emes">
+      <summary>修飾文字を表示</summary>
+      <param name="strings">表示するメッセージまたは変数</param>
+    </member>
+    <member name="gfade">
+      <summary>画面のフェードを行なう</summary>
+      <param name="p1">フェードレベル(0～256)</param>
+      <param name="p2">フェードを行なう左上X,Y座標</param>
+      <param name="p3">フェードを行なう左上X,Y座標</param>
+      <param name="p4">フェードを行なうX,Yサイズ</param>
+      <param name="p5">フェードを行なうX,Yサイズ</param>
+    </member>
+    <member name="statictext">
+      <summary>スタティックテキストを配置</summary>
+      <param name="strings">スタティックテキストの文字列</param>
+      <param name="p1">Xサイズ</param>
+      <param name="p2">Yサイズ</param>
+    </member>
+    <member name="statictext_set">
+      <summary>スタティックテキストを変更</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="strings">スタティックテキストの文字列</param>
+    </member>
+    <member name="scrollbar">
+      <summary>スクロールバーを配置</summary>
+      <param name="p1">Xサイズ</param>
+      <param name="p2">Yサイズ</param>
+    </member>
+    <member name="progbar">
+      <summary>プログレスバーを配置</summary>
+      <param name="p1">Xサイズ</param>
+      <param name="p2">Yサイズ</param>
+    </member>
+    <member name="progbar_set">
+      <summary>プログレスバーのステップ増分を設定する</summary>
+      <param name="p1">オブジェクトID</param>
+      <param name="p2">増分値</param>
+    </member>
+    <member name="progbar_step">
+      <summary>プログレスバーを1ステップ進める</summary>
+      <param name="p1">オブジェクトID</param>
+    </member>
+    <member name="note2array">
+      <summary>複数行文字列を配列に変換</summary>
+      <param name="p1">変換した配列を代入する変数</param>
+      <param name="p2">複数行文字列が代入されている変数</param>
+    </member>
+    <member name="array2note">
+      <summary>配列を複数行文字列に変換</summary>
+      <param name="p1">変換したを文字列を代入する変数</param>
+      <param name="p2">文字列が配列に代入されている変数</param>
+    </member>
+    <member name="arraysave">
+      <summary>文字列型の配列変数をファイルに書き出し</summary>
+      <param name="ファイル名">書き出しを行なうファイル名</param>
+      <param name="p1">書き出しを行なう元の変数</param>
+    </member>
+    <member name="arrayload">
+      <summary>文字列型の配列変数をファイルから読み込み</summary>
+      <param name="ファイル名">読み込みを行なうファイル名</param>
+      <param name="p1">読み込みを行なう先の変数</param>
+    </member>
+  </members>
+</doc>

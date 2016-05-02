@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>mod_img</name>
+  </assembly>
+  <members>
+    <member name="imgload">
+      <summary>画像ファイル読み込み</summary>
+      <param name="ファイル名">読み込むファイル名</param>
+    </member>
+  </members>
+</doc>

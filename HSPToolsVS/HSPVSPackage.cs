@@ -8,6 +8,7 @@ using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
+using HSPToolsVS.IntelliSense;
 using HSPToolsVS.LanguageService;
 
 using Microsoft.VisualStudio.Shell;
@@ -64,6 +65,8 @@ namespace HSPToolsVS
             var hspLangService = new HSPLanguageService();
             hspLangService.SetSite(this);
             serviceContainer.AddService(typeof(HSPLanguageService), hspLangService, true);
+
+            HSPDocs.LoadDocuments();
         }
 
         protected override void Dispose(bool disposing)

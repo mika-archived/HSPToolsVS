@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>mod_fontdlg</name>
+  </assembly>
+  <members>
+    <member name="fontdlg">
+      <summary>フォント選択ダイアログを開く</summary>
+      <param name="p1">戻り値を格納する数値型配列変数</param>
+      <param name="p2">オプション</param>
+    </member>
+  </members>
+</doc>

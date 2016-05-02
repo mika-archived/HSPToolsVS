@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hsp3imp</name>
+  </assembly>
+  <members>
+    <member name="hspini">
+      <summary>HSP3IMP.DLLの初期化</summary>
+      <param name="mode">初期化モード($100=子ウィンドウとして初期化)</param>
+      <param name="xsize">window非表示(ON/OFF)</param>
+      <param name="ysize">カレントディレクトリ変更禁止(ON/OFF)</param>
+      <param name="handle"></param>
+    </member>
+    <member name="hspbye">
+      <summary>初期化されたHSP3のインスタンスの破棄</summary>
+    </member>
+    <member name="hspexec">
+      <summary>HSP3のタスクの実行</summary>
+    </member>
+    <member name="hspprm">
+      <summary>HSP3IMP.DLLに関する設定と情報の取得</summary>
+      <param name="p1">設定または取得のモード</param>
+      <param name="p2">p1 に応じたパラメーター</param>
+      <param name="p3"></param>
+      <param name="p4"></param>
+    </member>
+  </members>
+</doc>

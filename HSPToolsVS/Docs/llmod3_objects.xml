@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/objects</name>
+  </assembly>
+  <members>
+    <member name="listview">
+      <summary>リストビューの作成</summary>
+      <param name="n1">幅</param>
+      <param name="n2">高さ</param>
+      <param name="n3">スタイル</param>
+    </member>
+    <member name="listadd">
+      <summary>リストビューにアイテムを追加</summary>
+      <param name="n1">アイテムの位置</param>
+      <param name="s2">アイテムのテキスト</param>
+      <param name="n3">欄の番号</param>
+      <param name="n4">アイコン番号</param>
+      <param name="n5">アイテムの状態</param>
+      <param name="n6">アイテムに持たせる数値</param>
+    </member>
+    <member name="listdel">
+      <summary>リストビューのアイテムを消去</summary>
+      <param name="n1">アイテムのインデックス</param>
+    </member>
+    <member name="listaddcl">
+      <summary>リストビューに欄を追加</summary>
+      <param name="n1">欄のインデックス</param>
+      <param name="s2">欄の名前</param>
+      <param name="n3">欄の幅</param>
+      <param name="n4">欄の名前の位置</param>
+    </member>
+    <member name="listdelcl">
+      <summary>欄を消去</summary>
+      <param name="n1">欄のインデックス</param>
+    </member>
+    <member name="listsel">
+      <summary>リストビューのアイテムを選択</summary>
+      <param name="n1">アイテムのインデックス</param>
+      <param name="n2">選択状態のタイプ</param>
+    </member>
+    <member name="listget">
+      <summary>リストビューのアイテムを取得</summary>
+      <param name="v1">取得したものを入れる変数</param>
+      <param name="n2">アイテムのインデックス</param>
+      <param name="n3">取得するもの</param>
+      <param name="n4">取得するアイテムの状態</param>
+    </member>
+    <member name="listicon">
+      <summary>リストビューのアイコンを設定</summary>
+      <param name="v1">アイコンが入った数値変数(get_iconで取得したもの)</param>
+      <param name="n2">アイコンの数</param>
+      <param name="n3">セットするアイコンの大小</param>
+    </member>
+    <member name="listmax">
+      <summary>リストビューのアイテムの数を取得</summary>
+      <param name="v1">リストビュー内のアイテムの数を入れる数値変数</param>
+      <param name="n2">フラグ</param>
+    </member>
+    <member name="listhit">
+      <summary>マウスの下にあるアイテムを取得</summary>
+    </member>
+    <member name="sel_listview">
+      <summary>操作するリストビューを選択</summary>
+      <param name="n1">リストビューのID</param>
+    </member>
+    <member name="progbox">
+      <summary>プログレスボックスの作成</summary>
+      <param name="n1">幅</param>
+      <param name="n2">高さ</param>
+      <param name="n3">スタイル</param>
+    </member>
+    <member name="sel_progbox">
+      <summary>操作するプログレスボックスを選択</summary>
+      <param name="n1">プログレスボックスのID</param>
+    </member>
+    <member name="progrng">
+      <summary>プログレスボックスの範囲を設定</summary>
+      <param name="n1">最小値</param>
+      <param name="n2">最大値</param>
+      <param name="n3">最大値の拡張フラグ</param>
+    </member>
+    <member name="progset">
+      <summary>プログレスボックスの各設定</summary>
+      <param name="n1">セットする値</param>
+      <param name="n2">セットするタイプ</param>
+    </member>
+    <member name="trackbox">
+      <summary>トラックボックスの作成</summary>
+      <param name="n1">幅</param>
+      <param name="n2">高さ</param>
+      <param name="n3">スタイル</param>
+    </member>
+    <member name="sel_trackbox">
+      <summary>操作するトラックボックスを選択</summary>
+      <param name="n1">トラックボックスのID</param>
+    </member>
+    <member name="trackpos">
+      <summary>トラックボックスのつまみの位置の設定と取得</summary>
+      <param name="n1">設定する位置</param>
+      <param name="n2">位置を取得するフラグ</param>
+    </member>
+    <member name="trackrng">
+      <summary>トラックボックスの範囲の設定と取得</summary>
+      <param name="n1">最小値</param>
+      <param name="n2">最大値</param>
+      <param name="n3">範囲を取得するフラグ</param>
+    </member>
+    <member name="trackmrk">
+      <summary>トラックボックスの目盛りの設定と取得</summary>
+      <param name="n1">目盛りをつける位置</param>
+      <param name="n2">フラグ</param>
+    </member>
+    <member name="tracksel">
+      <summary>トラックボックスの選択範囲の設定と取得</summary>
+      <param name="n1">最小値</param>
+      <param name="n2">最大値</param>
+      <param name="n3">フラグ</param>
+    </member>
+    <member name="treemax">
+      <summary>ツリーボックスのアイテムの数を取得</summary>
+      <param name="v1">ツリーボックス内のアイテムの数を入れる数値変数</param>
+      <param name="n2">フラグ</param>
+    </member>
+    <member name="treesel">
+      <summary>ツリーボックスのアイテムを選択</summary>
+      <param name="n1">アイテムのID</param>
+      <param name="n2">選択状態のタイプ</param>
+    </member>
+    <member name="treedel">
+      <summary>ツリーボックスのアイテムを消去</summary>
+      <param name="n1">アイテムのID</param>
+    </member>
+    <member name="treesort">
+      <summary>ツリーボックスのアイテムをソート</summary>
+      <param name="n1">アイテムのID</param>
+    </member>
+    <member name="treeicon">
+      <summary>ツリーボックスのアイコンを設定</summary>
+      <param name="v1">アイコンが入った数値変数(get_iconで取得したもの)</param>
+      <param name="n2">アイコンの数</param>
+    </member>
+    <member name="treehit">
+      <summary>マウスの下にあるアイテムを取得</summary>
+    </member>
+    <member name="sel_treebox">
+      <summary>操作するツリーボックスを選択</summary>
+      <param name="n1">ツリーボックスのID</param>
+    </member>
+    <member name="treeget">
+      <summary>ツリーボックスの各情報を取得</summary>
+      <param name="v1">取得したものを入れる変数</param>
+      <param name="n2">取得するタイプ</param>
+      <param name="n3">n2によって変わる</param>
+      <param name="n4">n2によって変わる</param>
+    </member>
+    <member name="treeadd">
+      <summary>treeboxにアイテムを追加</summary>
+      <param name="n1">親アイテムのID</param>
+      <param name="s2">アイテムのテキスト</param>
+      <param name="n3">アイテムの追加の仕方</param>
+      <param name="n4">アイテムが収縮している時のアイコン番号</param>
+      <param name="n5">アイテムが展開している時のアイコン番号</param>
+      <param name="n6">アイテムに持たせる数値</param>
+    </member>
+    <member name="treebox">
+      <summary>treeboxの作成</summary>
+      <param name="n1">幅</param>
+      <param name="n2">高さ</param>
+      <param name="n3">スタイル</param>
+    </member>
+    <member name="udbtn">
+      <summary>アップダウンボタンの作成</summary>
+      <param name="n1">幅</param>
+      <param name="n2">高さ</param>
+      <param name="n3">スタイル</param>
+      <param name="n4">アップダウンボタンを付けるオブジェクトのID</param>
+    </member>
+    <member name="sel_udbtn">
+      <summary>操作するアップダウンボタンの選択</summary>
+      <param name="n1">アップダウンボタンのID</param>
+    </member>
+    <member name="udset">
+      <summary>アップダウンボタンの設定</summary>
+      <param name="n1">セットするタイプ</param>
+      <param name="n2">n1によって変わる</param>
+      <param name="n3">n1によって変わる</param>
+    </member>
+    <member name="udget">
+      <summary>アップダウンボタンの各種情報の取得</summary>
+      <param name="n1">取得するタイプ</param>
+    </member>
+  </members>
+</doc>

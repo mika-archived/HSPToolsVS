@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/ime</name>
+  </assembly>
+  <members>
+    <member name="imeinit">
+      <summary>IME情報を取得</summary>
+      <param name="v1">IME情報を代入する変数</param>
+      <param name="n2">mesboxのID</param>
+    </member>
+    <member name="imeopen">
+      <summary>IMEウィンドウを開く</summary>
+      <param name="v1">imeinitに使用した変数</param>
+      <param name="n2">開くか閉じるかを示すフラグ</param>
+    </member>
+    <member name="imestr">
+      <summary>IMEに文字列を送る</summary>
+      <param name="v1">imeinitに使用した変数</param>
+      <param name="s2">IMEに送る文字列</param>
+    </member>
+    <member name="imesend">
+      <summary>IMEにメッセージを送る</summary>
+      <param name="v1">imeinitに使用した変数</param>
+      <param name="n2">IMEに送るメッセージ</param>
+      <param name="n3">パラメータ1</param>
+      <param name="n4">パラメータ2</param>
+    </member>
+    <member name="linesel">
+      <summary>mesbox内の一行を選択</summary>
+      <param name="n1.n2">mesboxのID</param>
+    </member>
+    <member name="selget">
+      <summary>mesbox内の選択部分の文字列を取得</summary>
+      <param name="v1">mesbox内の選択されている部分を代入する変数</param>
+      <param name="n2">mesboxのID</param>
+    </member>
+  </members>
+</doc>

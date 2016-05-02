@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hgimg_common</name>
+  </assembly>
+  <members>
+    <member name="fvseti">
+      <summary>整数値からベクトル設定</summary>
+      <param name="fv">FV値が代入される変数名</param>
+      <param name="x">整数値</param>
+      <param name="y">整数値</param>
+      <param name="z">整数値</param>
+    </member>
+    <member name="fvset">
+      <summary>ベクトル設定</summary>
+      <param name="fv">FV値が代入される変数名</param>
+      <param name="x">計算値(実数値)</param>
+      <param name="y">計算値(実数値)</param>
+      <param name="z">計算値(実数値)</param>
+    </member>
+    <member name="fvadd">
+      <summary>ベクトル加算</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">計算値(実数値)</param>
+      <param name="y">計算値(実数値)</param>
+      <param name="z">計算値(実数値)</param>
+    </member>
+    <member name="fvsub">
+      <summary>ベクトル減算</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">計算値(実数値)</param>
+      <param name="y">計算値(実数値)</param>
+      <param name="z">計算値(実数値)</param>
+    </member>
+    <member name="fvmul">
+      <summary>ベクトル乗算</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">計算値(実数値)</param>
+      <param name="y">計算値(実数値)</param>
+      <param name="z">計算値(実数値)</param>
+    </member>
+    <member name="fvdiv">
+      <summary>ベクトル除算</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">計算値(実数値)</param>
+      <param name="y">計算値(実数値)</param>
+      <param name="z">計算値(実数値)</param>
+    </member>
+    <member name="fvdir">
+      <summary>ベクトル回転</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">回転角度(実数値)</param>
+      <param name="y">回転角度(実数値)</param>
+      <param name="z">回転角度(実数値)</param>
+    </member>
+    <member name="fvface">
+      <summary>座標から角度を得る</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">X,Y,Z座標値(実数値)</param>
+      <param name="y">X,Y,Z座標値(実数値)</param>
+      <param name="z">X,Y,Z座標値(実数値)</param>
+    </member>
+    <member name="fvmin">
+      <summary>ベクトル最小値</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">比較値(実数値)</param>
+      <param name="y">比較値(実数値)</param>
+      <param name="z">比較値(実数値)</param>
+    </member>
+    <member name="fvmax">
+      <summary>ベクトル最大値</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">比較値(実数値)</param>
+      <param name="y">比較値(実数値)</param>
+      <param name="z">比較値(実数値)</param>
+    </member>
+    <member name="fvouter">
+      <summary>ベクトル外積</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">演算するベクトル値(実数値)</param>
+      <param name="y">演算するベクトル値(実数値)</param>
+      <param name="z">演算するベクトル値(実数値)</param>
+    </member>
+    <member name="fvinner">
+      <summary>ベクトル内積</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+      <param name="x">演算するベクトル値(実数値)</param>
+      <param name="y">演算するベクトル値(実数値)</param>
+      <param name="z">演算するベクトル値(実数値)</param>
+    </member>
+    <member name="fvunit">
+      <summary>ベクトル正規化</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+    </member>
+    <member name="fsin">
+      <summary>サインを求める</summary>
+      <param name="fval">実数値が代入される変数名</param>
+      <param name="frot">回転角度(ラジアン)</param>
+    </member>
+    <member name="fcos">
+      <summary>コサインを求める</summary>
+      <param name="fval">実数値が代入される変数名</param>
+      <param name="frot">回転角度(ラジアン)</param>
+    </member>
+    <member name="fsqr">
+      <summary>平方根を求める</summary>
+      <param name="fval">実数値が代入される変数名</param>
+      <param name="fprm">演算に使われる値(実数)</param>
+    </member>
+    <member name="str2fv">
+      <summary>文字列をベクトルに変換</summary>
+      <param name="fv">FV値が代入される変数名</param>
+      <param name="x">「,」で区切られた実数値が格納された文字列</param>
+      <param name="y">「,」で区切られた実数値が格納された文字列</param>
+      <param name="z">「,」で区切られた実数値が格納された文字列</param>
+    </member>
+    <member name="fv2str">
+      <summary>ベクトルを文字列に変換</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+    </member>
+    <member name="str2f">
+      <summary>文字列を小数値に変換</summary>
+      <param name="fval">実数値が代入される変数名</param>
+      <param name="fval">実数値が格納された文字列</param>
+    </member>
+    <member name="f2str">
+      <summary>小数値を文字列に変換</summary>
+      <param name="sval">文字列が代入される変数名</param>
+      <param name="fval">変換元の実数値</param>
+    </member>
+    <member name="delobj">
+      <summary>オブジェクトの削除</summary>
+      <param name="ObjID">オブジェクトID</param>
+    </member>
+    <member name="setpos">
+      <summary>posグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="setang">
+      <summary>angグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="setangr">
+      <summary>angグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="setscale">
+      <summary>scaleグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="setdir">
+      <summary>dirグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="setwork">
+      <summary>workグループ情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">設定する値 (デフォルト=0)</param>
+      <param name="y">設定する値 (デフォルト=0)</param>
+      <param name="z">設定する値 (デフォルト=0)</param>
+    </member>
+    <member name="addpos">
+      <summary>posグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="addang">
+      <summary>angグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="addangr">
+      <summary>angグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="addscale">
+      <summary>scaleグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="adddir">
+      <summary>dirグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="addwork">
+      <summary>workグループ情報を加算</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">加算する値 (デフォルト=0)</param>
+      <param name="y">加算する値 (デフォルト=0)</param>
+      <param name="z">加算する値 (デフォルト=0)</param>
+    </member>
+    <member name="getpos">
+      <summary>posグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getscale">
+      <summary>scaleグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getdir">
+      <summary>dirグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getwork">
+      <summary>workグループ情報を取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getposi">
+      <summary>posグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getscalei">
+      <summary>scaleグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getdiri">
+      <summary>dirグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="getworki">
+      <summary>workグループ情報を整数で取得</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="x">取得する変数</param>
+      <param name="y">取得する変数</param>
+      <param name="z">取得する変数</param>
+    </member>
+    <member name="selpos">
+      <summary>移動座標をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="selang">
+      <summary>回転角度をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="selscale">
+      <summary>スケールをMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="seldir">
+      <summary>移動量をMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="selwork">
+      <summary>オブジェクトワークをMOC情報に設定</summary>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="objset3">
+      <summary>MOC情報を設定</summary>
+      <param name="x">設定する値</param>
+      <param name="y">設定する値2</param>
+      <param name="z">設定する値3</param>
+    </member>
+    <member name="objsetf3">
+      <summary>MOC情報を設定</summary>
+      <param name="fx">設定する値(実数値)</param>
+      <param name="fy">設定する値2(実数値)</param>
+      <param name="fz">設定する値3(実数値)</param>
+    </member>
+    <member name="objadd3">
+      <summary>MOC情報を加算</summary>
+      <param name="x">加算する値</param>
+      <param name="y">加算する値2</param>
+      <param name="z">加算する値3</param>
+    </member>
+    <member name="objaddf3">
+      <summary>MOC情報を加算</summary>
+      <param name="fx">加算する値(実数値)</param>
+      <param name="fy">加算する値2(実数値)</param>
+      <param name="fz">加算する値3(実数値)</param>
+    </member>
+    <member name="objadd3r">
+      <summary>MOC情報を加算</summary>
+      <param name="ofs">MOCのオフセット番号</param>
+      <param name="fx">加算する値(整数角度値)</param>
+      <param name="fy">加算する値2(整数角度値)</param>
+      <param name="fz">加算する値3(整数角度値)</param>
+    </member>
+    <member name="objset3r">
+      <summary>MOC情報を設定</summary>
+      <param name="x">設定する値</param>
+      <param name="y">設定する値2</param>
+      <param name="z">設定する値3</param>
+    </member>
+    <member name="setobjmode">
+      <summary>オブジェクトのモード設定</summary>
+      <param name="ObjID">オブジェクトID</param>
+      <param name="mode">モード値</param>
+      <param name="sw">設定スイッチ</param>
+    </member>
+    <member name="setcoli">
+      <summary>オブジェクトのコリジョン設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="mygroup">自分が属するグループ値</param>
+      <param name="enegroup">衝突を検出する対象となるグループ値</param>
+    </member>
+    <member name="getcoli">
+      <summary>オブジェクトのコリジョン判定</summary>
+      <param name="val">結果が代入される変数名</param>
+      <param name="id">オブジェクトID</param>
+      <param name="distance">衝突を検出する範囲(実数値)</param>
+    </member>
+    <member name="getobjcoli">
+      <summary>オブジェクトのコリジョングループ取得</summary>
+      <param name="var">結果が代入される変数名</param>
+      <param name="id">オブジェクトID</param>
+    </member>
+    <member name="findobj">
+      <summary>オブジェクト検索</summary>
+      <param name="exmode">検索を除外するモード</param>
+      <param name="group">検索対象コリジョングループ値</param>
+    </member>
+    <member name="nextobj">
+      <summary>次のオブジェクト検索</summary>
+      <param name="val">結果が代入される変数名</param>
+    </member>
+    <member name="setborder">
+      <summary>オブジェクト有効範囲設定</summary>
+      <param name="fx">ボーダー領域の設定値(実数値)</param>
+      <param name="fy">ボーダー領域の設定値(実数値)</param>
+      <param name="fz">ボーダー領域の設定値(実数値)</param>
+      <param name="option">設定オプション(0～2)</param>
+    </member>
+    <member name="selmoc">
+      <summary>MOC情報を設定</summary>
+      <param name="id">オブジェクトID</param>
+      <param name="mocofs">MOCのグループ指定</param>
+    </member>
+    <member name="objgetfv">
+      <summary>MOC情報を取得</summary>
+      <param name="fv">FV値が代入される変数名</param>
+    </member>
+    <member name="objsetfv">
+      <summary>MOC情報を設定</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+    </member>
+    <member name="objaddfv">
+      <summary>MOC情報を加算</summary>
+      <param name="fv">FV値が代入されている変数名</param>
+    </member>
+    <member name="objexist">
+      <summary>オブジェクトIDが有効か調べる</summary>
+      <param name="p1">オブジェクトID</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspmath</name>
+  </assembly>
+  <members>
+    <member name="M_LOG2E">
+      <summary>2を底とするネイピア数の対数</summary>
+    </member>
+    <member name="M_LOG10E">
+      <summary>10を底とするネイピア数の対数</summary>
+    </member>
+    <member name="M_LN2">
+      <summary>ネイピア数を底とした2の対数</summary>
+    </member>
+    <member name="M_LN10">
+      <summary>ネイピア数を底とした10の対数</summary>
+    </member>
+    <member name="M_E">
+      <summary>ネイピア数</summary>
+    </member>
+    <member name="M_SQRTPI">
+      <summary>円周率の平方根</summary>
+    </member>
+    <member name="M_SQRT2">
+      <summary>2の平方根</summary>
+    </member>
+    <member name="M_SQRT3">
+      <summary>3の累乗根</summary>
+    </member>
+    <member name="DBL_DIG">
+      <summary>10進数で有効な桁数</summary>
+    </member>
+    <member name="DBL_EPSILON">
+      <summary>1.0とその次に大きい値との差</summary>
+    </member>
+    <member name="DBL_MANT_DIG">
+      <summary>仮数部のbit数</summary>
+    </member>
+    <member name="DBL_MAX">
+      <summary>実数の最大値</summary>
+    </member>
+    <member name="DBL_MAX_10_EXP">
+      <summary>10進数での指数部の最大値</summary>
+    </member>
+    <member name="DBL_MAX_EXP">
+      <summary>2進数での指数部の最大値</summary>
+    </member>
+    <member name="DBL_MIN">
+      <summary>0を超える最小の値</summary>
+    </member>
+    <member name="DBL_MIN_10_EXP">
+      <summary>10進数での指数部の最小値</summary>
+    </member>
+    <member name="DBL_MIN_EXP">
+      <summary>2進数での指数部の最小値</summary>
+    </member>
+    <member name="INT_DIGIT">
+      <summary>2進数で有効な桁数</summary>
+    </member>
+    <member name="INT_DIGIT10">
+      <summary>10進数で有効な桁数</summary>
+    </member>
+    <member name="INT_MAX">
+      <summary>最大値</summary>
+    </member>
+    <member name="INT_MIN">
+      <summary>最小値</summary>
+    </member>
+    <member name="pow">
+      <summary>累乗（べき乗）を求める</summary>
+      <param name="p1">底（0以上）</param>
+      <param name="p2">指数</param>
+    </member>
+    <member name="log10">
+      <summary>10を底とした対数（常用対数）</summary>
+      <param name="p1">真数</param>
+    </member>
+    <member name="log2">
+      <summary>2を底とした対数</summary>
+      <param name="p1">真数</param>
+    </member>
+    <member name="asin">
+      <summary>サインの逆関数（アークサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="acos">
+      <summary>コサインの逆関数（アークコサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="sinh">
+      <summary>双曲線正弦関数（ハイパボリックサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="cosh">
+      <summary>双曲線余弦関数（ハイパボリックコサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="tanh">
+      <summary>双曲線正接関数（ハイパボリックタンジェント）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="asinh">
+      <summary>双曲線正弦関数の逆関数（アークハイパボリックサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="acosh">
+      <summary>双曲線余弦関数の逆関数（アークハイパボリックコサイン）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="atanh">
+      <summary>双曲線正接関数の逆関数（アークハイパボリックタンジェント）</summary>
+      <param name="p1">角度値（ラジアン）</param>
+    </member>
+    <member name="isfinite">
+      <summary>有限／無限･非数の判定</summary>
+      <param name="p1">判定する値</param>
+    </member>
+    <member name="isnan">
+      <summary>非数の判定</summary>
+      <param name="p1">判定する値</param>
+    </member>
+    <member name="round">
+      <summary>四捨五入</summary>
+      <param name="p1">四捨五入する値（実数）</param>
+    </member>
+    <member name="sgn">
+      <summary>符号</summary>
+      <param name="p1">符号を判定する値（数値）</param>
+    </member>
+    <member name="intf">
+      <summary>0の方向へ丸め</summary>
+      <param name="p1">丸める数値</param>
+    </member>
+    <member name="floor">
+      <summary>負の方向へ丸め</summary>
+      <param name="p1">丸める数値</param>
+    </member>
+    <member name="ceil">
+      <summary>正の方向へ丸め</summary>
+      <param name="p1">丸める数値</param>
+    </member>
+    <member name="fmod">
+      <summary>モジュロ</summary>
+      <param name="p1">割られる数</param>
+      <param name="p2">割る数</param>
+    </member>
+    <member name="distance2">
+      <summary>2点の距離を求める</summary>
+      <param name="p1">点の座標を代入した数値型配列変数</param>
+      <param name="p2"></param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/var</name>
+  </assembly>
+  <members>
+    <member name="hspstat">
+      <summary>HSPランタイムの情報</summary>
+    </member>
+    <member name="hspver">
+      <summary>HSPのバージョン番号</summary>
+    </member>
+    <member name="cnt">
+      <summary>ループのカウンター</summary>
+    </member>
+    <member name="err">
+      <summary>HSPのエラーコード</summary>
+    </member>
+    <member name="stat">
+      <summary>色々な命令のステータス値</summary>
+    </member>
+    <member name="mousex">
+      <summary>マウスカーソルのX座標</summary>
+    </member>
+    <member name="mousey">
+      <summary>マウスカーソルのY座標</summary>
+    </member>
+    <member name="mousew">
+      <summary>マウスカーソルのホイール値</summary>
+    </member>
+    <member name="strsize">
+      <summary>読み出しバイト数</summary>
+    </member>
+    <member name="refstr">
+      <summary>色々な命令のステータス文字列</summary>
+    </member>
+    <member name="looplev">
+      <summary>repeatのネストレベル</summary>
+    </member>
+    <member name="sublev">
+      <summary>サブルーチンのネストレベル</summary>
+    </member>
+    <member name="iparam">
+      <summary>割り込み要因を示す値</summary>
+    </member>
+    <member name="wparam">
+      <summary>割り込み時のwParam</summary>
+    </member>
+    <member name="lparam">
+      <summary>割り込み時のlParam</summary>
+    </member>
+    <member name="hwnd">
+      <summary>現在のウィンドウハンドル</summary>
+    </member>
+    <member name="hdc">
+      <summary>現在のデバイスコンテキスト</summary>
+    </member>
+    <member name="hinstance">
+      <summary>現在のインスタンスハンドル</summary>
+    </member>
+    <member name="refdval">
+      <summary>色々な命令のステータス実数値</summary>
+    </member>
+    <member name="thismod">
+      <summary>現在の有効なモジュール変数</summary>
+    </member>
+    <member name="notemax">
+      <summary>メモリノートパッドの行数</summary>
+    </member>
+    <member name="notesize">
+      <summary>メモリノートパッドの文字数</summary>
+    </member>
+    <member name="ginfo_mx">
+      <summary>スクリーン上のマウスカーソルX座標</summary>
+    </member>
+    <member name="ginfo_my">
+      <summary>スクリーン上のマウスカーソルY座標</summary>
+    </member>
+    <member name="ginfo_act">
+      <summary>アクティブなウィンドウID</summary>
+    </member>
+    <member name="ginfo_sel">
+      <summary>操作先ウィンドウID</summary>
+    </member>
+    <member name="ginfo_wx1">
+      <summary>ウィンドウの左上X座標</summary>
+    </member>
+    <member name="ginfo_wy1">
+      <summary>ウィンドウの左上Y座標</summary>
+    </member>
+    <member name="ginfo_wx2">
+      <summary>ウィンドウの右下X座標</summary>
+    </member>
+    <member name="ginfo_wy2">
+      <summary>ウィンドウの右下Y座標</summary>
+    </member>
+    <member name="ginfo_vx">
+      <summary>ウィンドウのスクロールX座標</summary>
+    </member>
+    <member name="ginfo_vy">
+      <summary>ウィンドウのスクロールY座標</summary>
+    </member>
+    <member name="ginfo_sizex">
+      <summary>ウィンドウ全体のXサイズ</summary>
+    </member>
+    <member name="ginfo_sizey">
+      <summary>ウィンドウ全体のYサイズ</summary>
+    </member>
+    <member name="ginfo_winx">
+      <summary>画面の描画エリアXサイズ</summary>
+    </member>
+    <member name="ginfo_winy">
+      <summary>画面の描画エリアYサイズ</summary>
+    </member>
+    <member name="ginfo_sx">
+      <summary>画面の初期化Xサイズ</summary>
+    </member>
+    <member name="ginfo_sy">
+      <summary>画面の初期化Yサイズ</summary>
+    </member>
+    <member name="ginfo_mesx">
+      <summary>メッセージの出力Xサイズ</summary>
+    </member>
+    <member name="ginfo_mesy">
+      <summary>メッセージの出力Yサイズ</summary>
+    </member>
+    <member name="ginfo_r">
+      <summary>現在設定されているカラーコードR</summary>
+    </member>
+    <member name="ginfo_g">
+      <summary>現在設定されているカラーコードG</summary>
+    </member>
+    <member name="ginfo_b">
+      <summary>現在設定されているカラーコードB</summary>
+    </member>
+    <member name="ginfo_paluse">
+      <summary>デスクトップのカラーモード</summary>
+    </member>
+    <member name="ginfo_dispx">
+      <summary>デスクトップ全体のXサイズ</summary>
+    </member>
+    <member name="ginfo_dispy">
+      <summary>デスクトップ全体のYサイズ</summary>
+    </member>
+    <member name="ginfo_cx">
+      <summary>カレントポジションのX座標</summary>
+    </member>
+    <member name="ginfo_cy">
+      <summary>カレントポジションのY座標</summary>
+    </member>
+    <member name="ginfo_intid">
+      <summary>メッセージ割り込み時のウィンドウID</summary>
+    </member>
+    <member name="ginfo_newid">
+      <summary>未使用ウィンドウID</summary>
+    </member>
+    <member name="ginfo_accx">
+      <summary>加速度センサー値(X)</summary>
+    </member>
+    <member name="ginfo_accy">
+      <summary>加速度センサー値(Y)</summary>
+    </member>
+    <member name="ginfo_accz">
+      <summary>加速度センサー値(Z)</summary>
+    </member>
+    <member name="dir_cur">
+      <summary>カレントディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_exe">
+      <summary>実行ファイルがあるディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_win">
+      <summary>Windowsディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_sys">
+      <summary>Windowsシステムディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_cmdline">
+      <summary>コマンドライン文字列</summary>
+    </member>
+    <member name="dir_desktop">
+      <summary>デスクトップディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_mydoc">
+      <summary>マイドキュメントディレクトリ(フォルダ)</summary>
+    </member>
+    <member name="dir_tv">
+      <summary>HSPTVディレクトリ(フォルダ)</summary>
+    </member>
+  </members>
+</doc>

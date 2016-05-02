@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="button">
+      <summary>ボタン表示</summary>
+      <param name="goto/gosub name">ボタンの名前</param>
+      <param name="*label">押した時にジャンプするラベル名</param>
+    </member>
+    <member name="chkbox">
+      <summary>チェックボックス表示</summary>
+      <param name="strings">チェックボックスの内容表示文字列</param>
+      <param name="p1">チェックボックスの状態を保持する変数</param>
+    </member>
+    <member name="clrobj">
+      <summary>オブジェクトをクリア</summary>
+      <param name="p1">消去するオブジェクトID(開始)</param>
+      <param name="p2">消去するオブジェクトID(終了)( -1の場合は、 最終のIDが指定</param>
+    </member>
+    <member name="combox">
+      <summary>コンボボックス表示</summary>
+      <param name="p1">コンボボックスの状態を保持する数値型変数</param>
+      <param name="p2">拡張Yサイズ</param>
+      <param name="p3">コンボボックスの内容を示す文字列</param>
+    </member>
+    <member name="input">
+      <summary>入力ボックス表示</summary>
+      <param name="p1">入力のための変数</param>
+      <param name="p2">メッセージボックスのサイズ（ドット単位）</param>
+      <param name="p3">入力できる最大文字数</param>
+      <param name="p4"></param>
+    </member>
+    <member name="listbox">
+      <summary>リストボックス表示</summary>
+      <param name="p1">リストボックスの状態を保持する数値型変数</param>
+      <param name="p2">拡張Yサイズ</param>
+      <param name="p3">リストボックスの内容を示す文字列</param>
+    </member>
+    <member name="mesbox">
+      <summary>メッセージボックス表示</summary>
+      <param name="p1">表示メッセージが代入された文字列型変数</param>
+      <param name="p2">メッセージボックスのサイズ（ドット単位）</param>
+      <param name="p3">メッセージボックスのスタイル</param>
+      <param name="p4">入力できる最大文字数</param>
+      <param name="p5"></param>
+    </member>
+    <member name="objprm">
+      <summary>オブジェクトの内容を変更</summary>
+      <param name="p1">オブジェクトID指定</param>
+      <param name="p2">変更するパラメータの内容</param>
+    </member>
+    <member name="objsize">
+      <summary>オブジェクトサイズ設定</summary>
+      <param name="p1">オブジェクトのX方向のサイズ（ドット単位）</param>
+      <param name="p2">オブジェクトのY方向のサイズ（ドット単位）</param>
+      <param name="p3">Y方向の最低確保行サイズ (ドット単位)</param>
+    </member>
+    <member name="objsel">
+      <summary>オブジェクトに入力フォーカスを設定</summary>
+      <param name="p1">オブジェクトID指定</param>
+    </member>
+    <member name="objmode">
+      <summary>オブジェクトモード設定</summary>
+      <param name="p1">オブジェクトフォント設定モード指定</param>
+      <param name="p2">フォーカス移動キー指定(0=OFF/1=ON)</param>
+    </member>
+    <member name="objenable">
+      <summary>オブジェクトの有効・無効を設定</summary>
+      <param name="p1">オブジェクトID指定</param>
+      <param name="p2">0ならば無効、0以外は有効</param>
+    </member>
+    <member name="objskip">
+      <summary>オブジェクトのフォーカス移動モードを設定</summary>
+      <param name="p1">オブジェクトID指定</param>
+      <param name="p2">フォーカス移動モード</param>
+    </member>
+    <member name="objimage">
+      <summary>カスタムボタンの設定</summary>
+      <param name="id">カスタムボタンの参照バッファID</param>
+      <param name="x1">カスタムボタンの参照座標1(通常時)</param>
+      <param name="y1">カスタムボタンの参照座標2(押し下げ時)</param>
+      <param name="x2">カスタムボタンの参照座標3(マウスオーバー時)</param>
+      <param name="y2"></param>
+      <param name="x3"></param>
+      <param name="y3"></param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspsock</name>
+  </assembly>
+  <members>
+    <member name="sockopen">
+      <summary>ソケットを初期化して接続</summary>
+      <param name="p1">ソケットID番号</param>
+      <param name="url">URL指定文字列</param>
+      <param name="p2">ポート番号</param>
+    </member>
+    <member name="sockclose">
+      <summary>ソケットを切断</summary>
+      <param name="p1">ソケットID番号</param>
+    </member>
+    <member name="sockput">
+      <summary>データを送信</summary>
+      <param name="message">送信するメッセージ</param>
+      <param name="p1">ソケットID番号</param>
+    </member>
+    <member name="sockputc">
+      <summary>データを1byte送信</summary>
+      <param name="p1">送信するメッセージ(1byte)</param>
+      <param name="p2">ソケットID番号</param>
+    </member>
+    <member name="sockputb">
+      <summary>バッファのデータを送信</summary>
+      <param name="p1">送信内容が格納されている変数名</param>
+      <param name="p2">バッファオフセット(byte単位)</param>
+      <param name="p3">送信サイズ(byte単位)</param>
+      <param name="p4">ソケットID番号</param>
+    </member>
+    <member name="sockcheck">
+      <summary>データの到着を調べる</summary>
+      <param name="p1">ソケットID番号</param>
+    </member>
+    <member name="sockget">
+      <summary>データを受信</summary>
+      <param name="p1">受信内容が格納される変数名</param>
+      <param name="p2">受信サイズ(byte単位)</param>
+      <param name="p3">ソケットID番号</param>
+    </member>
+    <member name="sockgetc">
+      <summary>データを1byte受信</summary>
+      <param name="p1">受信内容が格納される変数名</param>
+      <param name="p2">ソケットID番号</param>
+    </member>
+    <member name="sockgetb">
+      <summary>バッファにデータを受信</summary>
+      <param name="p1">受信内容が格納される変数名</param>
+      <param name="p2">バッファオフセット (byte単位)</param>
+      <param name="p3">受信サイズ (byte単位)</param>
+      <param name="p4">ソケットID番号</param>
+    </member>
+    <member name="sockmake">
+      <summary>ソケットをサーバーとして初期化</summary>
+      <param name="p1">ソケットID番号</param>
+      <param name="p2">ポート番号</param>
+    </member>
+    <member name="sockwait">
+      <summary>クライアントの着信を待つ</summary>
+      <param name="p1">ソケットID番号</param>
+      <param name="p2">代替ソケットID番号</param>
+    </member>
+    <member name="ipget">
+      <summary>ホストのIPアドレスを取得</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>system/func</name>
+  </assembly>
+  <members>
+    <member name="getstr">
+      <summary>バッファから文字列読み出し</summary>
+      <param name="p1">内容を読み出す先の変数名</param>
+      <param name="p2">バッファを割り当てた変数名</param>
+      <param name="p3">バッファのインデックス(Byte単位)</param>
+      <param name="p4">区切りキャラクタのASCIIコード</param>
+      <param name="p5">読み出しを行なう最大文字数</param>
+    </member>
+    <member name="noteadd">
+      <summary>指定行の追加・変更</summary>
+      <param name="p1">追加・変更をする文字列または変数名</param>
+      <param name="p2">追加するインデックス</param>
+      <param name="p3">上書きモード指定(0=追加・1=上書き)</param>
+    </member>
+    <member name="notedel">
+      <summary>行の削除</summary>
+      <param name="p1">削除するインデックス</param>
+    </member>
+    <member name="noteget">
+      <summary>指定行を読み込み</summary>
+      <param name="p1">読み出し先の変数名</param>
+      <param name="p2">読み出すインデックス</param>
+    </member>
+    <member name="noteinfo">
+      <summary>メモリノートパッド情報取得</summary>
+      <param name="p1">情報取得モード</param>
+    </member>
+    <member name="notesel">
+      <summary>対象バッファ指定</summary>
+      <param name="p1">バッファを割り当てた変数名</param>
+    </member>
+    <member name="noteunsel">
+      <summary>対象バッファの復帰</summary>
+    </member>
+    <member name="strmid">
+      <summary>文字列の一部を取り出す</summary>
+      <param name="p1">取り出すもとの文字列が格納されている変数名</param>
+      <param name="p2">取り出し始めのインデックス</param>
+      <param name="p3">取り出す文字数</param>
+    </member>
+    <member name="instr">
+      <summary>文字列の検索をする</summary>
+      <param name="p1">検索される文字列が格納されている文字列型変数名</param>
+      <param name="p2">検索を始めるインデックス</param>
+      <param name="string">検索する文字列</param>
+    </member>
+    <member name="notesave">
+      <summary>対象バッファ保存</summary>
+      <param name="filename">書き込みファイル名</param>
+    </member>
+    <member name="noteload">
+      <summary>対象バッファ読み込み</summary>
+      <param name="filename">読み込みファイル名</param>
+      <param name="p1">読み込みサイズの上限値</param>
+    </member>
+    <member name="getpath">
+      <summary>パスの一部を取得</summary>
+      <param name="p1">取り出す元の文字列</param>
+      <param name="p2">情報のタイプ指定</param>
+    </member>
+    <member name="strf">
+      <summary>書式付き文字列を変換</summary>
+      <param name="format">書式指定文字列</param>
+      <param name="p1...">書式指定パラメーター</param>
+    </member>
+    <member name="cnvwtos">
+      <summary>unicodeを通常文字列に変換</summary>
+      <param name="p1">内容を読み出す元の変数名</param>
+    </member>
+    <member name="cnvstow">
+      <summary>通常文字列をunicodeに変換</summary>
+      <param name="p1">結果を書き込む変数名</param>
+      <param name="string">変換元の文字列</param>
+    </member>
+    <member name="strtrim">
+      <summary>指定した文字だけを取り除く</summary>
+      <param name="p1">元の文字列が代入された変数</param>
+      <param name="p2">除去する位置の指定</param>
+      <param name="p3">文字コード</param>
+    </member>
+    <member name="split">
+      <summary>文字列から分割された要素を代入</summary>
+      <param name="p1">元の文字列が代入された変数</param>
+      <param name="string">区切り用文字列</param>
+      <param name="p2...">分割された要素が代入される変数</param>
+    </member>
+    <member name="strrep">
+      <summary>文字列の置換をする</summary>
+      <param name="p1">検索される文字列が格納されている文字列型変数名</param>
+      <param name="検索文字列">検索する文字列</param>
+      <param name="置換文字列">置換する文字列</param>
+    </member>
+  </members>
+</doc>

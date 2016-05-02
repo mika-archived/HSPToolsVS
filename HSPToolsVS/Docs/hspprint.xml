@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>hspprint</name>
+  </assembly>
+  <members>
+    <member name="prnflags">
+      <summary>リンタ列挙フラグを設定する</summary>
+      <param name="flag">プリンタ列挙フラグ</param>
+    </member>
+    <member name="enumprn">
+      <summary>プリンタを列挙する</summary>
+      <param name="変数 : 結果の文字列が代入される変数名"></param>
+    </member>
+    <member name="propprn">
+      <summary>プリンタ情報の取得</summary>
+      <param name="変数1">結果Xの値が代入される変数名</param>
+      <param name="変数2">結果Yの値が代入される変数名</param>
+      <param name="id">プリンタID(0～)</param>
+      <param name="type">取得される情報タイプ</param>
+    </member>
+    <member name="execprn">
+      <summary>プリンタ印刷の開始</summary>
+      <param name="id">プリンタID(0～)</param>
+      <param name="x">印刷ページ内の画像位置X,Y座標</param>
+      <param name="y">印刷ページ内の画像サイズX,Y</param>
+      <param name="sx">印刷される画像の左上X,Y座標</param>
+      <param name="sy">印刷される画像サイズX,Y</param>
+      <param name="bx">ドキュメント名</param>
+      <param name="by"></param>
+      <param name="bsx"></param>
+      <param name="bsy"></param>
+      <param name="name"></param>
+    </member>
+    <member name="getdefprn">
+      <summary>規定のプリンタを取得する</summary>
+      <param name="変数">結果の文字列が代入される変数名</param>
+    </member>
+    <member name="prndialog">
+      <summary>プリンタの設定ダイアログを開く</summary>
+      <param name="id">プリンタID(0～)</param>
+    </member>
+  </members>
+</doc>

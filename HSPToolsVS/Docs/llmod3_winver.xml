@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>llmod3/winver</name>
+  </assembly>
+  <members>
+    <member name="winver">
+      <summary>Windowsのバージョン取得</summary>
+      <param name="v1">バージョンを受け取るための数値変数</param>
+    </member>
+    <member name="verinfo">
+      <summary>バージョン情報取得</summary>
+      <param name="s1">ファイル名</param>
+      <param name="n2">取得するタイプ</param>
+    </member>
+  </members>
+</doc>
