@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace HSPToolsVS.LanguageService
 {
@@ -21,6 +22,8 @@ namespace HSPToolsVS.LanguageService
         public static List<string> Preprocessors { get; }
 
         public static List<string> Macros { get; }
+
+        public static List<string> AllKeywords { get; }
 
         public static string CommentStart => "/*";
         public static string CommentEnd => "*/";
@@ -102,6 +105,11 @@ namespace HSPToolsVS.LanguageService
                 "<<=", ">>="
             };
             Operators.Sort((s1, s2) => s2.Length - s1.Length);
+
+            var ar1 = Keywords.ToArray();
+            ar1 = ar1.Concat(Preprocessors).ToArray();
+            ar1 = ar1.Concat(Macros).ToArray();
+            AllKeywords = ar1.ToList();
         }
     }
 }

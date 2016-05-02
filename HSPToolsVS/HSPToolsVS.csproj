@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="HSPToolsConstants.cs" />
     <Compile Include="HSPVSPackage.cs" />
+    <Compile Include="IntelliSense\HSPDeclarations.cs" />
     <Compile Include="LanguageService\HSPAuthoringScope.cs" />
     <Compile Include="LanguageService\HSPColorizer.cs" />
     <Compile Include="LanguageService\HSPLanguagePreferences.cs" />
@@ -499,9 +500,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IntelliSense\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Project\SharedProject\OverwriteFileDialog.xaml">
       <Generator>MSBuild:Compile</Generator>

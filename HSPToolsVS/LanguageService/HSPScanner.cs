@@ -45,6 +45,7 @@ namespace HSPToolsVS.LanguageService
             tokenInfo.Type = token.Type.ToTokenType();
             tokenInfo.Color = token.Type.ToColor();
             tokenInfo.Token = (int) token.Type;
+            tokenInfo.Trigger |= token.Type == HSPTokenType.Idenfitier ? TokenTriggers.MemberSelect : TokenTriggers.None;
             return true;
         }
 

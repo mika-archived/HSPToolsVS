@@ -39,7 +39,12 @@ namespace HSPToolsVS
         Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     // Register a Language Service
     [ProvideService(typeof(HSPLanguageService))]
-    [ProvideLanguageService(typeof(HSPLanguageService), HSPToolsConstants.LanguageName, 0)]
+    [ProvideLanguageService(typeof(HSPLanguageService), HSPToolsConstants.LanguageName, 0,
+        EnableLineNumbers = true,
+        CodeSense = true,
+        CodeSenseDelay = 500,
+        ShowCompletion = true,
+        QuickInfo = true)]
     [ProvideLanguageExtension(typeof(HSPLanguageService), HSPToolsConstants.ScriptExtension)]
     [ProvideLanguageExtension(typeof(HSPLanguageService), HSPToolsConstants.ModuleExtension)]
     // ReSharper disable once InconsistentNaming

@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
+
+using HSPToolsVS.IntelliSense;
 
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Package;
@@ -11,6 +14,7 @@ namespace HSPToolsVS.LanguageService
     internal class HSPAuthoringScope : AuthoringScope
     {
         private readonly IEnumerable<Token> _tokens;
+        private readonly Regex _upperCharRegex = new Regex(@"[^A-Z0-9]");
 
         public HSPAuthoringScope(IEnumerable<Token> tokens)
         {
@@ -34,7 +38,11 @@ namespace HSPToolsVS.LanguageService
         public override Declarations GetDeclarations(IVsTextView view, int line, int col, TokenInfo info,
                                                      ParseReason reason)
         {
-            return null;
+            var token = GetTokenFromLineAndCol(line, col - 1);
+            if (token == null || token.Type == HSPTokenType.Comment || token.Type == HSPTokenType.Numeric)
+                return null;
+
+            return new HSPDeclarations(GetWordCandidatesFromIdentifier(token.Text));
         }
 
         public override Methods GetMethods(int line, int col, string name)
@@ -52,6 +60,16 @@ namespace HSPToolsVS.LanguageService
         private Token GetTokenFromLineAndCol(int line, int col)
         {
             return _tokens.SingleOrDefault(w => w.Line == line && w.StartIndex <= col && col <= w.EndIndex);
+        }
+
+        private IList<string> GetWordCandidatesFromIdentifier(string text)
+        {
+            var temp =
+                _tokens.Where(w => w.Type == HSPTokenType.Idenfitier && w.Text != text)
+                       .Select(w => w.Text)
+                       .Distinct()
+                       .Concat(HSPTokens.AllKeywords.ToList());
+            return temp.Where(w => w.StartsWith(text) || text.ToUpper() == _upperCharRegex.Replace(w, "")).ToList();
         }
     }
 }
